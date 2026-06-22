@@ -1,0 +1,3 @@
+﻿distribucion,representacion,padding_aplicado,forma_original,forma_ujanet,filas_cero_anadidas,columnas_cero_anadidas
+8-3,DeepONMF_W,True,126x3,126x4,0,1
+8-3,DeepONMF_H2,True,3x212,4x212,1,0

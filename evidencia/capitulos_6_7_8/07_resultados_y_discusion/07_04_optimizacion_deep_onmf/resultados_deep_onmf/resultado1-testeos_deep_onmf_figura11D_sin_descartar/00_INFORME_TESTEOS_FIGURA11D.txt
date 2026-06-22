@@ -1,0 +1,62 @@
+﻿INFORME DE TESTEOS DEEP-ONMF PARA FIGURA 11D
+
+Objetivo:
+Comprobar por qué la Figura 11D generada no se parece a la del artículo.
+
+Criterio usado para audios cortos:
+En estos testeos no se descarta ningun audio menor de 2 segundos. Esos audios se rellenan con ceros hasta 2 segundos para usar toda la base disponible.
+
+Punto crítico detectado en el texto del artículo:
+En la sección 6.7 los autores dicen que, para comparar métodos en la Figura 11,
+pasan de analizar SBV individuales a usar la matriz W final completa como conjunto
+de características. Por eso se prueban varias formas de construir la entrada de t-SNE.
+
+Carpeta de resultados:
+C:\Users\armga\OneDrive\Escritorio\TFG\Programacion objetivo\resultados_deep_onmf\resultado1-testeos_deep_onmf_figura11D_sin_descartar
+
+Auditoria del criterio de datos usado:
+clase  audios_totales  audios_usados  audios_descartados_por_duracion  audios_cortos_menores_2s  duracion_min_s  duracion_media_s  duracion_max_s  columnas_matriz_x
+    N             200            200                                0                         0        2.033750          2.381381        3.007250              42612
+   AS             200            200                                0                         0        2.349875          2.741807        3.550250              49184
+   MR             200            200                                0                        16        1.575500          2.256554        3.034625              43248
+   MS             200            200                                0                        14        1.155625          2.356657        3.201375              45156
+  MVP             200            200                                0                        19        1.726375          2.481116        3.992875              43248
+
+Resumen de variantes:
+    configuracion_onmf               variante  n_puntos  n_features escalado  perplexity  silhouette_features  davies_bouldin_features
+onmf_iter120_semilla42      H_media_por_audio      1000           7 standard          30             0.053016                 3.593991
+onmf_iter120_semilla42      H_media_por_audio      1000           7  ninguno          30             0.043822                 3.620197
+onmf_iter120_semilla42   W_filas_matriz_final       630           7 standard          30            -0.144963                34.295815
+onmf_iter120_semilla42   W_filas_matriz_final       630           7   minmax          30            -0.145621                34.270114
+onmf_iter120_semilla42   W_filas_matriz_final       630           7  ninguno          30            -0.144335                34.210890
+onmf_iter120_semilla42 H_columnas_muestreadas      1100           7 standard          30            -0.158678                10.838548
+ onmf_iter120_semilla7      H_media_por_audio      1000           7 standard          30             0.055271                 3.575956
+ onmf_iter120_semilla7      H_media_por_audio      1000           7  ninguno          30             0.052053                 3.681127
+ onmf_iter120_semilla7   W_filas_matriz_final       630           7 standard          30            -0.151743                22.584570
+ onmf_iter120_semilla7   W_filas_matriz_final       630           7   minmax          30            -0.150339                22.798079
+ onmf_iter120_semilla7   W_filas_matriz_final       630           7  ninguno          30            -0.151691                22.611319
+ onmf_iter120_semilla7 H_columnas_muestreadas      1100           7 standard          30            -0.110418                13.505745
+onmf_iter120_semilla99      H_media_por_audio      1000           7 standard          30             0.090822                 4.315985
+onmf_iter120_semilla99      H_media_por_audio      1000           7  ninguno          30             0.084269                 4.441253
+onmf_iter120_semilla99   W_filas_matriz_final       630           7 standard          30            -0.143721                36.328761
+onmf_iter120_semilla99   W_filas_matriz_final       630           7   minmax          30            -0.144315                36.279819
+onmf_iter120_semilla99   W_filas_matriz_final       630           7  ninguno          30            -0.143517                36.346266
+onmf_iter120_semilla99 H_columnas_muestreadas      1100           7 standard          30            -0.125111                10.964932
+onmf_iter300_semilla42      H_media_por_audio      1000           7 standard          30             0.066207                 4.441047
+onmf_iter300_semilla42      H_media_por_audio      1000           7  ninguno          30             0.061462                 4.561318
+onmf_iter300_semilla42   W_filas_matriz_final       630           7 standard          30            -0.143102                19.274671
+onmf_iter300_semilla42   W_filas_matriz_final       630           7   minmax          30            -0.143869                19.507075
+onmf_iter300_semilla42   W_filas_matriz_final       630           7  ninguno          30            -0.143098                19.279873
+onmf_iter300_semilla42 H_columnas_muestreadas      1100           7 standard          30            -0.154868                14.588180
+
+Mejor variante por silhouette en el espacio de características:
+onmf_iter120_semilla99 / H_media_por_audio / escalado=standard con silhouette=0.0908
+
+Mejor variante por Davies-Bouldin en el espacio de características:
+onmf_iter120_semilla7 / H_media_por_audio / escalado=standard con DB=3.5760
+
+Lectura:
+Si la variante basada en filas de W se parece más al documento, la diferencia venía de
+usar antes características por audio derivadas de H. Si ninguna variante reproduce la Figura 11D,
+entonces faltan detalles no publicados: normalización exacta, inicialización, optimizador,
+selección de muestras o parámetros internos de t-SNE.

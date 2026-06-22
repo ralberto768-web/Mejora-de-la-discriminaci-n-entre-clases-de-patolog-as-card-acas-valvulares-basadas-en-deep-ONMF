@@ -1,0 +1,11 @@
+{
+  "base": "original",
+  "numero_audios": 10,
+  "representaciones": [
+    "STFT",
+    "MFCC",
+    "Mel",
+    "LogMel"
+  ],
+  "semilla": 42
+}

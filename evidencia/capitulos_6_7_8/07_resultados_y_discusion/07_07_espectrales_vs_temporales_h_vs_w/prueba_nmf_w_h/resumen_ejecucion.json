@@ -1,0 +1,10 @@
+{
+  "protocolo": "prueba_nmf_w_h_v1",
+  "filas": 32,
+  "bases": [
+    "original",
+    "SNR_0db"
+  ],
+  "segundos": 2196.6663276999025,
+  "salida": "C:\\Users\\armga\\OneDrive\\Escritorio\\TFG\\Ultima implementacio Juan\\ULTIMA\\05_prueba_nmf_w_h"
+}

@@ -1,0 +1,13 @@
+{
+  "distribucion": "17-9",
+  "rangos": [
+    17,
+    9
+  ],
+  "numero_capas": 2,
+  "ronda": 7,
+  "segundos": 194.06955200000084,
+  "audios": 1000,
+  "folds": 5,
+  "evaluaciones_esperadas": 60
+}

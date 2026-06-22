@@ -1,0 +1,25 @@
+{
+  "numero_audios": 1000,
+  "rangos": [
+    18,
+    12,
+    7
+  ],
+  "numero_capas": 3,
+  "representacion_h": "DeepONMF_H3",
+  "iteraciones": 60,
+  "penalizacion_ortogonal": 0.05,
+  "semilla": 42,
+  "formas": {
+    "DeepONMF_W": [
+      1000,
+      126,
+      7
+    ],
+    "DeepONMF_H3": [
+      1000,
+      7,
+      212
+    ]
+  }
+}

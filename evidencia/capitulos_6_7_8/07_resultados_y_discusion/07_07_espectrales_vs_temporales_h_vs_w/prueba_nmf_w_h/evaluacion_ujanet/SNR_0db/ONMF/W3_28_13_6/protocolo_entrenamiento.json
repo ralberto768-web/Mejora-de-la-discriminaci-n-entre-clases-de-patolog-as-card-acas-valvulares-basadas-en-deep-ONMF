@@ -1,0 +1,18 @@
+{
+  "protocolo": "ultima_juan_ujanet_multiclase_v3_nndsvd_auditado",
+  "base": "SNR_0db",
+  "representacion": "ONMF_W3",
+  "distribucion": "28-13-6",
+  "numero_capas": 3,
+  "inicializacion_onmf": "nndsvd",
+  "entrada_ujanet": "matriz_W_final_ONMF",
+  "forma": [
+    1000,
+    126,
+    6
+  ],
+  "folds": 5,
+  "semilla": 42,
+  "epocas": 30,
+  "paciencia": 10
+}

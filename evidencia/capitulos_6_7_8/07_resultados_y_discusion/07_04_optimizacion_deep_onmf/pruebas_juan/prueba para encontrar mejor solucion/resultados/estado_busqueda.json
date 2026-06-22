@@ -1,0 +1,11 @@
+{
+  "ronda": 9,
+  "rondas_sin_mejora": 3,
+  "mejor_accuracy": 0.9813333333333333,
+  "mejor_distribucion": "16-4",
+  "finalizada": true,
+  "mejor_score": 0.9733333333333333,
+  "ultima_mejora": 0.0,
+  "configuraciones_evaluadas": 149,
+  "motivo_finalizacion": "Tres rondas consecutivas sin mejorar Accuracy."
+}

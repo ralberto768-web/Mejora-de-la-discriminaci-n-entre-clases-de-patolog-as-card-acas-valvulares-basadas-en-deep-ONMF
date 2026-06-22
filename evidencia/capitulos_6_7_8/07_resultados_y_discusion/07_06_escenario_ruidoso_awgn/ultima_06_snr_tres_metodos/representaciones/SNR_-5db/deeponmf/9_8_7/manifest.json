@@ -1,0 +1,18 @@
+{
+  "protocolo": "prueba_snr_tres_metodos_v1",
+  "base": "SNR_-5db",
+  "metodo": "DeepONMF",
+  "descripcion": "Deep-ONMF con configuracion 9-8-7",
+  "numero_audios": 1000,
+  "distribucion": "9-8-7",
+  "numero_capas": 3,
+  "inicializacion": "nndsvd",
+  "iteraciones": 60,
+  "penalizacion_ortogonal": 0.05,
+  "sin_regularizacion": false,
+  "matrices_guardadas": [
+    "H",
+    "W"
+  ],
+  "semilla": 42
+}

@@ -1,0 +1,10 @@
+{
+  "base": "original",
+  "numero_audios": 1000,
+  "distribucion": "16-8-4-2",
+  "numero_capas": 4,
+  "inicializacion_onmf": "nndsvd",
+  "iteraciones_onmf": 60,
+  "penalizacion_ortogonal": 0.05,
+  "semilla": 42
+}

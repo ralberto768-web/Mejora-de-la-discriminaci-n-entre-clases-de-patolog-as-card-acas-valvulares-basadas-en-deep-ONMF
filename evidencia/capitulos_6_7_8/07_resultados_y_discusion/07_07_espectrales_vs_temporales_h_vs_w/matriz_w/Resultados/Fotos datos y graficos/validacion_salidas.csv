@@ -1,0 +1,13 @@
+﻿comprobacion,esperado,observado,ok
+audios_validos,951,951,True
+filas_rasgos_nndsvd,951,951,True
+columnas_w_nndsvd,882,882,True
+formas_npz_nndsvd,126x7,951,True
+filas_rasgos_nndsvda,951,951,True
+columnas_w_nndsvda,882,882,True
+formas_npz_nndsvda,126x7,951,True
+filas_rasgos_nndsvdar,951,951,True
+columnas_w_nndsvdar,882,882,True
+formas_npz_nndsvdar,126x7,951,True
+metodos_comparados,7,7,True
+pdf_existe,si,True,True

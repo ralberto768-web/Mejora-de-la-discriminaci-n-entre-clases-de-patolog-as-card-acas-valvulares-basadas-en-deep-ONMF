@@ -1,0 +1,5 @@
+﻿distribucion,numero_capas,representacion,modo_rapido
+8,1,DeepONMF_H1,True
+32-2,2,DeepONMF_H2,True
+32-8-2,3,DeepONMF_H3,True
+32-13-5-2,4,DeepONMF_H4,True

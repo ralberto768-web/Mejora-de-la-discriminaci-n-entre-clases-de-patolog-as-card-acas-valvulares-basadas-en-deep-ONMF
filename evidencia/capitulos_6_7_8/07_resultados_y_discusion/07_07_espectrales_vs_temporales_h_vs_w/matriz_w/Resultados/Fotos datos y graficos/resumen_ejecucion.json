@@ -1,0 +1,17 @@
+{
+  "audios_validos": 951,
+  "audios_descartados": 49,
+  "metodos": [
+    "CNN",
+    "DWT",
+    "Deep-ONMF W por audio + NNDSVD",
+    "Deep-ONMF W por audio + NNDSVDa",
+    "Deep-ONMF W por audio + NNDSVDar",
+    "MFCC",
+    "STFT"
+  ],
+  "pdf": "C:\\Users\\armga\\OneDrive\\Escritorio\\TFG\\Programacion objetivo\\Matriz W\\Resultados\\Documento explicativo Matriz W.pdf",
+  "carpeta_datos_figuras": "C:\\Users\\armga\\OneDrive\\Escritorio\\TFG\\Programacion objetivo\\Matriz W\\Resultados\\Fotos datos y graficos",
+  "segundos_totales": 698.4977578001563,
+  "validacion_ok": true
+}

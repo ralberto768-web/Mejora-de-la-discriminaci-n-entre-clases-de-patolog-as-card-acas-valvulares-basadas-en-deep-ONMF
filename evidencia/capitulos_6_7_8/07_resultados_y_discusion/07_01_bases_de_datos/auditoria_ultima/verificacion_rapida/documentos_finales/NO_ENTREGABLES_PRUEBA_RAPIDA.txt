@@ -1,0 +1,17 @@
+Estos PDFs NO son entregables y NO deben usarse en la memoria.
+
+Se generaron con una prueba reducida de verificacion:
+
+- 2 audios por clase
+- 10 audios en total
+- 2 folds
+- 4 iteraciones ONMF
+- 2 epocas UjaNet
+- 1 arquitectura por profundidad
+
+Solo sirven para comprobar que el pipeline crea bases ruidosas, ejecuta ONMF de
+1 a 4 capas, entrena UjaNet y genera documentos.
+
+Los documentos validos se generaran en:
+
+C:\Users\armga\OneDrive\Escritorio\TFG\Ultima implementacio Juan\ULTIMA\documentos_finales

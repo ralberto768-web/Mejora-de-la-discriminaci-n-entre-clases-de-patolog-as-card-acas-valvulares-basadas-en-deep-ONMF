@@ -1,0 +1,3 @@
+﻿protocolo,muestras,tratamiento audios cortos,mejor fila,uso
+resultado8_deep_onmf_sin_descartar_menores_2s,1000,no se descartan; se rellenan con ceros hasta 2 s,resultado8_deep_onmf_sin_descartar_menores_2s__perfil_softmin_errores_f8,resultado f8 defendible y comparacion con inicializaciones del profesor
+Fiel al articulo,951,"se descartan menores de 2 s: 16 MR, 14 MS y 19 MVP",Deep-ONMF mejorado + NNDSVD,reproduccion metodologica estricta con 951 audios

@@ -1,0 +1,10 @@
+{
+  "worker": 4,
+  "numero_workers": 8,
+  "asignadas": 46,
+  "completadas": 6,
+  "reutilizadas_en_esta_ejecucion": 0,
+  "calculadas_en_esta_ejecucion": 4,
+  "ultima": "30-13-6",
+  "sentido": "decreciente"
+}

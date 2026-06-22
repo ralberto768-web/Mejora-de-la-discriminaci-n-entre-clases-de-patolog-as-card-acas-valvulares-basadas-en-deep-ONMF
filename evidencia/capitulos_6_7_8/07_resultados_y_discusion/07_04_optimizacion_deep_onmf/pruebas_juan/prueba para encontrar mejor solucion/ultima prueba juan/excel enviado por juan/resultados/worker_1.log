@@ -1,0 +1,831 @@
+[2-32] Deep-ONMF 800/1000
+[2-32] Deep-ONMF 900/1000
+[2-32] Deep-ONMF 1000/1000
+[worker 1] 1/93 creciente 2-32
+[worker 1] 2/93 creciente 2-5-13-32
+[worker 1] 3/93 creciente 4-11-32
+[worker 1] 4/93 creciente 6-32
+[worker 1] 5/93 creciente 6-10-18-32
+[8-16-32] UjaNet-H fold 5/5
+[worker 1] 6/93 creciente 8-16-32
+[10-32] UjaNet-H fold 3/5
+[10-32] UjaNet-H fold 4/5
+[10-32] UjaNet-H fold 5/5
+[worker 1] 7/93 creciente 10-32
+[10-15-22-32] Deep-ONMF 1/1000
+[10-15-22-32] Deep-ONMF 100/1000
+[10-15-22-32] Deep-ONMF 200/1000
+[10-15-22-32] Deep-ONMF 300/1000
+[10-15-22-32] Deep-ONMF 400/1000
+[10-15-22-32] Deep-ONMF 500/1000
+[10-15-22-32] Deep-ONMF 600/1000
+[10-15-22-32] Deep-ONMF 700/1000
+[10-15-22-32] Deep-ONMF 800/1000
+[10-15-22-32] Deep-ONMF 900/1000
+[10-15-22-32] Deep-ONMF 1000/1000
+[10-15-22-32] UjaNet-H fold 1/5
+[10-15-22-32] UjaNet-H fold 2/5
+[10-15-22-32] UjaNet-H fold 3/5
+[10-15-22-32] UjaNet-H fold 4/5
+[10-15-22-32] UjaNet-H fold 5/5
+[worker 1] 8/93 creciente 10-15-22-32
+[2-8-30] Deep-ONMF 1/1000
+[2-8-30] Deep-ONMF 100/1000
+[2-8-30] Deep-ONMF 200/1000
+[2-8-30] Deep-ONMF 300/1000
+[2-8-30] Deep-ONMF 400/1000
+[2-8-30] Deep-ONMF 500/1000
+[2-8-30] Deep-ONMF 600/1000
+[2-8-30] Deep-ONMF 700/1000
+[2-8-30] Deep-ONMF 800/1000
+[2-8-30] Deep-ONMF 900/1000
+[2-8-30] Deep-ONMF 1000/1000
+[2-8-30] UjaNet-H fold 1/5
+[2-8-30] UjaNet-H fold 2/5
+[2-8-30] UjaNet-H fold 3/5
+[2-8-30] UjaNet-H fold 4/5
+[2-8-30] UjaNet-H fold 5/5
+[worker 1] 9/93 creciente 2-8-30
+[4-30] Deep-ONMF 1/1000
+[4-30] Deep-ONMF 100/1000
+[4-30] Deep-ONMF 200/1000
+[4-30] Deep-ONMF 300/1000
+[4-30] Deep-ONMF 400/1000
+[4-30] Deep-ONMF 500/1000
+[4-30] Deep-ONMF 600/1000
+[4-30] Deep-ONMF 700/1000
+[4-30] Deep-ONMF 800/1000
+[4-30] Deep-ONMF 900/1000
+[4-30] Deep-ONMF 1000/1000
+[4-30] UjaNet-H fold 1/5
+[4-30] UjaNet-H fold 2/5
+[4-30] UjaNet-H fold 3/5
+[4-30] UjaNet-H fold 4/5
+[4-30] UjaNet-H fold 5/5
+[worker 1] 10/93 creciente 4-30
+[4-8-15-30] Deep-ONMF 1/1000
+[4-8-15-30] Deep-ONMF 100/1000
+[4-8-15-30] Deep-ONMF 200/1000
+[4-8-15-30] Deep-ONMF 300/1000
+[4-8-15-30] Deep-ONMF 400/1000
+[4-8-15-30] Deep-ONMF 500/1000
+[4-8-15-30] Deep-ONMF 600/1000
+[4-8-15-30] Deep-ONMF 700/1000
+[4-8-15-30] Deep-ONMF 800/1000
+[4-8-15-30] Deep-ONMF 900/1000
+[4-8-15-30] Deep-ONMF 1000/1000
+[4-8-15-30] UjaNet-H fold 1/5
+[4-8-15-30] UjaNet-H fold 2/5
+[4-8-15-30] UjaNet-H fold 3/5
+[4-8-15-30] UjaNet-H fold 4/5
+[4-8-15-30] UjaNet-H fold 5/5
+[worker 1] 11/93 creciente 4-8-15-30
+[6-13-30] Deep-ONMF 1/1000
+[6-13-30] Deep-ONMF 100/1000
+[6-13-30] Deep-ONMF 200/1000
+[6-13-30] Deep-ONMF 300/1000
+[6-13-30] Deep-ONMF 400/1000
+[6-13-30] Deep-ONMF 500/1000
+[6-13-30] Deep-ONMF 600/1000
+[6-13-30] Deep-ONMF 700/1000
+[6-13-30] Deep-ONMF 800/1000
+[6-13-30] Deep-ONMF 900/1000
+[6-13-30] Deep-ONMF 1000/1000
+[6-13-30] UjaNet-H fold 1/5
+[6-13-30] UjaNet-H fold 2/5
+[6-13-30] UjaNet-H fold 3/5
+[6-13-30] UjaNet-H fold 4/5
+[6-13-30] UjaNet-H fold 5/5
+[worker 1] 12/93 creciente 6-13-30
+[8-30] Deep-ONMF 1/1000
+[8-30] Deep-ONMF 100/1000
+[8-30] Deep-ONMF 200/1000
+[8-30] Deep-ONMF 300/1000
+[8-30] Deep-ONMF 400/1000
+[8-30] Deep-ONMF 500/1000
+[8-30] Deep-ONMF 600/1000
+[8-30] Deep-ONMF 700/1000
+[8-30] Deep-ONMF 800/1000
+[8-30] Deep-ONMF 900/1000
+[8-30] Deep-ONMF 1000/1000
+[8-30] UjaNet-H fold 1/5
+[8-30] UjaNet-H fold 2/5
+[8-30] UjaNet-H fold 3/5
+[8-30] UjaNet-H fold 4/5
+[8-30] UjaNet-H fold 5/5
+[worker 1] 13/93 creciente 8-30
+[8-12-19-30] Deep-ONMF 1/1000
+[8-12-19-30] Deep-ONMF 100/1000
+[8-12-19-30] Deep-ONMF 200/1000
+[8-12-19-30] Deep-ONMF 300/1000
+[8-12-19-30] Deep-ONMF 400/1000
+[8-12-19-30] Deep-ONMF 500/1000
+[8-12-19-30] Deep-ONMF 600/1000
+[8-12-19-30] Deep-ONMF 700/1000
+[8-12-19-30] Deep-ONMF 800/1000
+[8-12-19-30] Deep-ONMF 900/1000
+[8-12-19-30] Deep-ONMF 1000/1000
+[8-12-19-30] UjaNet-H fold 1/5
+[8-12-19-30] UjaNet-H fold 2/5
+[8-12-19-30] UjaNet-H fold 3/5
+[8-12-19-30] UjaNet-H fold 4/5
+[8-12-19-30] UjaNet-H fold 5/5
+[worker 1] 14/93 creciente 8-12-19-30
+[10-17-30] Deep-ONMF 1/1000
+[10-17-30] Deep-ONMF 100/1000
+[10-17-30] Deep-ONMF 200/1000
+[10-17-30] Deep-ONMF 300/1000
+[10-17-30] Deep-ONMF 400/1000
+[10-17-30] Deep-ONMF 500/1000
+[10-17-30] Deep-ONMF 600/1000
+[10-17-30] Deep-ONMF 700/1000
+[10-17-30] Deep-ONMF 800/1000
+[10-17-30] Deep-ONMF 900/1000
+[10-17-30] Deep-ONMF 1000/1000
+[10-17-30] UjaNet-H fold 1/5
+[10-17-30] UjaNet-H fold 2/5
+[10-17-30] UjaNet-H fold 3/5
+[10-17-30] UjaNet-H fold 4/5
+[10-17-30] UjaNet-H fold 5/5
+[worker 1] 15/93 creciente 10-17-30
+[2-28] Deep-ONMF 1/1000
+[2-28] Deep-ONMF 100/1000
+[2-28] Deep-ONMF 200/1000
+[2-28] Deep-ONMF 300/1000
+[2-28] Deep-ONMF 400/1000
+[2-28] Deep-ONMF 500/1000
+[2-28] Deep-ONMF 600/1000
+[2-28] Deep-ONMF 700/1000
+[2-28] Deep-ONMF 800/1000
+[2-28] Deep-ONMF 900/1000
+[2-28] Deep-ONMF 1000/1000
+[2-28] UjaNet-H fold 1/5
+[2-28] UjaNet-H fold 2/5
+[2-28] UjaNet-H fold 3/5
+[2-28] UjaNet-H fold 4/5
+[2-28] UjaNet-H fold 5/5
+[worker 1] 16/93 creciente 2-28
+[2-5-12-28] Deep-ONMF 1/1000
+[2-5-12-28] Deep-ONMF 100/1000
+[2-5-12-28] Deep-ONMF 200/1000
+[2-5-12-28] Deep-ONMF 300/1000
+[2-5-12-28] Deep-ONMF 400/1000
+[2-5-12-28] Deep-ONMF 500/1000
+[2-5-12-28] Deep-ONMF 600/1000
+[2-5-12-28] Deep-ONMF 700/1000
+[2-5-12-28] Deep-ONMF 800/1000
+[2-5-12-28] Deep-ONMF 900/1000
+[2-5-12-28] Deep-ONMF 1000/1000
+[2-5-12-28] UjaNet-H fold 1/5
+[2-5-12-28] UjaNet-H fold 2/5
+[2-5-12-28] UjaNet-H fold 3/5
+[2-5-12-28] UjaNet-H fold 4/5
+[2-5-12-28] UjaNet-H fold 5/5
+[worker 1] 17/93 creciente 2-5-12-28
+[4-11-28] Deep-ONMF 1/1000
+[4-11-28] Deep-ONMF 100/1000
+[4-11-28] Deep-ONMF 200/1000
+[4-11-28] Deep-ONMF 300/1000
+[4-11-28] Deep-ONMF 400/1000
+[4-11-28] Deep-ONMF 500/1000
+[4-11-28] Deep-ONMF 600/1000
+[4-11-28] Deep-ONMF 700/1000
+[4-11-28] Deep-ONMF 800/1000
+[4-11-28] Deep-ONMF 900/1000
+[4-11-28] Deep-ONMF 1000/1000
+[4-11-28] UjaNet-H fold 1/5
+[4-11-28] UjaNet-H fold 2/5
+[4-11-28] UjaNet-H fold 3/5
+[4-11-28] UjaNet-H fold 4/5
+[4-11-28] UjaNet-H fold 5/5
+[worker 1] 18/93 creciente 4-11-28
+[6-28] Deep-ONMF 1/1000
+[6-28] Deep-ONMF 100/1000
+[6-28] Deep-ONMF 200/1000
+[6-28] Deep-ONMF 300/1000
+[6-28] Deep-ONMF 400/1000
+[6-28] Deep-ONMF 500/1000
+[6-28] Deep-ONMF 600/1000
+[6-28] Deep-ONMF 700/1000
+[6-28] Deep-ONMF 800/1000
+[6-28] Deep-ONMF 900/1000
+[6-28] Deep-ONMF 1000/1000
+[6-28] UjaNet-H fold 1/5
+[6-28] UjaNet-H fold 2/5
+[6-28] UjaNet-H fold 3/5
+[6-28] UjaNet-H fold 4/5
+[6-28] UjaNet-H fold 5/5
+[worker 1] 19/93 creciente 6-28
+[6-10-17-28] Deep-ONMF 1/1000
+[6-10-17-28] Deep-ONMF 100/1000
+[6-10-17-28] Deep-ONMF 200/1000
+[6-10-17-28] Deep-ONMF 300/1000
+[6-10-17-28] Deep-ONMF 400/1000
+[6-10-17-28] Deep-ONMF 500/1000
+[6-10-17-28] Deep-ONMF 600/1000
+[6-10-17-28] Deep-ONMF 700/1000
+[6-10-17-28] Deep-ONMF 800/1000
+[6-10-17-28] Deep-ONMF 900/1000
+[6-10-17-28] Deep-ONMF 1000/1000
+[6-10-17-28] UjaNet-H fold 1/5
+[6-10-17-28] UjaNet-H fold 2/5
+[6-10-17-28] UjaNet-H fold 3/5
+[6-10-17-28] UjaNet-H fold 4/5
+[6-10-17-28] UjaNet-H fold 5/5
+[worker 1] 20/93 creciente 6-10-17-28
+[8-15-28] Deep-ONMF 1/1000
+[8-15-28] Deep-ONMF 100/1000
+[8-15-28] Deep-ONMF 200/1000
+[8-15-28] Deep-ONMF 300/1000
+[8-15-28] Deep-ONMF 400/1000
+[8-15-28] Deep-ONMF 500/1000
+[8-15-28] Deep-ONMF 600/1000
+[8-15-28] Deep-ONMF 700/1000
+[8-15-28] Deep-ONMF 800/1000
+[8-15-28] Deep-ONMF 900/1000
+[8-15-28] Deep-ONMF 1000/1000
+[8-15-28] UjaNet-H fold 1/5
+[8-15-28] UjaNet-H fold 2/5
+[8-15-28] UjaNet-H fold 3/5
+[8-15-28] UjaNet-H fold 4/5
+[8-15-28] UjaNet-H fold 5/5
+[worker 1] 21/93 creciente 8-15-28
+[10-28] Deep-ONMF 1/1000
+[10-28] Deep-ONMF 100/1000
+[10-28] Deep-ONMF 200/1000
+[10-28] Deep-ONMF 300/1000
+[10-28] Deep-ONMF 400/1000
+[10-28] Deep-ONMF 500/1000
+[10-28] Deep-ONMF 600/1000
+[10-28] Deep-ONMF 700/1000
+[10-28] Deep-ONMF 800/1000
+[10-28] Deep-ONMF 900/1000
+[10-28] Deep-ONMF 1000/1000
+[10-28] UjaNet-H fold 1/5
+[10-28] UjaNet-H fold 2/5
+[10-28] UjaNet-H fold 3/5
+[10-28] UjaNet-H fold 4/5
+[10-28] UjaNet-H fold 5/5
+[worker 1] 22/93 creciente 10-28
+[10-14-20-28] Deep-ONMF 1/1000
+[10-14-20-28] Deep-ONMF 100/1000
+[10-14-20-28] Deep-ONMF 200/1000
+[10-14-20-28] Deep-ONMF 300/1000
+[10-14-20-28] Deep-ONMF 400/1000
+[10-14-20-28] Deep-ONMF 500/1000[worker 1] 1/93 decreciente 32-8-2
+[worker 1] 2/93 decreciente 32-16-8-4
+[worker 1] 3/93 decreciente 32-8
+[worker 1] 4/93 decreciente 32-18-10
+[worker 1] 5/93 decreciente 30-12-5-2
+[worker 1] 6/93 decreciente 30-6
+[worker 1] 7/93 decreciente 30-15-8
+[worker 1] 8/93 decreciente 30-21-14-10
+[worker 1] 9/93 decreciente 28-4
+[worker 1] 10/93 decreciente 28-13-6
+[worker 1] 11/93 decreciente 28-18-12-8
+[worker 1] 12/93 decreciente 26-2
+[worker 1] 13/93 decreciente 26-10-4
+[worker 1] 14/93 decreciente 26-16-10-6
+[worker 1] 15/93 decreciente 26-10
+[worker 1] 16/93 decreciente 24-7-2
+[worker 1] 17/93 decreciente 24-13-7-4
+[worker 1] 18/93 decreciente 24-8
+[worker 1] 19/93 decreciente 24-15-10
+[worker 1] 20/93 decreciente 22-10-4-2
+[worker 1] 21/93 decreciente 22-6
+[worker 1] 22/93 decreciente 22-13-8
+[worker 1] 23/93 decreciente 22-17-13-10
+[worker 1] 24/93 decreciente 20-4
+[worker 1] 25/93 decreciente 20-11-6
+[worker 1] 26/93 decreciente 20-15-11-8
+[worker 1] 27/93 decreciente 18-2
+[worker 1] 28/93 decreciente 18-8-4
+[worker 1] 29/93 decreciente 18-12-9-6
+[worker 1] 30/93 decreciente 18-10
+[worker 1] 31/93 decreciente 16-6-2
+[worker 1] 32/93 decreciente 16-10-6-4
+[worker 1] 33/93 decreciente 16-8
+[worker 1] 34/93 decreciente 16-13-10
+[worker 1] 35/93 decreciente 14-7-4-2
+[worker 1] 36/93 decreciente 14-6
+[worker 1] 37/93 decreciente 14-11-8
+[worker 1] 38/93 decreciente 14-13-11-10
+[worker 1] 39/93 decreciente 12-4
+[worker 1] 40/93 decreciente 12-8-6
+[worker 1] 41/93 decreciente 12-10-9-8
+[worker 1] 42/93 decreciente 10-2
+[worker 1] 43/93 decreciente 10-6-4
+[worker 1] 44/93 decreciente 10-8-7-6
+[8-2] Deep-ONMF 1/1000
+[8-2] Deep-ONMF 100/1000
+[8-2] Deep-ONMF 200/1000
+[8-2] Deep-ONMF 300/1000
+[8-2] Deep-ONMF 400/1000
+[8-2] Deep-ONMF 500/1000
+[8-2] Deep-ONMF 600/1000
+[8-2] Deep-ONMF 700/1000
+[8-2] Deep-ONMF 800/1000
+[8-2] Deep-ONMF 900/1000
+[8-2] Deep-ONMF 1000/1000
+[8-2] UjaNet-H fold 1/5
+[8-2] UjaNet-H fold 2/5
+[8-2] UjaNet-H fold 3/5
+[8-2] UjaNet-H fold 4/5
+[8-2] UjaNet-H fold 5/5
+[worker 1] 45/93 decreciente 8-2
+[worker 1] 46/93 decreciente 8-6-4
+[8-7-7-6] Deep-ONMF 1/1000
+[8-7-7-6] Deep-ONMF 100/1000
+[8-7-7-6] Deep-ONMF 200/1000
+[8-7-7-6] Deep-ONMF 300/1000
+[8-7-7-6] Deep-ONMF 400/1000
+[8-7-7-6] Deep-ONMF 500/1000
+[8-7-7-6] Deep-ONMF 600/1000
+[8-7-7-6] Deep-ONMF 700/1000
+[8-7-7-6] Deep-ONMF 800/1000
+[8-7-7-6] Deep-ONMF 900/1000
+[8-7-7-6] Deep-ONMF 1000/1000
+[8-7-7-6] UjaNet-H fold 1/5
+[8-7-7-6] UjaNet-H fold 2/5
+[8-7-7-6] UjaNet-H fold 3/5
+[8-7-7-6] UjaNet-H fold 4/5
+[8-7-7-6] UjaNet-H fold 5/5
+[worker 1] 47/93 decreciente 8-7-7-6
+[worker 1] 48/93 creciente 4-32
+[worker 1] 49/93 creciente 6-14-32
+[worker 1] 50/93 creciente 8-13-20-32
+[worker 1] 51/93 creciente 2-30
+[worker 1] 52/93 creciente 4-11-30
+[worker 1] 53/93 creciente 6-10-18-30
+[worker 1] 54/93 creciente 10-30
+[worker 1] 55/93 creciente 2-7-28
+[worker 1] 56/93 creciente 4-8-15-28
+[worker 1] 57/93 creciente 8-28
+[worker 1] 58/93 creciente 10-17-28
+[worker 1] 59/93 creciente 2-5-11-26
+[worker 1] 60/93 creciente 6-26
+[worker 1] 61/93 creciente 8-14-26
+[worker 1] 62/93 creciente 10-14-19-26
+[worker 1] 63/93 creciente 4-24
+[worker 1] 64/93 creciente 6-12-24
+[worker 1] 65/93 creciente 8-12-17-24
+[worker 1] 66/93 creciente 2-22
+[4-9-22] Deep-ONMF 1/1000
+[4-9-22] Deep-ONMF 100/1000
+[4-9-22] Deep-ONMF 200/1000
+[4-9-22] Deep-ONMF 300/1000
+[4-9-22] Deep-ONMF 400/1000
+[4-9-22] Deep-ONMF 500/1000
+[4-9-22] Deep-ONMF 600/1000
+[4-9-22] Deep-ONMF 700/1000
+[4-9-22] Deep-ONMF 800/1000
+[4-9-22] Deep-ONMF 900/1000
+[4-9-22] Deep-ONMF 1000/1000
+[4-9-22] UjaNet-H fold 1/5
+[4-9-22] UjaNet-H fold 2/5
+[4-9-22] UjaNet-H fold 3/5
+[4-9-22] UjaNet-H fold 4/5
+[4-9-22] UjaNet-H fold 5/5
+[worker 1] 67/93 creciente 4-9-22
+[6-9-14-22] Deep-ONMF 1/1000
+[6-9-14-22] Deep-ONMF 100/1000
+[6-9-14-22] Deep-ONMF 200/1000
+[6-9-14-22] Deep-ONMF 300/1000
+[6-9-14-22] Deep-ONMF 400/1000
+[6-9-14-22] Deep-ONMF 500/1000
+[6-9-14-22] Deep-ONMF 600/1000
+[6-9-14-22] Deep-ONMF 700/1000
+[6-9-14-22] Deep-ONMF 800/1000
+[6-9-14-22] Deep-ONMF 900/1000
+[6-9-14-22] Deep-ONMF 1000/1000
+[6-9-14-22] UjaNet-H fold 1/5
+[6-9-14-22] UjaNet-H fold 2/5
+[6-9-14-22] UjaNet-H fold 3/5
+[6-9-14-22] UjaNet-H fold 4/5
+[6-9-14-22] UjaNet-H fold 5/5
+[worker 1] 68/93 creciente 6-9-14-22
+[10-22] Deep-ONMF 1/1000
+[10-22] Deep-ONMF 100/1000
+[10-22] Deep-ONMF 200/1000
+[10-22] Deep-ONMF 300/1000
+[10-22] Deep-ONMF 400/1000
+[10-22] Deep-ONMF 500/1000
+[10-22] Deep-ONMF 600/1000
+[10-22] Deep-ONMF 700/1000
+[10-22] Deep-ONMF 800/1000
+[10-22] Deep-ONMF 900/1000
+[10-22] Deep-ONMF 1000/1000
+[10-22] UjaNet-H fold 1/5
+[10-22] UjaNet-H fold 2/5
+[10-22] UjaNet-H fold 3/5
+[10-22] UjaNet-H fold 4/5
+[10-22] UjaNet-H fold 5/5
+[worker 1] 69/93 creciente 10-22
+[2-6-20] Deep-ONMF 1/1000
+[2-6-20] Deep-ONMF 100/1000
+[2-6-20] Deep-ONMF 200/1000
+[2-6-20] Deep-ONMF 300/1000
+[2-6-20] Deep-ONMF 400/1000
+[2-6-20] Deep-ONMF 500/1000
+[2-6-20] Deep-ONMF 600/1000
+[2-6-20] Deep-ONMF 700/1000
+[2-6-20] Deep-ONMF 800/1000
+[2-6-20] Deep-ONMF 900/1000
+[2-6-20] Deep-ONMF 1000/1000
+[2-6-20] UjaNet-H fold 1/5
+[2-6-20] UjaNet-H fold 2/5
+[2-6-20] UjaNet-H fold 3/5
+[2-6-20] UjaNet-H fold 4/5
+[2-6-20] UjaNet-H fold 5/5
+[worker 1] 70/93 creciente 2-6-20
+[4-7-12-20] Deep-ONMF 1/1000
+[4-7-12-20] Deep-ONMF 100/1000
+[4-7-12-20] Deep-ONMF 200/1000
+[4-7-12-20] Deep-ONMF 300/1000
+[4-7-12-20] Deep-ONMF 400/1000
+[4-7-12-20] Deep-ONMF 500/1000
+[4-7-12-20] Deep-ONMF 600/1000
+[4-7-12-20] Deep-ONMF 700/1000
+[4-7-12-20] Deep-ONMF 800/1000
+[4-7-12-20] Deep-ONMF 900/1000
+[4-7-12-20] Deep-ONMF 1000/1000
+[4-7-12-20] UjaNet-H fold 1/5
+[4-7-12-20] UjaNet-H fold 2/5
+[4-7-12-20] UjaNet-H fold 3/5
+[4-7-12-20] UjaNet-H fold 4/5
+[4-7-12-20] UjaNet-H fold 5/5
+[worker 1] 71/93 creciente 4-7-12-20
+[8-20] Deep-ONMF 1/1000
+[8-20] Deep-ONMF 100/1000
+[8-20] Deep-ONMF 200/1000
+[8-20] Deep-ONMF 300/1000
+[8-20] Deep-ONMF 400/1000
+[8-20] Deep-ONMF 500/1000
+[8-20] Deep-ONMF 600/1000
+[8-20] Deep-ONMF 700/1000
+[8-20] Deep-ONMF 800/1000
+[8-20] Deep-ONMF 900/1000
+[8-20] Deep-ONMF 1000/1000
+[8-20] UjaNet-H fold 1/5
+[8-20] UjaNet-H fold 2/5
+[8-20] UjaNet-H fold 3/5
+[8-20] UjaNet-H fold 4/5
+[8-20] UjaNet-H fold 5/5
+[worker 1] 72/93 creciente 8-20
+[10-14-20] Deep-ONMF 1/1000
+[10-14-20] Deep-ONMF 100/1000
+[10-14-20] Deep-ONMF 200/1000
+[10-14-20] Deep-ONMF 300/1000
+[10-14-20] Deep-ONMF 400/1000
+[10-14-20] Deep-ONMF 500/1000
+[10-14-20] Deep-ONMF 600/1000
+[10-14-20] Deep-ONMF 700/1000
+[10-14-20] Deep-ONMF 800/1000
+[10-14-20] Deep-ONMF 900/1000
+[10-14-20] Deep-ONMF 1000/1000
+[10-14-20] UjaNet-H fold 1/5
+[10-14-20] UjaNet-H fold 2/5
+[10-14-20] UjaNet-H fold 3/5
+[10-14-20] UjaNet-H fold 4/5
+[10-14-20] UjaNet-H fold 5/5
+[worker 1] 73/93 creciente 10-14-20
+[2-4-9-18] Deep-ONMF 1/1000
+[2-4-9-18] Deep-ONMF 100/1000
+[2-4-9-18] Deep-ONMF 200/1000
+[2-4-9-18] Deep-ONMF 300/1000
+[2-4-9-18] Deep-ONMF 400/1000
+[2-4-9-18] Deep-ONMF 500/1000
+[2-4-9-18] Deep-ONMF 600/1000
+[2-4-9-18] Deep-ONMF 700/1000
+[2-4-9-18] Deep-ONMF 800/1000
+[2-4-9-18] Deep-ONMF 900/1000
+[2-4-9-18] Deep-ONMF 1000/1000
+[2-4-9-18] UjaNet-H fold 1/5
+[2-4-9-18] UjaNet-H fold 2/5
+[2-4-9-18] UjaNet-H fold 3/5
+[2-4-9-18] UjaNet-H fold 4/5
+[2-4-9-18] UjaNet-H fold 5/5
+[worker 1] 74/93 creciente 2-4-9-18
+[6-18] Deep-ONMF 1/1000
+[6-18] Deep-ONMF 100/1000
+[6-18] Deep-ONMF 200/1000
+[6-18] Deep-ONMF 300/1000
+[6-18] Deep-ONMF 400/1000
+[6-18] Deep-ONMF 500/1000
+[6-18] Deep-ONMF 600/1000
+[6-18] Deep-ONMF 700/1000
+[6-18] Deep-ONMF 800/1000
+[6-18] Deep-ONMF 900/1000
+[6-18] Deep-ONMF 1000/1000
+[6-18] UjaNet-H fold 1/5
+[6-18] UjaNet-H fold 2/5
+[6-18] UjaNet-H fold 3/5
+[6-18] UjaNet-H fold 4/5
+[6-18] UjaNet-H fold 5/5
+[worker 1] 75/93 creciente 6-18
+[8-12-18] Deep-ONMF 1/1000
+[8-12-18] Deep-ONMF 100/1000
+[8-12-18] Deep-ONMF 200/1000
+[8-12-18] Deep-ONMF 300/1000
+[8-12-18] Deep-ONMF 400/1000
+[8-12-18] Deep-ONMF 500/1000
+[8-12-18] Deep-ONMF 600/1000
+[8-12-18] Deep-ONMF 700/1000
+[8-12-18] Deep-ONMF 800/1000
+[8-12-18] Deep-ONMF 900/1000
+[8-12-18] Deep-ONMF 1000/1000
+[8-12-18] UjaNet-H fold 1/5
+[8-12-18] UjaNet-H fold 2/5
+[8-12-18] UjaNet-H fold 3/5
+[8-12-18] UjaNet-H fold 4/5
+[8-12-18] UjaNet-H fold 5/5
+[worker 1] 76/93 creciente 8-12-18
+[10-12-15-18] Deep-ONMF 1/1000
+[10-12-15-18] Deep-ONMF 100/1000
+[10-12-15-18] Deep-ONMF 200/1000
+[10-12-15-18] Deep-ONMF 300/1000
+[10-12-15-18] Deep-ONMF 400/1000
+[10-12-15-18] Deep-ONMF 500/1000
+[10-12-15-18] Deep-ONMF 600/1000
+[10-12-15-18] Deep-ONMF 700/1000
+[10-12-15-18] Deep-ONMF 800/1000
+[10-12-15-18] Deep-ONMF 900/1000
+[10-12-15-18] Deep-ONMF 1000/1000
+[10-12-15-18] UjaNet-H fold 1/5
+[10-12-15-18] UjaNet-H fold 2/5
+[10-12-15-18] UjaNet-H fold 3/5
+[10-12-15-18] UjaNet-H fold 4/5
+[10-12-15-18] UjaNet-H fold 5/5
+[worker 1] 77/93 creciente 10-12-15-18
+[4-16] Deep-ONMF 1/1000
+[4-16] Deep-ONMF 100/1000
+[4-16] Deep-ONMF 200/1000
+[4-16] Deep-ONMF 300/1000
+[4-16] Deep-ONMF 400/1000
+[4-16] Deep-ONMF 500/1000
+[4-16] Deep-ONMF 600/1000
+[4-16] Deep-ONMF 700/1000
+[4-16] Deep-ONMF 800/1000
+[4-16] Deep-ONMF 900/1000
+[4-16] Deep-ONMF 1000/1000
+[4-16] UjaNet-H fold 1/5
+[4-16] UjaNet-H fold 2/5
+[4-16] UjaNet-H fold 3/5
+[4-16] UjaNet-H fold 4/5
+[4-16] UjaNet-H fold 5/5
+[worker 1] 78/93 creciente 4-16
+[6-10-16] Deep-ONMF 1/1000
+[6-10-16] Deep-ONMF 100/1000
+[6-10-16] Deep-ONMF 200/1000
+[6-10-16] Deep-ONMF 300/1000
+[6-10-16] Deep-ONMF 400/1000
+[6-10-16] Deep-ONMF 500/1000
+[6-10-16] Deep-ONMF 600/1000
+[6-10-16] Deep-ONMF 700/1000
+[6-10-16] Deep-ONMF 800/1000
+[6-10-16] Deep-ONMF 900/1000
+[6-10-16] Deep-ONMF 1000/1000
+[6-10-16] UjaNet-H fold 1/5
+[6-10-16] UjaNet-H fold 2/5
+[6-10-16] UjaNet-H fold 3/5
+[6-10-16] UjaNet-H fold 4/5
+[6-10-16] UjaNet-H fold 5/5
+[worker 1] 79/93 creciente 6-10-16
+[8-10-13-16] Deep-ONMF 1/1000
+[8-10-13-16] Deep-ONMF 100/1000
+[8-10-13-16] Deep-ONMF 200/1000
+[8-10-13-16] Deep-ONMF 300/1000
+[8-10-13-16] Deep-ONMF 400/1000
+[8-10-13-16] Deep-ONMF 500/1000
+[8-10-13-16] Deep-ONMF 600/1000
+[8-10-13-16] Deep-ONMF 700/1000
+[8-10-13-16] Deep-ONMF 800/1000
+[8-10-13-16] Deep-ONMF 900/1000
+[8-10-13-16] Deep-ONMF 1000/1000
+[8-10-13-16] UjaNet-H fold 1/5
+[8-10-13-16] UjaNet-H fold 2/5
+[8-10-13-16] UjaNet-H fold 3/5
+[8-10-13-16] UjaNet-H fold 4/5
+[8-10-13-16] UjaNet-H fold 5/5
+[worker 1] 80/93 creciente 8-10-13-16
+[2-14] Deep-ONMF 1/1000
+[2-14] Deep-ONMF 100/1000
+[2-14] Deep-ONMF 200/1000
+[2-14] Deep-ONMF 300/1000
+[2-14] Deep-ONMF 400/1000
+[2-14] Deep-ONMF 500/1000
+[2-14] Deep-ONMF 600/1000
+[2-14] Deep-ONMF 700/1000
+[2-14] Deep-ONMF 800/1000
+[2-14] Deep-ONMF 900/1000
+[2-14] Deep-ONMF 1000/1000
+[2-14] UjaNet-H fold 1/5
+[2-14] UjaNet-H fold 2/5
+[2-14] UjaNet-H fold 3/5
+[2-14] UjaNet-H fold 4/5
+[2-14] UjaNet-H fold 5/5
+[worker 1] 81/93 creciente 2-14
+[4-7-14] Deep-ONMF 1/1000
+[4-7-14] Deep-ONMF 100/1000
+[4-7-14] Deep-ONMF 200/1000
+[4-7-14] Deep-ONMF 300/1000
+[4-7-14] Deep-ONMF 400/1000
+[4-7-14] Deep-ONMF 500/1000
+[4-7-14] Deep-ONMF 600/1000
+[4-7-14] Deep-ONMF 700/1000
+[4-7-14] Deep-ONMF 800/1000
+[4-7-14] Deep-ONMF 900/1000
+[4-7-14] Deep-ONMF 1000/1000
+[4-7-14] UjaNet-H fold 1/5
+[4-7-14] UjaNet-H fold 2/5
+[4-7-14] UjaNet-H fold 3/5
+[4-7-14] UjaNet-H fold 4/5
+[4-7-14] UjaNet-H fold 5/5
+[worker 1] 82/93 creciente 4-7-14
+[6-8-11-14] Deep-ONMF 1/1000
+[6-8-11-14] Deep-ONMF 100/1000
+[6-8-11-14] Deep-ONMF 200/1000
+[6-8-11-14] Deep-ONMF 300/1000
+[6-8-11-14] Deep-ONMF 400/1000
+[6-8-11-14] Deep-ONMF 500/1000
+[6-8-11-14] Deep-ONMF 600/1000
+[6-8-11-14] Deep-ONMF 700/1000
+[6-8-11-14] Deep-ONMF 800/1000
+[6-8-11-14] Deep-ONMF 900/1000
+[6-8-11-14] Deep-ONMF 1000/1000
+[6-8-11-14] UjaNet-H fold 1/5
+[6-8-11-14] UjaNet-H fold 2/5
+[6-8-11-14] UjaNet-H fold 3/5
+[6-8-11-14] UjaNet-H fold 4/5
+[6-8-11-14] UjaNet-H fold 5/5
+[worker 1] 83/93 creciente 6-8-11-14
+[10-14] Deep-ONMF 1/1000
+[10-14] Deep-ONMF 100/1000
+[10-14] Deep-ONMF 200/1000
+[10-14] Deep-ONMF 300/1000
+[10-14] Deep-ONMF 400/1000
+[10-14] Deep-ONMF 500/1000
+[10-14] Deep-ONMF 600/1000
+[10-14] Deep-ONMF 700/1000
+[10-14] Deep-ONMF 800/1000
+[10-14] Deep-ONMF 900/1000
+[10-14] Deep-ONMF 1000/1000
+[10-14] UjaNet-H fold 1/5
+[10-14] UjaNet-H fold 2/5
+[10-14] UjaNet-H fold 3/5
+[10-14] UjaNet-H fold 4/5
+[10-14] UjaNet-H fold 5/5
+[worker 1] 84/93 creciente 10-14
+[2-5-12] Deep-ONMF 1/1000
+[2-5-12] Deep-ONMF 100/1000
+[2-5-12] Deep-ONMF 200/1000
+[2-5-12] Deep-ONMF 300/1000
+[2-5-12] Deep-ONMF 400/1000
+[2-5-12] Deep-ONMF 500/1000
+[2-5-12] Deep-ONMF 600/1000
+[2-5-12] Deep-ONMF 700/1000
+[2-5-12] Deep-ONMF 800/1000
+[2-5-12] Deep-ONMF 900/1000
+[2-5-12] Deep-ONMF 1000/1000
+[2-5-12] UjaNet-H fold 1/5
+[2-5-12] UjaNet-H fold 2/5
+[2-5-12] UjaNet-H fold 3/5
+[2-5-12] UjaNet-H fold 4/5
+[2-5-12] UjaNet-H fold 5/5
+[worker 1] 85/93 creciente 2-5-12
+[4-6-8-12] Deep-ONMF 1/1000
+[4-6-8-12] Deep-ONMF 100/1000
+[4-6-8-12] Deep-ONMF 200/1000
+[4-6-8-12] Deep-ONMF 300/1000
+[4-6-8-12] Deep-ONMF 400/1000
+[4-6-8-12] Deep-ONMF 500/1000
+[4-6-8-12] Deep-ONMF 600/1000
+[4-6-8-12] Deep-ONMF 700/1000
+[4-6-8-12] Deep-ONMF 800/1000
+[4-6-8-12] Deep-ONMF 900/1000
+[4-6-8-12] Deep-ONMF 1000/1000
+[4-6-8-12] UjaNet-H fold 1/5
+[4-6-8-12] UjaNet-H fold 2/5
+[4-6-8-12] UjaNet-H fold 3/5
+[4-6-8-12] UjaNet-H fold 4/5
+[4-6-8-12] UjaNet-H fold 5/5
+[worker 1] 86/93 creciente 4-6-8-12
+[8-12] Deep-ONMF 1/1000
+[8-12] Deep-ONMF 100/1000
+[8-12] Deep-ONMF 200/1000
+[8-12] Deep-ONMF 300/1000
+[8-12] Deep-ONMF 400/1000
+[8-12] Deep-ONMF 500/1000
+[8-12] Deep-ONMF 600/1000
+[8-12] Deep-ONMF 700/1000
+[8-12] Deep-ONMF 800/1000
+[8-12] Deep-ONMF 900/1000
+[8-12] Deep-ONMF 1000/1000
+[8-12] UjaNet-H fold 1/5
+[8-12] UjaNet-H fold 2/5
+[8-12] UjaNet-H fold 3/5
+[8-12] UjaNet-H fold 4/5
+[8-12] UjaNet-H fold 5/5
+[worker 1] 87/93 creciente 8-12
+[10-11-12] Deep-ONMF 1/1000
+[10-11-12] Deep-ONMF 100/1000
+[10-11-12] Deep-ONMF 200/1000
+[10-11-12] Deep-ONMF 300/1000
+[10-11-12] Deep-ONMF 400/1000
+[10-11-12] Deep-ONMF 500/1000
+[10-11-12] Deep-ONMF 600/1000
+[10-11-12] Deep-ONMF 700/1000
+[10-11-12] Deep-ONMF 800/1000
+[10-11-12] Deep-ONMF 900/1000
+[10-11-12] Deep-ONMF 1000/1000
+[10-11-12] UjaNet-H fold 1/5
+[10-11-12] UjaNet-H fold 2/5
+[10-11-12] UjaNet-H fold 3/5
+[10-11-12] UjaNet-H fold 4/5
+[10-11-12] UjaNet-H fold 5/5
+[worker 1] 88/93 creciente 10-11-12
+[2-3-6-10] Deep-ONMF 1/1000
+[2-3-6-10] Deep-ONMF 100/1000
+[2-3-6-10] Deep-ONMF 200/1000
+[2-3-6-10] Deep-ONMF 300/1000
+[2-3-6-10] Deep-ONMF 400/1000
+[2-3-6-10] Deep-ONMF 500/1000
+[2-3-6-10] Deep-ONMF 600/1000
+[2-3-6-10] Deep-ONMF 700/1000
+[2-3-6-10] Deep-ONMF 800/1000
+[2-3-6-10] Deep-ONMF 900/1000
+[2-3-6-10] Deep-ONMF 1000/1000
+[2-3-6-10] UjaNet-H fold 1/5
+[2-3-6-10] UjaNet-H fold 2/5
+[2-3-6-10] UjaNet-H fold 3/5
+[2-3-6-10] UjaNet-H fold 4/5
+[2-3-6-10] UjaNet-H fold 5/5
+[worker 1] 89/93 creciente 2-3-6-10
+[6-10] Deep-ONMF 1/1000
+[6-10] Deep-ONMF 100/1000
+[6-10] Deep-ONMF 200/1000
+[6-10] Deep-ONMF 300/1000
+[6-10] Deep-ONMF 400/1000
+[6-10] Deep-ONMF 500/1000
+[6-10] Deep-ONMF 600/1000
+[6-10] Deep-ONMF 700/1000
+[6-10] Deep-ONMF 800/1000
+[6-10] Deep-ONMF 900/1000
+[6-10] Deep-ONMF 1000/1000
+[6-10] UjaNet-H fold 1/5
+[6-10] UjaNet-H fold 2/5
+[6-10] UjaNet-H fold 3/5
+[6-10] UjaNet-H fold 4/5
+[6-10] UjaNet-H fold 5/5
+[worker 1] 90/93 creciente 6-10
+[8-9-10] Deep-ONMF 1/1000
+[8-9-10] Deep-ONMF 100/1000
+[8-9-10] Deep-ONMF 200/1000
+[8-9-10] Deep-ONMF 300/1000
+[8-9-10] Deep-ONMF 400/1000
+[8-9-10] Deep-ONMF 500/1000
+[8-9-10] Deep-ONMF 600/1000
+[8-9-10] Deep-ONMF 700/1000
+[8-9-10] Deep-ONMF 800/1000
+[8-9-10] Deep-ONMF 900/1000
+[8-9-10] Deep-ONMF 1000/1000
+[8-9-10] UjaNet-H fold 1/5
+[8-9-10] UjaNet-H fold 2/5
+[8-9-10] UjaNet-H fold 3/5
+[8-9-10] UjaNet-H fold 4/5
+[8-9-10] UjaNet-H fold 5/5
+[worker 1] 91/93 creciente 8-9-10
+[2-3-5-8] Deep-ONMF 1/1000
+[2-3-5-8] Deep-ONMF 100/1000
+[2-3-5-8] Deep-ONMF 200/1000
+[2-3-5-8] Deep-ONMF 300/1000
+[2-3-5-8] Deep-ONMF 400/1000
+[2-3-5-8] Deep-ONMF 500/1000
+[2-3-5-8] Deep-ONMF 600/1000
+[2-3-5-8] Deep-ONMF 700/1000
+[2-3-5-8] Deep-ONMF 800/1000
+[2-3-5-8] Deep-ONMF 900/1000
+[2-3-5-8] Deep-ONMF 1000/1000
+[2-3-5-8] UjaNet-H fold 1/5
+[2-3-5-8] UjaNet-H fold 2/5
+[2-3-5-8] UjaNet-H fold 3/5
+[2-3-5-8] UjaNet-H fold 4/5
+[2-3-5-8] UjaNet-H fold 5/5
+[worker 1] 92/93 creciente 2-3-5-8
+[6-8] Deep-ONMF 1/1000
+[6-8] Deep-ONMF 100/1000
+[6-8] Deep-ONMF 200/1000
+[6-8] Deep-ONMF 300/1000
+[6-8] Deep-ONMF 400/1000
+[6-8] Deep-ONMF 500/1000
+[6-8] Deep-ONMF 600/1000
+[6-8] Deep-ONMF 700/1000
+[6-8] Deep-ONMF 800/1000
+[6-8] Deep-ONMF 900/1000
+[6-8] Deep-ONMF 1000/1000
+[6-8] UjaNet-H fold 1/5
+[6-8] UjaNet-H fold 2/5
+[6-8] UjaNet-H fold 3/5
+[6-8] UjaNet-H fold 4/5
+[6-8] UjaNet-H fold 5/5
+[worker 1] 93/93 creciente 6-8

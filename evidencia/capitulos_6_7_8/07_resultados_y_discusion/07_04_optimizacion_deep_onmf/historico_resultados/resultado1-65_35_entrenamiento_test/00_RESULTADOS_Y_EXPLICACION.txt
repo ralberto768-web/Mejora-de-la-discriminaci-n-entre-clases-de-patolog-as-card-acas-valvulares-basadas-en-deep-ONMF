@@ -1,0 +1,269 @@
+﻿INFORME DE RESULTADOS - resultado1-65_35_entrenamiento_test
+
+Prueba ejecutada: 65% entrenamiento / 35% test.
+Implementación en Python del método deep ONMF aplicado a señales PCG.
+
+Carpeta de salida: C:\Users\armga\OneDrive\Escritorio\TFG\Programacion objetivo\resultados\resultado1-65_35_entrenamiento_test
+Carpeta de tablas y figuras: C:\Users\armga\OneDrive\Escritorio\TFG\Programacion objetivo\resultados\resultado1-65_35_entrenamiento_test\tablas_y_figuras
+Carpeta de documentación técnica: C:\Users\armga\OneDrive\Escritorio\TFG\Programacion objetivo\resultados\resultado1-65_35_entrenamiento_test\documentacion_tecnica
+Tiempo total de ejecución: 45.08 segundos
+
+IMPORTANTE:
+En esta versión no se descarta ningún WAV. Si un audio dura menos de 2 segundos,
+se rellena con ceros hasta 2 segundos para poder calcular el espectrograma.
+Esta decisión se toma porque la base disponible es la que se va a usar en el TFG.
+
+==============================================================================================================
+1. ORGANIZACIÓN DE LA CARPETA
+==============================================================================================================
+
+resultado1-65_35_entrenamiento_test/
+  00_RESULTADOS_Y_EXPLICACION.txt
+  tablas_y_figuras/
+    resultado1-65_35_entrenamiento_test_Figura_5_SBV_por_clase.png
+    resultado1-65_35_entrenamiento_test_Tabla_2_estadistica_SBV.png
+    resultado1-65_35_entrenamiento_test_Tabla_2_estadistica_SBV.csv
+    resultado1-65_35_entrenamiento_test_Figura_7_distancias_euclideas.png
+    resultado1-65_35_entrenamiento_test_Figura_11D_tSNE_deep_ONMF.png
+  documentacion_tecnica/
+    predicciones_test.csv
+    metricas_test.csv
+    matriz_confusion_test.csv
+    caracteristicas_sbv_por_audio.csv
+    parametros_configuracion.json
+
+==============================================================================================================
+2. AUDITORÍA TOTAL DE LA BASE DE DATOS
+==============================================================================================================
+
+La columna 'audios_rellenados_a_2s' indica cuántos audios reales duran menos de 2 segundos.
+Esos audios se han usado igualmente, rellenándolos con ceros hasta alcanzar 2 segundos.
+
+clase  audios_totales  audios_usados  audios_descartados_por_duracion  audios_rellenados_a_2s  duracion_min_s  duracion_media_s  duracion_max_s  columnas_matriz_x
+   N        200            200                      0                             0               2.033750         2.381381         3.007250          42612       
+  AS        200            200                      0                             0               2.349875         2.741807         3.550250          49184       
+  MR        200            200                      0                            16               1.575500         2.256554         3.034625          43248       
+  MS        200            200                      0                            14               1.155625         2.356657         3.201375          45156       
+ MVP        200            200                      0                            19               1.726375         2.481116         3.992875          43248       
+
+==============================================================================================================
+3. PARTICIÓN ENTRENAMIENTO / TEST
+==============================================================================================================
+
+La división es estratificada: cada clase mantiene el mismo porcentaje de entrenamiento y test.
+
+clase  total  entrenamiento  test  rellenados_entrenamiento  rellenados_test
+   N   200        130         70               0                   0        
+  AS   200        130         70               0                   0        
+  MR   200        130         70              10                   6        
+  MS   200        130         70              11                   3        
+ MVP   200        130         70              12                   7        
+
+==============================================================================================================
+4. PARÁMETROS DEL MÉTODO
+==============================================================================================================
+
+Frecuencia esperada de muestreo: 8000 Hz
+Trama PCG: 2.0 s
+Solape entre tramas PCG: 1.0 s
+Ventana STFT: Hamming de 150 muestras
+Salto STFT: 75 muestras
+FFT: 250 puntos
+Bins de frecuencia: 126
+Rangos deep ONMF: (9, 8, 7)
+Iteraciones por capa: 120
+Penalización de ortogonalidad sobre H: 0.05
+Semilla aleatoria base: 42
+
+Entrenamiento del modelo:
+Para evitar fuga de información, las matrices W de deep ONMF se aprenden solo con los audios
+de entrenamiento. El test se evalúa después, proyectándolo sobre las bases aprendidas.
+
+==============================================================================================================
+5. RESULTADOS DE LA FACTORIZACIÓN DEEP ONMF
+==============================================================================================================
+
+Errores relativos finales por clase, calculados sobre las matrices de entrenamiento:
+
+clase error_relativo_final  capas
+   N        0.114684         3   
+  AS        0.217138         3   
+  MR        0.203565         3   
+  MS        0.148466         3   
+ MVP        0.132205         3   
+
+Detalle por capa:
+
+clase  capa  rango   entrada      W        H     error_relativo ortogonalidad_media segundos
+   N    1     9    126 x 27772 126 x 9 9 x 27772    0.050926          0.723523        1.80  
+   N    2     8      9 x 27772   9 x 8 8 x 27772    0.157049          0.396542        1.01  
+   N    3     7      8 x 27772   8 x 7 7 x 27772    0.255848          0.269963        0.97  
+  AS    1     9    126 x 31376 126 x 9 9 x 31376    0.127104          0.343641        1.93  
+  AS    2     8      9 x 31376   9 x 8 8 x 31376    0.155040          0.212832        1.10  
+  AS    3     7      8 x 31376   8 x 7 7 x 31376    0.285508          0.166849        1.21  
+  MR    1     9    126 x 27984 126 x 9 9 x 27984    0.125758          0.363851        1.80  
+  MR    2     8      9 x 27984   9 x 8 8 x 27984    0.163291          0.212304        1.04  
+  MR    3     7      8 x 27984   8 x 7 7 x 27984    0.255475          0.151198        0.98  
+  MS    1     9    126 x 28832 126 x 9 9 x 28832    0.075075          0.522936        1.84  
+  MS    2     8      9 x 28832   9 x 8 8 x 28832    0.159176          0.297229        1.04  
+  MS    3     7      8 x 28832   8 x 7 7 x 28832    0.238996          0.215946        1.00  
+ MVP    1     9    126 x 28196 126 x 9 9 x 28196    0.087669          0.429395        1.80  
+ MVP    2     8      9 x 28196   9 x 8 8 x 28196    0.136805          0.235465        1.07  
+ MVP    3     7      8 x 28196   8 x 7 7 x 28196    0.251037          0.166014        1.23  
+
+==============================================================================================================
+6. RESULTADOS DE CLASIFICACIÓN
+==============================================================================================================
+
+La clasificación se hace por error de reconstrucción: un audio se asigna a la clase cuya
+base W reconstruye mejor su espectrograma. El test no participa en el aprendizaje de W.
+
+Resumen global:
+
+  particion    muestras  accuracy  macro_f1
+entrenamiento    650     0.620000  0.602734
+         test    350     0.582857  0.565891
+
+Métricas por clase en entrenamiento:
+
+clase  precision  sensibilidad_recall    f1     soporte
+    N  0.981818        0.830769       0.900000   130   
+   AS  0.629630        0.261538       0.369565   130   
+   MR  0.522124        0.907692       0.662921   130   
+   MS  0.387931        0.346154       0.365854   130   
+  MVP  0.680556        0.753846       0.715328   130   
+TOTAL  0.640412        0.620000       0.602734   650   
+
+Métricas por clase en test:
+
+clase  precision  sensibilidad_recall    f1     soporte
+    N  1.000000        0.742857       0.852459    70   
+   AS  0.619048        0.185714       0.285714    70   
+   MR  0.512000        0.914286       0.656410    70   
+   MS  0.316456        0.357143       0.335570    70   
+  MVP  0.684932        0.714286       0.699301    70   
+TOTAL  0.626487        0.582857       0.565891   350   
+
+Matriz de confusión en test:
+
+          pred_N  pred_AS  pred_MR  pred_MS  pred_MVP
+real_N      52       0        5        2        11   
+real_AS      0      13        5       46         6   
+real_MR      0       1       64        5         0   
+real_MS      0       1       38       25         6   
+real_MVP     0       6       13        1        50   
+
+==============================================================================================================
+7. TABLA 2 - ESTADÍSTICA DE SBV 1 A SBV 7
+==============================================================================================================
+
+La Tabla 2 se calcula usando las bases W aprendidas en entrenamiento.
+
+Número de característica          N                   AS                  MR                  MS                 MVP          p-valor 
+         SBV 1           0.019767 ± 0.087213 0.021513 ± 0.086796 0.022647 ± 0.086504 0.019445 ± 0.087286 0.026531 ± 0.085384 1.168e-12
+         SBV 2           0.019172 ± 0.087347 0.022334 ± 0.086586 0.027168 ± 0.085182 0.020501 ± 0.087042 0.019906 ± 0.087181 6.397e-07
+         SBV 3           0.019527 ± 0.087268 0.018616 ± 0.087468 0.025772 ± 0.085618 0.021014 ± 0.086919 0.021493 ± 0.086801 2.259e-10
+         SBV 4           0.019203 ± 0.087340 0.019413 ± 0.087293 0.019736 ± 0.087220 0.018655 ± 0.087460 0.018995 ± 0.087386 1.494e-04
+         SBV 5           0.022471 ± 0.086551 0.032714 ± 0.083194 0.018463 ± 0.087501 0.025040 ± 0.085837 0.019141 ± 0.087354 1.062e-19
+         SBV 6           0.019166 ± 0.087348 0.027316 ± 0.085134 0.028649 ± 0.084692 0.019915 ± 0.087179 0.023935 ± 0.086154 6.635e-17
+         SBV 7           0.022493 ± 0.086545 0.030501 ± 0.084037 0.019781 ± 0.087210 0.020920 ± 0.086942 0.019915 ± 0.087179 3.352e-14
+
+SBV con menor p-valor: SBV 5 con p = 1.062e-19.
+
+==============================================================================================================
+8. FIGURA 5 - SBV POR CLASE
+==============================================================================================================
+
+Archivo: tablas_y_figuras/resultado1-65_35_entrenamiento_test_Figura_5_SBV_por_clase.png
+Representa los cinco primeros SBV de cada clase aprendidos con entrenamiento.
+
+==============================================================================================================
+9. FIGURA 7 - DISTANCIAS EUCLÍDEAS
+==============================================================================================================
+
+Archivo: tablas_y_figuras/resultado1-65_35_entrenamiento_test_Figura_7_distancias_euclideas.png
+Las distancias se calculan sobre las características SBV proyectadas por audio.
+
+Datos numéricos usados en la Figura 7:
+
+SBV_1_entre_clases
+comparación  distancia
+     N-AS    0.555393 
+     N-MR    0.244203 
+     N-MS    0.140756 
+    N-MVP    0.450874 
+    AS-MR    0.311190 
+    AS-MS    0.414637 
+   AS-MVP    1.006267 
+    MR-MS    0.103447 
+   MR-MVP    0.695077 
+   MS-MVP    0.591630 
+
+SBV_1_dentro_clase
+clase  distancia
+   N   0.296770 
+  AS   0.798409 
+  MR   0.612795 
+  MS   0.307199 
+ MVP   0.268837 
+
+SBV_2_entre_clases
+comparación  distancia
+     N-AS    0.507018 
+     N-MR    0.036173 
+     N-MS    0.125723 
+    N-MVP    0.102108 
+    AS-MR    0.543191 
+    AS-MS    0.632741 
+   AS-MVP    0.609125 
+    MR-MS    0.089550 
+   MR-MVP    0.065934 
+   MS-MVP    0.023615 
+
+SBV_2_dentro_clase
+clase  distancia
+   N   0.224942 
+  AS   0.977356 
+  MR   0.398503 
+  MS   0.320112 
+ MVP   0.477845 
+
+SBV_3_entre_clases
+comparación  distancia
+     N-AS    0.758249 
+     N-MR    0.467954 
+     N-MS    0.172646 
+    N-MVP    0.250545 
+    AS-MR    1.226203 
+    AS-MS    0.930895 
+   AS-MVP    1.008794 
+    MR-MS    0.295308 
+   MR-MVP    0.217409 
+   MS-MVP    0.077899 
+
+SBV_3_dentro_clase
+clase  distancia
+   N   0.260786 
+  AS   1.542871 
+  MR   0.364977 
+  MS   0.488255 
+ MVP   0.781860 
+
+==============================================================================================================
+10. FIGURA 11D - t-SNE DEEP ONMF
+==============================================================================================================
+
+Archivo: tablas_y_figuras/resultado1-65_35_entrenamiento_test_Figura_11D_tSNE_deep_ONMF.png
+El t-SNE se calcula con las siete características SBV de cada audio, incluyendo
+entrenamiento y test, para visualizar la separación de clases.
+
+==============================================================================================================
+11. CONCLUSIÓN DE ESTA PRUEBA
+==============================================================================================================
+
+Resultado test para 65/35:
+- Accuracy test: 0.5829
+- Macro F1 test: 0.5659
+
+Estos valores son los que deben compararse con el resto de particiones para decidir
+qué reparto entrenamiento/test se comporta mejor con esta base de datos.

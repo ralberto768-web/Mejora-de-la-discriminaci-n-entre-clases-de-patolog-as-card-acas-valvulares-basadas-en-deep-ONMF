@@ -1,0 +1,2 @@
+﻿posicion,distribucion,numero_capas,Accuracy_SVM,Score_SVM,Accuracy_std_SVM,Accuracy_KNN,Score_KNN,Accuracy_std_KNN,Accuracy_UjaNet,Score_UjaNet,Accuracy_std_UjaNet,Accuracy_media,Score_medio,estabilidad_std,finalista
+1,10-9-7-5,4,0.8,0.5,0.0,0.8,0.5,0.0,0.8,0.5,0.0,0.8000000000000002,0.5,0.0,True

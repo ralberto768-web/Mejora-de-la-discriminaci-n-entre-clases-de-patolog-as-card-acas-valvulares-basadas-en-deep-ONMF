@@ -1,0 +1,9 @@
+﻿comprobacion,correcto,detalle
+paginas_historicas_conservadas,True,historicas=6; total=20
+orientacion_horizontal,True,paginas=20
+todas_las_distribuciones_listadas,True,[]
+cinco_finalistas,True,finalistas=5
+149_filas_compactas_csv_pdf,True,[]
+60_filas_finalistas_csv_pdf,True,[]
+contenido_w_h,True,W y H presentes
+sin_desviacion_estandar_visible,True,Score y Accuracy se muestran como medias simples

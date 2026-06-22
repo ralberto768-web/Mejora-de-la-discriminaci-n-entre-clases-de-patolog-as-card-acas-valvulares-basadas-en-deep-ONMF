@@ -1,0 +1,2 @@
+Esta ejecucion se ha generado desde cero con 120 iteraciones ONMF.
+Los resultados anteriores de resultados_punto3_validacion usaban 60 iteraciones y no se consideran resultados finales de esta correccion.

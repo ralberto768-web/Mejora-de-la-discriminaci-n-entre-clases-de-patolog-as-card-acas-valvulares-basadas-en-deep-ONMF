@@ -1,0 +1,13 @@
+﻿comprobacion,correcto,detalle
+texto:15-10-5,True,15-10-5
+texto:10-6-4,True,10-6-4
+texto:8-5-3,True,8-5-3
+texto:9-8-7,True,9-8-7
+texto:DeepONMF_W,True,DeepONMF_W
+texto:DeepONMF_H3,True,DeepONMF_H3
+texto:SVM,True,SVM
+texto:KNN,True,KNN
+texto:UjaNet,True,UjaNet
+"texto:TP, TN, FP y FN",True,"TP, TN, FP y FN"
+paginas_pdf,True,16
+identificadores_de_fila,True,ausentes=0

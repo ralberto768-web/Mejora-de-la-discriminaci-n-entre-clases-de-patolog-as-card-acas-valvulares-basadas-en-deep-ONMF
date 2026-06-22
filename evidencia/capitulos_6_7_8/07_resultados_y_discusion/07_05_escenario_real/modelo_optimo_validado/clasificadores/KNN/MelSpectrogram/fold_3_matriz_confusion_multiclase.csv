@@ -1,0 +1,6 @@
+﻿,pred_N,pred_AS,pred_MR,pred_MS,pred_MVP
+real_N,38,0,0,0,2
+real_AS,0,38,2,0,0
+real_MR,1,0,36,2,1
+real_MS,0,0,0,39,1
+real_MVP,0,1,1,0,38

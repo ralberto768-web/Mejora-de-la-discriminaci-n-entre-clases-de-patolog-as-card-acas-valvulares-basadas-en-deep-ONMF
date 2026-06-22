@@ -1,0 +1,14 @@
+{
+  "distribucion": "16-8-3",
+  "rangos": [
+    16,
+    8,
+    3
+  ],
+  "numero_capas": 3,
+  "ronda": 9,
+  "segundos": 194.4602834000034,
+  "audios": 1000,
+  "folds": 5,
+  "evaluaciones_esperadas": 60
+}

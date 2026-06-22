@@ -1,0 +1,51 @@
+{
+  "semilla": 42,
+  "frecuencia_objetivo_hz": 8000,
+  "duracion_trama_pcg_s": 2.0,
+  "solape_trama_pcg_s": 1.0,
+  "ventana_stft_muestras": 150,
+  "salto_stft_muestras": 75,
+  "puntos_fft": 250,
+  "bandas_mel": 40,
+  "coeficientes_mfcc": 13,
+  "rangos_deep_onmf": [
+    9,
+    8,
+    7
+  ],
+  "iteraciones_onmf": 4,
+  "penalizacion_ortogonal": 0.05,
+  "folds": 5,
+  "pca_componentes_max": 16,
+  "svm_c": 1.0,
+  "knn_vecinos": 5,
+  "ujanet_epocas": 2,
+  "ujanet_paciencia": 1,
+  "ujanet_lote": 4,
+  "ujanet_lr": 0.001,
+  "clases": [
+    "N",
+    "AS",
+    "MR",
+    "MS",
+    "MVP"
+  ],
+  "clases_anomalas": [
+    "AS",
+    "MR",
+    "MS",
+    "MVP"
+  ],
+  "representaciones": [
+    "STFT",
+    "MFCC",
+    "MelSpectrogram",
+    "LogMelSpectrogram",
+    "DeepONMF_W",
+    "DeepONMF_H3"
+  ],
+  "muestras_trama_pcg": 16000,
+  "salto_trama_pcg": 8000,
+  "bins_frecuencia": 126,
+  "tramas_stft_por_segmento": 212
+}

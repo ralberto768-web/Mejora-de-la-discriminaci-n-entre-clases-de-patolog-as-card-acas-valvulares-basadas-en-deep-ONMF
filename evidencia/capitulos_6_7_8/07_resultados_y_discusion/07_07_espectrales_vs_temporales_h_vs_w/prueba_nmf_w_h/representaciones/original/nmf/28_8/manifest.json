@@ -1,0 +1,16 @@
+{
+  "protocolo": "prueba_nmf_w_h_v1",
+  "base": "original",
+  "metodo": "NMF",
+  "numero_audios": 1000,
+  "distribucion": "28-8",
+  "numero_capas": 2,
+  "inicializacion": "nndsvd",
+  "iteraciones": 60,
+  "penalizacion_ortogonal": 0.0,
+  "matrices_guardadas": [
+    "H",
+    "W"
+  ],
+  "semilla": 42
+}

@@ -1,0 +1,6 @@
+﻿clase,audios_totales,audios_usados,audios_descartados_por_duracion,audios_cortos_menores_2s,duracion_min_s,duracion_media_s,duracion_max_s,columnas_matriz_x
+N,200,200,0,0,2.03375,2.381380625,3.00725,42612
+AS,200,200,0,0,2.349875,2.7418074999999997,3.55025,49184
+MR,200,184,16,16,1.5755,2.25655375,3.034625,39856
+MS,200,186,14,14,1.155625,2.3566575,3.201375,42188
+MVP,200,181,19,19,1.726375,2.48111625,3.992875,39220

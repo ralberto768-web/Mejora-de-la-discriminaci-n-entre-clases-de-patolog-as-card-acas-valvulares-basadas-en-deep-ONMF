@@ -1,0 +1,18 @@
+name: tfg-valvulopatias
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python>=3.10
+  - pip
+  - pip:
+      - numpy==2.4.2
+      - pandas==3.0.1
+      - scipy==1.17.1
+      - scikit-learn==1.8.0
+      - matplotlib==3.10.9
+      - torch==2.11.0
+      - PyMuPDF==1.27.2.3
+      - PyWavelets==1.9.0
+      - openpyxl
+      - seaborn

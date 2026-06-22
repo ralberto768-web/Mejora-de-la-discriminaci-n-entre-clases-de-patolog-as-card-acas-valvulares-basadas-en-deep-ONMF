@@ -1,0 +1,6 @@
+﻿clase,etiqueta_binaria,archivo,ruta,fold,pred_multiclase
+N,normal,New_N_001.wav,C:\Users\armga\OneDrive\Escritorio\TFG\Ultima implementacio Juan\ULTIMA\auditoria\verificacion_rapida\datasets_ruidosos\SNR_0db\N_New_3주기\New_N_001.wav,2,MS
+AS,anomalo,New_AS_002.wav,C:\Users\armga\OneDrive\Escritorio\TFG\Ultima implementacio Juan\ULTIMA\auditoria\verificacion_rapida\datasets_ruidosos\SNR_0db\AS_New_3주기\New_AS_002.wav,2,MS
+MR,anomalo,New_MR_001.wav,C:\Users\armga\OneDrive\Escritorio\TFG\Ultima implementacio Juan\ULTIMA\auditoria\verificacion_rapida\datasets_ruidosos\SNR_0db\MR_New_3주기\New_MR_001.wav,2,MS
+MS,anomalo,New_MS_001.wav,C:\Users\armga\OneDrive\Escritorio\TFG\Ultima implementacio Juan\ULTIMA\auditoria\verificacion_rapida\datasets_ruidosos\SNR_0db\MS_New_3주기\New_MS_001.wav,2,MS
+MVP,anomalo,New_MVP_001.wav,C:\Users\armga\OneDrive\Escritorio\TFG\Ultima implementacio Juan\ULTIMA\auditoria\verificacion_rapida\datasets_ruidosos\SNR_0db\MVP_New_3주기\New_MVP_001.wav,2,MS

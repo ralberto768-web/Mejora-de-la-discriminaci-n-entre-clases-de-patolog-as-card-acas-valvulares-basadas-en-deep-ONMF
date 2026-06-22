@@ -1,0 +1,53 @@
+{
+  "modo_rapido_no_entregable": false,
+  "raiz": "C:\\Users\\armga\\OneDrive\\Escritorio\\TFG\\Ultima implementacio Juan\\ULTIMA",
+  "inicializacion_onmf": "nndsvd",
+  "datasets": "C:\\Users\\armga\\OneDrive\\Escritorio\\TFG\\Ultima implementacio Juan\\ULTIMA\\datasets_ruidosos",
+  "documentos": {
+    "optimizacion_original": "C:\\Users\\armga\\OneDrive\\Escritorio\\TFG\\Ultima implementacio Juan\\ULTIMA\\documentos_finales\\optimizacion_dataset_original.pdf",
+    "optimizacion_snr0": "C:\\Users\\armga\\OneDrive\\Escritorio\\TFG\\Ultima implementacio Juan\\ULTIMA\\documentos_finales\\optimizacion_dataset_SNR0db.pdf",
+    "resultados_original": "C:\\Users\\armga\\OneDrive\\Escritorio\\TFG\\Ultima implementacio Juan\\ULTIMA\\documentos_finales\\Resultados_Optimizacion_original.pdf",
+    "resultados_snr0": "C:\\Users\\armga\\OneDrive\\Escritorio\\TFG\\Ultima implementacio Juan\\ULTIMA\\documentos_finales\\Resultados_Optimizacion_SNR0db.pdf"
+  },
+  "optimas_original": {
+    "1": [
+      26
+    ],
+    "2": [
+      28,
+      8
+    ],
+    "3": [
+      22,
+      15,
+      10
+    ],
+    "4": [
+      32,
+      18,
+      10,
+      6
+    ]
+  },
+  "optimas_snr0": {
+    "1": [
+      24
+    ],
+    "2": [
+      20,
+      4
+    ],
+    "3": [
+      28,
+      13,
+      6
+    ],
+    "4": [
+      8,
+      7,
+      7,
+      6
+    ]
+  },
+  "segundos_totales": 32512.32410930004
+}

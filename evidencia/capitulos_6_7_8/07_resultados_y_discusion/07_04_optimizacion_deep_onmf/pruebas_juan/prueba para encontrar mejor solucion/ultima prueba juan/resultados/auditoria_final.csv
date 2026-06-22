@@ -1,0 +1,16 @@
+﻿comprobacion,correcto
+pdf_completo_existe,True
+pdf_comparacion_existe,True
+pdf_completo_horizontal,True
+pdf_comparacion_horizontal,True
+pdf_comparacion_once_paginas,True
+pdf_completo_sin_matrices,True
+pdf_completo_contiene_ranking,True
+pdf_comparacion_contiene_veinte_matrices,True
+pdf_comparacion_solo_ujanet_h,True
+ranking_incluye_9_8_7,True
+ranking_ordenado_por_accuracy_y_score,True
+ranking_sin_medias_entre_clasificadores,True
+pdf_sin_medias_entre_clasificadores,True
+veinte_matrices_ujanet,True
+matrices_con_1000_predicciones,True

@@ -1,0 +1,43 @@
+{
+  "protocolo": "prueba_snr_tres_metodos_v1",
+  "filas": 30,
+  "snr": [
+    8.0,
+    5.0,
+    0.0,
+    -5.0,
+    -8.0
+  ],
+  "metodos": [
+    {
+      "metodo": "NMF",
+      "rangos": [
+        7
+      ],
+      "penalizacion": 0.0,
+      "sin_regularizacion": true
+    },
+    {
+      "metodo": "ONMF",
+      "rangos": [
+        7
+      ],
+      "penalizacion": 0.05,
+      "sin_regularizacion": false
+    },
+    {
+      "metodo": "DeepONMF",
+      "rangos": [
+        9,
+        8,
+        7
+      ],
+      "penalizacion": 0.05,
+      "sin_regularizacion": false
+    }
+  ],
+  "factorizacion_por_senal": true,
+  "diccionario_comun_por_fold": false,
+  "segundos": 2334.300400200067,
+  "salida": "C:\\Users\\armga\\OneDrive\\Escritorio\\TFG\\Ultima implementacio Juan\\ULTIMA\\06_prueba_snr_tres_metodos"
+}

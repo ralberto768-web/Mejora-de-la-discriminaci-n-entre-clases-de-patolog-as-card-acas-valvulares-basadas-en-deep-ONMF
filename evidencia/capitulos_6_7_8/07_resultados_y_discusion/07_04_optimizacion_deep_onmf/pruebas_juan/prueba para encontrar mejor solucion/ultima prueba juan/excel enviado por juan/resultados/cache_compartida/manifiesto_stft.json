@@ -1,0 +1,11 @@
+{
+  "forma": [
+    1000,
+    126,
+    212
+  ],
+  "frecuencia_objetivo_hz": 8000,
+  "ventana_stft_muestras": 150,
+  "salto_stft_muestras": 75,
+  "puntos_fft": 250
+}

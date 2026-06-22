@@ -1,0 +1,14 @@
+{
+  "distribucion": "15-11-7",
+  "rangos": [
+    15,
+    11,
+    7
+  ],
+  "numero_capas": 3,
+  "ronda": 2,
+  "segundos": 160.99317399999563,
+  "audios": 1000,
+  "folds": 5,
+  "evaluaciones_esperadas": 60
+}

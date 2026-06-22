@@ -1,0 +1,13 @@
+﻿distribucion,clasificador,representacion,fold,TP,TN,FP,FN,Accuracy,Sensitivity,Specificity,Precision,Score
+15-10-5,KNN,DeepONMF_H3,1,4,0,1,0,0.8,1.0,0.0,0.8,0.5
+15-10-5,KNN,DeepONMF_H3,2,4,0,1,0,0.8,1.0,0.0,0.8,0.5
+15-10-5,KNN,DeepONMF_W,1,4,0,1,0,0.8,1.0,0.0,0.8,0.5
+15-10-5,KNN,DeepONMF_W,2,4,1,0,0,1.0,1.0,1.0,1.0,1.0
+15-10-5,SVM,DeepONMF_H3,1,4,0,1,0,0.8,1.0,0.0,0.8,0.5
+15-10-5,SVM,DeepONMF_H3,2,4,0,1,0,0.8,1.0,0.0,0.8,0.5
+15-10-5,SVM,DeepONMF_W,1,4,1,0,0,1.0,1.0,1.0,1.0,1.0
+15-10-5,SVM,DeepONMF_W,2,4,1,0,0,1.0,1.0,1.0,1.0,1.0
+15-10-5,UjaNet,DeepONMF_H3,1,4,0,1,0,0.8,1.0,0.0,0.8,0.5
+15-10-5,UjaNet,DeepONMF_H3,2,4,0,1,0,0.8,1.0,0.0,0.8,0.5
+15-10-5,UjaNet,DeepONMF_W,1,4,0,1,0,0.8,1.0,0.0,0.8,0.5
+15-10-5,UjaNet,DeepONMF_W,2,4,0,1,0,0.8,1.0,0.0,0.8,0.5

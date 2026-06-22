@@ -1,0 +1,18 @@
+﻿COMPARATIVA GENERAL DE PRUEBAS ENTRENAMIENTO / TEST
+
+Estas pruebas usan todos los WAV disponibles. Los audios de menos de 2 segúndos no se descartan: se rellenan con ceros hasta 2 segúndos.
+La clasificación se calcula por menor error de reconstruccion frente a las bases W aprendidas en entrenamiento.
+
+                          resultado  entrenamiento  test  accuracy_entrenamiento  macro_f1_entrenamiento  accuracy_test  macro_f1_test
+resultado1-65_35_entrenamiento_test             65    35                0.620000                0.602734       0.582857       0.565891
+resultado2-70_30_entrenamiento_test             70    30                0.702857                0.689671       0.690000       0.673381
+resultado3-75_25_entrenamiento_test             75    25                0.528000                0.525324       0.536000       0.541285
+resultado4-80_20_entrenamiento_test             80    20                0.717500                0.717980       0.735000       0.729830
+resultado5-85_15_entrenamiento_test             85    15                0.623529                0.613287       0.600000       0.590445
+
+Mejor partición según accuracy de test: 80/20
+Carpeta: resultado4-80_20_entrenamiento_test
+Accuracy test: 0.7350
+Macro F1 test: 0.7298
+
+Lectura: cuanto mayores sean accuracy_test y macro_f1_test, mejor se comporta la partición en datos no usados durante el entrenamiento.

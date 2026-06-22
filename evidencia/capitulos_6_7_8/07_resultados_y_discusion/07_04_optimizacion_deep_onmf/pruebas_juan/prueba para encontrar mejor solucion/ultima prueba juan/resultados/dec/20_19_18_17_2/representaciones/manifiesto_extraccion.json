@@ -1,0 +1,27 @@
+{
+  "numero_audios": 1000,
+  "rangos": [
+    20,
+    19,
+    18,
+    17,
+    2
+  ],
+  "numero_capas": 5,
+  "representacion_h": "DeepONMF_H5",
+  "iteraciones": 60,
+  "penalizacion_ortogonal": 0.05,
+  "semilla": 42,
+  "formas": {
+    "DeepONMF_W": [
+      1000,
+      126,
+      2
+    ],
+    "DeepONMF_H5": [
+      1000,
+      2,
+      212
+    ]
+  }
+}

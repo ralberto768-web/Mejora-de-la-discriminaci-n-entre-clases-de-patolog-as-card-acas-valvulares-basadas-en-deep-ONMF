@@ -1,0 +1,233 @@
+CARPETA CODIGOS - LEE ESTO PRIMERO
+===================================
+
+Esta carpeta contiene las implementaciones separadas y limpias que se han llevado a cabo en el TFG.
+No contiene resultados precargados. Cada codigo genera sus resultados cuando se ejecuta.
+
+Forma general de ejecucion
+--------------------------
+
+Desde cualquier carpeta de implementacion:
+
+  python ejecutar.py --datos "RUTA_A_BASES_DE_DATOS"
+
+Si no se indica --datos, el codigo intenta encontrar automaticamente una carpeta llamada "Bases de Datos"
+en la raiz del TFG o en carpetas superiores.
+
+Por defecto, los resultados se guardan en:
+
+  resultados
+
+Tambien se puede indicar otra salida:
+
+  python ejecutar.py --datos "RUTA_A_BASES_DE_DATOS" --salida "RUTA_DE_SALIDA"
+
+Cada carpeta incluye:
+
+  ejecutar.py      Codigo principal.
+  verificar.py     Prueba rapida de sintaxis, ejecucion reducida y salidas esperadas.
+  EJECUTAR.bat     Lanzador para Windows.
+  README.md        Instrucciones concretas de esa carpeta.
+  requirements.txt Dependencias de Python.
+
+
+01_deep_onmf_H_articulo_original
+--------------------------------
+
+Implementacion:
+  Deep-ONMF fiel al articulo objetivo usando la matriz H como representacion por audio.
+  Descarta los audios menores de 2 segundos, tal como exige el protocolo estricto de tramas completas.
+
+Ejecutar:
+  python ejecutar.py --datos "..\Bases de Datos"
+
+Genera:
+  - Matrices W finales por clase.
+  - Matrices H finales por clase.
+  - Caracteristicas SBV por audio obtenidas desde H.
+  - Tabla 2, Figura 5, Figura 7 y Figura 11D.
+  - Informe de resultados y documentacion tecnica.
+
+Verificacion:
+  python verificar.py --datos "..\Bases de Datos"
+
+Usa:
+  Matriz H.
+
+
+02_deep_onmf_H_rellenando_audios
+--------------------------------
+
+Implementacion:
+  Misma implementacion Deep-ONMF con matriz H, pero sin descartar audios cortos.
+  Los audios menores de 2 segundos se rellenan con ceros hasta formar una trama valida.
+
+Ejecutar:
+  python ejecutar.py --datos "..\Bases de Datos"
+
+Genera:
+  - Matrices W y H finales por clase.
+  - Caracteristicas SBV por audio.
+  - Figuras y tablas equivalentes a la implementacion fiel.
+  - Auditoria indicando los audios cortos usados mediante relleno.
+
+Verificacion:
+  python verificar.py --datos "..\Bases de Datos"
+
+Usa:
+  Matriz H.
+
+
+03_deep_onmf_H_mejorado_NNDSVD
+------------------------------
+
+Implementacion:
+  Deep-ONMF con matriz H y mejora de inicializacion.
+  Prueba NNDSVD, NNDSVDa y NNDSVDar, y genera rasgos mejorados mediante errores de reconstruccion y softmin F8.
+
+Ejecutar:
+  python ejecutar.py --datos "..\Bases de Datos"
+
+Genera:
+  - Matrices W y H por clase para cada inicializacion.
+  - CSV de capas y errores por variante.
+  - Rasgos F8/softmin por audio.
+  - Tabla comparativa entre variantes.
+
+Verificacion:
+  python verificar.py --datos "..\Bases de Datos"
+
+Usa:
+  Matriz H.
+
+
+04_matriz_W_por_audio
+---------------------
+
+Implementacion:
+  Calcula una matriz W independiente por cada audio.
+  Para cada audio prueba NNDSVD, NNDSVDa y NNDSVDar.
+  Despues genera la figura tipo 11 usando las matrices W como puntos de comparacion.
+
+Ejecutar:
+  python ejecutar.py --datos "..\Bases de Datos"
+
+Genera:
+  - NPZ con una matriz W por audio y por inicializacion.
+  - Rasgos vectorizados de W.
+  - Coordenadas t-SNE.
+  - Comparacion con CNN, STFT, MFCC y DWT.
+  - PDF explicativo cuando se ejecuta el flujo completo.
+
+Verificacion:
+  python verificar.py --datos "..\Bases de Datos"
+
+Usa:
+  Matriz W.
+
+
+05_cnn_log_mel_articulo
+-----------------------
+
+Implementacion:
+  Flujo de preparacion de audio, extraccion de espectrogramas log-mel y entrenamiento CNN.
+
+Ejecutar:
+  python ejecutar.py --datos "..\Bases de Datos"
+
+Genera:
+  - Audios preparados dentro de la carpeta de salida.
+  - Archivo NPZ con espectrogramas log-mel.
+  - Modelo CNN entrenado.
+  - Metricas de test.
+
+Verificacion:
+  python verificar.py --datos "..\Bases de Datos"
+
+Usa:
+  CNN.
+
+
+06_lstm_log_mel_articulo
+------------------------
+
+Implementacion:
+  Flujo de preparacion de audio, extraccion de espectrogramas log-mel y entrenamiento LSTM.
+
+Ejecutar:
+  python ejecutar.py --datos "..\Bases de Datos"
+
+Genera:
+  - Audios preparados dentro de la carpeta de salida.
+  - Archivo NPZ con espectrogramas log-mel.
+  - Modelo LSTM entrenado.
+  - Metricas de test.
+
+Verificacion:
+  python verificar.py --datos "..\Bases de Datos"
+
+Usa:
+  LSTM.
+
+
+07_baselines_STFT_MFCC_DWT
+--------------------------
+
+Implementacion:
+  Extraccion de rasgos clasicos STFT, MFCC y DWT sobre los mismos audios.
+
+Ejecutar:
+  python ejecutar.py --datos "..\Bases de Datos"
+
+Genera:
+  - CSV de rasgos STFT.
+  - CSV de rasgos MFCC.
+  - CSV de rasgos DWT.
+  - Coordenadas t-SNE y tabla de metricas por metodo.
+
+Verificacion:
+  python verificar.py --datos "..\Bases de Datos"
+
+Usa:
+  Baselines STFT, MFCC y DWT.
+
+
+08_comparador_figura11
+----------------------
+
+Implementacion:
+  Comparador global para generar una figura tipo 11 con Deep-ONMF, STFT, MFCC y DWT.
+  Esta carpeta no depende de resultados precargados de otras carpetas; calcula una comparacion reproducible desde la base de datos.
+
+Ejecutar:
+  python ejecutar.py --datos "..\Bases de Datos"
+
+Genera:
+  - Rasgos por metodo.
+  - Coordenadas t-SNE.
+  - Tabla de metricas comparativas.
+  - Figura comparativa.
+
+Verificacion:
+  python verificar.py --datos "..\Bases de Datos"
+
+Usa:
+  Deep-ONMF y baselines.
+
+
+99_verificacion_entrega
+-----------------------
+
+Implementacion:
+  Verificador maestro de la entrega.
+
+Ejecutar:
+  python ejecutar.py --datos "..\Bases de Datos"
+
+Genera:
+  - Informe CSV/TXT con el estado de cada carpeta.
+  - Comprobacion de sintaxis.
+  - Ejecucion rapida de los verificadores individuales.
+
+Usa:
+  Verificacion general.

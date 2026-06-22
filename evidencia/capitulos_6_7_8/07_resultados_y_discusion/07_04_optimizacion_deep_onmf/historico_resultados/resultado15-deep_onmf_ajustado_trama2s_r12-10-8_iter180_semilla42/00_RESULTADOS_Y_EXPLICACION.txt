@@ -1,0 +1,176 @@
+﻿INFORME MODO ARTICULO - resultado15-deep_onmf_ajustado_trama2s_r12-10-8_iter180_semilla42
+
+Esta ejecucion sigue el procedimiento deep-ONMF descrito en el articulo objetivo:
+- Uso de toda la base Yaseen disponible.
+- Tramas PCG de 2 segundos con 1 segundos de solape.
+- No se descarta ningun audio: los audios menores de 2 segundos se rellenan con ceros.
+- STFT con ventana Hamming de 150 muestras, salto 75 y FFT de 250 puntos.
+- Deep ONMF con tres capas y rangos 9, 8 y 7.
+
+Carpeta de salida: C:\Users\armga\OneDrive\Escritorio\TFG\Programacion objetivo\resultados\resultado15-deep_onmf_ajustado_trama2s_r12-10-8_iter180_semilla42
+Carpeta de tablas y figuras: C:\Users\armga\OneDrive\Escritorio\TFG\Programacion objetivo\resultados\resultado15-deep_onmf_ajustado_trama2s_r12-10-8_iter180_semilla42\tablas_y_figuras
+Carpeta de documentación técnica: C:\Users\armga\OneDrive\Escritorio\TFG\Programacion objetivo\resultados\resultado15-deep_onmf_ajustado_trama2s_r12-10-8_iter180_semilla42\documentacion_tecnica
+Tiempo total de ejecución: 58.14 segundos
+
+==============================================================================================================
+1. AUDITORÍA DE DATOS USADOS
+==============================================================================================================
+
+En esta ejecucion no se elimina ningun WAV por duracion.
+Si un audio dura menos de 2 segundos, se rellena con ceros hasta formar una trama completa.
+Esto permite usar la base completa disponible en el TFG.
+
+clase  audios_totales  audios_usados  audios_descartados_por_duracion  audios_cortos_menores_2s  duracion_min_s  duracion_media_s  duracion_max_s  columnas_matriz_x
+   N        200            200                      0                              0                2.033750         2.381381         3.007250          42612       
+  AS        200            200                      0                              0                2.349875         2.741807         3.550250          49184       
+  MR        200            200                      0                             16                1.575500         2.256554         3.034625          43248       
+  MS        200            200                      0                             14                1.155625         2.356657         3.201375          45156       
+ MVP        200            200                      0                             19                1.726375         2.481116         3.992875          43248       
+
+==============================================================================================================
+2. PARÁMETROS DEL ARTÍCULO
+==============================================================================================================
+
+Frecuencia esperada de muestreo: 8000 Hz
+Trama PCG: 2.0 s
+Solape entre tramas PCG: 1.0 s
+Ventana STFT: Hamming de 150 muestras
+Salto STFT: 75 muestras
+FFT: 250 puntos
+Bins de frecuencia: 126
+Rangos deep ONMF: (12, 10, 8)
+Iteraciones por capa en esta implementación: 180
+Rellenar audios cortos: True
+
+==============================================================================================================
+3. RESULTADOS DEEP ONMF
+==============================================================================================================
+
+Errores relativos de reconstrucción por clase:
+
+clase error_relativo_final  capas
+   N        0.109106         3   
+  AS        0.188383         3   
+  MR        0.201769         3   
+  MS        0.143624         3   
+ MVP        0.137518         3   
+
+Detalle por capa:
+
+clase  capa  rango   entrada      W         H      error_relativo ortogonalidad_media segundos
+   N    1     12   126 x 42612 126 x 12 12 x 42612    0.042255          0.702823        4.57  
+   N    2     10    12 x 42612  12 x 10 10 x 42612    0.177381          0.373420        2.86  
+   N    3      8    10 x 42612   10 x 8  8 x 42612    0.316911          0.249775        2.04  
+  AS    1     12   126 x 49184 126 x 12 12 x 49184    0.093064          0.336555        5.34  
+  AS    2     10    12 x 49184  12 x 10 10 x 49184    0.216564          0.208061        3.35  
+  AS    3      8    10 x 49184   10 x 8  8 x 49184    0.303462          0.147351        2.45  
+  MR    1     12   126 x 43248 126 x 12 12 x 43248    0.096601          0.350158        4.58  
+  MR    2     10    12 x 43248  12 x 10 10 x 43248    0.193209          0.206861        2.90  
+  MR    3      8    10 x 43248   10 x 8  8 x 43248    0.331262          0.172462        2.14  
+  MS    1     12   126 x 45156 126 x 12 12 x 45156    0.054591          0.505379        4.79  
+  MS    2     10    12 x 45156  12 x 10 10 x 45156    0.169027          0.274356        3.05  
+  MS    3      8    10 x 45156   10 x 8  8 x 45156    0.315940          0.199312        2.19  
+ MVP    1     12   126 x 43248 126 x 12 12 x 43248    0.065531          0.442449        4.60  
+ MVP    2     10    12 x 43248  12 x 10 10 x 43248    0.168034          0.241995        2.89  
+ MVP    3      8    10 x 43248   10 x 8  8 x 43248    0.291687          0.170486        2.17  
+
+==============================================================================================================
+4. TABLA 2
+==============================================================================================================
+
+Tabla 2 calculada con los SBV obtenidos desde las matrices W finales.
+
+Número de característica          N                   AS                  MR                  MS                 MVP          p-valor 
+         SBV 1           0.019805 ± 0.087205 0.021121 ± 0.086893 0.021532 ± 0.086791 0.022525 ± 0.086536 0.020076 ± 0.087142 9.060e-08
+         SBV 2           0.018353 ± 0.087524 0.033036 ± 0.083066 0.019906 ± 0.087181 0.020030 ± 0.087153 0.019025 ± 0.087379 4.006e-30
+         SBV 3           0.019561 ± 0.087260 0.023093 ± 0.086385 0.031819 ± 0.083543 0.027401 ± 0.085107 0.019562 ± 0.087260 3.710e-19
+         SBV 4           0.023942 ± 0.086152 0.019852 ± 0.087194 0.023230 ± 0.086349 0.018631 ± 0.087465 0.023369 ± 0.086311 8.811e-11
+         SBV 5           0.019055 ± 0.087373 0.021047 ± 0.086911 0.020825 ± 0.086965 0.019787 ± 0.087209 0.020187 ± 0.087116 1.100e-13
+         SBV 6           0.019354 ± 0.087307 0.029725 ± 0.084317 0.025649 ± 0.085656 0.019260 ± 0.087327 0.021280 ± 0.086854 1.278e-18
+         SBV 7           0.019318 ± 0.087315 0.022002 ± 0.086672 0.021803 ± 0.086723 0.020037 ± 0.087151 0.028388 ± 0.084780 7.980e-13
+         SBV 8           0.021685 ± 0.086753 0.027357 ± 0.085121 0.027587 ± 0.085046 0.019427 ± 0.087290 0.019134 ± 0.087355 1.475e-18
+
+SBV con menor p-valor: SBV 2 con p = 4.006e-30.
+
+==============================================================================================================
+5. FIGURA 5, FIGURA 7 Y FIGURA 11D
+==============================================================================================================
+
+Figura 5: tablas_y_figuras/resultado15-deep_onmf_ajustado_trama2s_r12-10-8_iter180_semilla42_Figura_5_SBV_por_clase.png
+Tabla 2: tablas_y_figuras/resultado15-deep_onmf_ajustado_trama2s_r12-10-8_iter180_semilla42_Tabla_2_estadistica_SBV.png
+Figura 7: tablas_y_figuras/resultado15-deep_onmf_ajustado_trama2s_r12-10-8_iter180_semilla42_Figura_7_distancias_euclideas.png
+Figura 11D: tablas_y_figuras/resultado15-deep_onmf_ajustado_trama2s_r12-10-8_iter180_semilla42_Figura_11D_tSNE_deep_ONMF.png
+
+Datos numéricos usados en la Figura 7:
+
+SBV_1_entre_clases
+comparación  distancia
+     N-AS    0.741465 
+     N-MR    0.017997 
+     N-MS    0.251417 
+    N-MVP    0.121743 
+    AS-MR    0.723467 
+    AS-MS    0.992882 
+   AS-MVP    0.863207 
+    MR-MS    0.269415 
+   MR-MVP    0.139740 
+   MS-MVP    0.129675 
+
+SBV_1_dentro_clase
+clase  distancia
+   N   0.313549 
+  AS   1.081141 
+  MR   0.428749 
+  MS   0.197441 
+ MVP   0.421419 
+
+SBV_2_entre_clases
+comparación  distancia
+     N-AS    0.666194 
+     N-MR    0.234392 
+     N-MS    0.403610 
+    N-MVP    0.378616 
+    AS-MR    0.431802 
+    AS-MS    0.262583 
+   AS-MVP    0.287578 
+    MR-MS    0.169218 
+   MR-MVP    0.144224 
+   MS-MVP    0.024994 
+
+SBV_2_dentro_clase
+clase  distancia
+   N   0.501356 
+  AS   0.559383 
+  MR   0.469132 
+  MS   0.409464 
+ MVP   0.685748 
+
+SBV_3_entre_clases
+comparación  distancia
+     N-AS    0.181950 
+     N-MR    0.514844 
+     N-MS    0.459920 
+    N-MVP    0.017614 
+    AS-MR    0.332894 
+    AS-MS    0.277970 
+   AS-MVP    0.164336 
+    MR-MS    0.054924 
+   MR-MVP    0.497230 
+   MS-MVP    0.442306 
+
+SBV_3_dentro_clase
+clase  distancia
+   N   0.238857 
+  AS   0.597905 
+  MR   0.402069 
+  MS   0.238605 
+ MVP   0.514050 
+
+==============================================================================================================
+6. LECTURA HONESTA DEL RESULTADO
+==============================================================================================================
+
+Esta ejecución reproduce la lógica experimental del documento, no una clasificación train/test.
+Por tanto sus resultados principales son p-valores, distancias y visualización de separabilidad.
+No debe compararse directamente con accuracy de test, porque el artículo no obtiene sus valores
+principales con esa evaluación.

@@ -1,0 +1,33 @@
+{
+  "audios": 1000,
+  "folds": 5,
+  "modo_rapido": false,
+  "ujanet_entrenada": true,
+  "segundos_totales": 4091.46874429984,
+  "tipo_entregable": "correccion_modelo_optimo_y_validacion_punto_3",
+  "representaciones": [
+    "STFT",
+    "MFCC",
+    "MelSpectrogram",
+    "LogMelSpectrogram",
+    "DeepONMF_W",
+    "DeepONMF_H3",
+    "DeepONMF_Mejorado",
+    "DeepONMF_F8"
+  ],
+  "combinaciones_clasificador_representacion": 24,
+  "filas_metricas_binarias": 120,
+  "filas_metricas_multiclase": 120,
+  "informe_markdown": "C:\\Users\\armga\\OneDrive\\Escritorio\\TFG\\Implementacion_last\\resultados_validacion_modelo_optimo\\informe_modelo_optimo\\informe_modelo_optimo.md",
+  "informe_pdf": "C:\\Users\\armga\\OneDrive\\Escritorio\\TFG\\Implementacion_last\\resultados_validacion_modelo_optimo\\informe_modelo_optimo\\informe_modelo_optimo.pdf",
+  "figuras": [
+    "C:\\Users\\armga\\OneDrive\\Escritorio\\TFG\\Implementacion_last\\resultados_validacion_modelo_optimo\\informe_modelo_optimo\\figuras\\score_binario_KNN.png",
+    "C:\\Users\\armga\\OneDrive\\Escritorio\\TFG\\Implementacion_last\\resultados_validacion_modelo_optimo\\informe_modelo_optimo\\figuras\\score_binario_SVM.png",
+    "C:\\Users\\armga\\OneDrive\\Escritorio\\TFG\\Implementacion_last\\resultados_validacion_modelo_optimo\\informe_modelo_optimo\\figuras\\score_binario_UjaNet.png",
+    "C:\\Users\\armga\\OneDrive\\Escritorio\\TFG\\Implementacion_last\\resultados_validacion_modelo_optimo\\informe_modelo_optimo\\figuras\\comparacion_deeponmf_w_h3_mejorado_f8.png",
+    "C:\\Users\\armga\\OneDrive\\Escritorio\\TFG\\Implementacion_last\\resultados_validacion_modelo_optimo\\informe_modelo_optimo\\figuras\\comparacion_tsne_w_h3_mejorado_f8.png"
+  ],
+  "pdf_final_corregido": "C:\\Users\\armga\\OneDrive\\Escritorio\\TFG\\FINAL_CORREGIDO_MODELO_OPTIMO.pdf",
+  "pdf_explicacion": "C:\\Users\\armga\\OneDrive\\Escritorio\\TFG\\EXPLICACION_MODELO_OPTIMO.pdf",
+  "entrega_compacta": "C:\\Users\\armga\\OneDrive\\Escritorio\\TFG\\ENTREGA_CORREGIDA_MODELO_OPTIMO"
+}

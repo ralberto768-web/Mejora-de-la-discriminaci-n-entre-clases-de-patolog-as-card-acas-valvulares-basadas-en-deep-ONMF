@@ -1,0 +1,4 @@
+﻿bloque,salida,pregunta que responde,efecto
+Deep-ONMF normal,7 SBV,que bases espectrales se activan en el audio,"representacion interpretable, pero no compara directamente contra todas las clases"
+Deep-ONMF mejorado,5 afinidades,que base de clase reconstruye mejor cada audio,mejora la discriminacion porque convierte reconstruccion en evidencia por clase
+perfil_softmin_errores_f8,5 afinidades con fuerza 8,cuanto gana la mejor reconstruccion frente a las demas,acentua diferencias relativas y logra 0.2602 de silhouette t-SNE con 1000 audios
