@@ -1,31 +1,57 @@
 # Datos externos
 
-Este repositorio esta preparado para revision y verificacion. Para repetir todo desde cero se necesitan los datos externos originales.
+El repositorio incluye código, resultados, tablas, figuras, configuraciones y manifiestos. No incluye obligatoriamente todos los audios fuente originales.
+
+## Por qué faltan los audios fuente
+
+Los audios de sonidos cardíacos pueden estar sujetos a restricciones de distribución y además pueden ocupar un volumen elevado. Por ese motivo se tratan como datos externos: el repositorio conserva todo lo necesario para entender y verificar los resultados, pero la reproducción desde cero requiere colocar las bases de datos en una carpeta local.
 
 ## Estructura esperada
-
-Colocar los datos asi:
 
 ```text
 datos_externos/
   Yaseen/
-    README_DATOS.txt
     audios_originales/
-  AWGN/
     README_DATOS.txt
+  AWGN/
     audios_o_resultados_ruidosos/
+    README_DATOS.txt
 ```
 
-## Por que no se suben directamente todos los audios
+## Qué representa cada carpeta
 
-Los audios fuente y bases completas pueden tener restricciones de licencia, tamano elevado y no son adecuados para una subida normal a GitHub. El repositorio conserva resultados, configuraciones, tablas, figuras, codigo y manifiestos; los datos pesados se tratan como dependencia externa.
+- `Yaseen`: base de datos de sonidos cardíacos usada como escenario sin ruido o escenario de referencia.
+- `AWGN`: material asociado a escenarios con ruido aditivo blanco gaussiano y distintos niveles SNR.
 
-## Comprobacion
+## Qué se puede hacer sin esos datos
 
-Despues de colocar los datos, ejecutar:
+Aunque no se tengan los audios fuente, se puede:
 
-```powershell
-python scripts\verificar_repositorio.py --modo rapido
-```
+- revisar la implementación;
+- consultar resultados ya generados;
+- comprobar métricas y matrices de confusión;
+- revisar las figuras;
+- verificar manifiestos;
+- leer el documento global del trabajo.
 
-Si se anaden datos externos, se recomienda generar un manifiesto propio de esos datos con SHA-256 antes de entregarlos o enlazarlos.
+## Qué requiere los datos externos
+
+Repetir todo desde cero requiere:
+
+- cargar audios originales;
+- regenerar características;
+- volver a ejecutar Deep-ONMF;
+- volver a entrenar/evaluar clasificadores;
+- comparar las nuevas salidas con los resultados esperados.
+
+## Recomendación de trazabilidad
+
+Si se añaden datos externos, conviene generar un manifiesto propio con:
+
+- ruta del archivo;
+- tamaño;
+- hash SHA-256;
+- origen o versión de la base de datos.
+
+Así una nueva ejecución podrá compararse con la evidencia conservada en el repositorio.
+

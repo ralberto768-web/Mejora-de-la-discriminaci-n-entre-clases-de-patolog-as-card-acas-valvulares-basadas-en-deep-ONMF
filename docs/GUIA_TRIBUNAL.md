@@ -1,44 +1,93 @@
-# Guia para el tribunal
+# Guía para revisión académica
 
-Este repositorio permite tres niveles de comprobacion.
+Este repositorio contiene código, resultados y evidencias del Trabajo Fin de Grado:
 
-## Nivel 1: revisar evidencia ya generada
+**Mejora de la discriminación entre clases de patologías cardíacas valvulares basadas en deep-ONMF**
 
-Abrir:
+La finalidad del repositorio es que el tribunal o cualquier lector externo pueda revisar qué se ha implementado, qué resultados se han obtenido y qué material permite comprobarlos.
 
-- `documento_global/DOCUMENTO_EVALUACION_CAPITULOS_6_7_8.pdf`
-- `evidencia/capitulos_6_7_8/00_README_GENERAL.md`
-- `docs/MAPA_INDICE_TFG.md`
+## Nivel 1: entender el trabajo sin ejecutar código
 
-Este nivel no requiere ejecutar codigo.
+Abrir en este orden:
 
-## Nivel 2: verificar integridad del paquete
+1. `README.md`
+2. `docs/LECTURA_RAPIDA.md`
+3. `documento_global/DOCUMENTO_EVALUACION_CAPITULOS_6_7_8.pdf`
+4. `docs/MAPA_INDICE_TFG.md`
 
-Ejecutar:
+Con esto se entiende:
 
-```powershell
-python scripts\verificar_repositorio.py --modo rapido
+- cuál es el problema tratado;
+- qué papel tiene Deep-ONMF;
+- qué son las matrices `W`, `H` y `H3`;
+- cómo se organiza la evidencia;
+- qué resultados corresponden a cada apartado de la memoria.
+
+## Nivel 2: revisar resultados ya generados
+
+Los resultados están en:
+
+```text
+evidencia/capitulos_6_7_8/07_resultados_y_discusion/
 ```
 
-Para comprobacion con hashes de archivos pequenos y de control:
+Bloques principales:
 
-```powershell
-python scripts\verificar_repositorio.py --modo completo
+- `07_04_optimizacion_deep_onmf`: configuraciones por capas y dimensiones.
+- `07_05_escenario_real`: resultados sin ruido.
+- `07_06_escenario_ruidoso_awgn`: resultados con ruido AWGN/SNR.
+- `07_07_espectrales_vs_temporales_h_vs_w`: comparación `H3` frente a `W` y características temporales frente a espectrales.
+
+El documento global resume qué evidencia usar en cada bloque:
+
+```text
+documento_global/DOCUMENTO_EVALUACION_CAPITULOS_6_7_8.pdf
 ```
 
-Los archivos grandes se controlan por presencia, tamano y Git LFS. La lista esta en `github/ARCHIVOS_GRANDES_GIT_LFS.csv`.
+## Nivel 3: comprobar integridad del repositorio
 
-En Windows, si PowerShell bloquea scripts, ejecutar:
+En Windows:
 
 ```powershell
 .\run_all.bat todo
 ```
 
-## Nivel 3: reproducir resultados
+Este comando comprueba entorno, archivos obligatorios y resultados principales.
 
-1. Instalar dependencias con `requirements.txt`.
-2. Colocar bases de datos en `datos_externos`.
-3. Revisar `docs/REPRODUCIBILIDAD.md`.
-4. Ejecutar los scripts originales indicados por cada bloque de evidencia.
+También puede ejecutarse de forma separada:
 
-La validacion principal del repositorio no depende de una unica ejecucion larga: separa codigo, datos externos, resultados esperados y verificacion de hashes.
+```powershell
+python scripts\comprobar_entorno.py
+python scripts\verificar_repositorio.py --modo rapido
+python scripts\resumen_resultados.py
+```
+
+Para una comprobación más estricta de archivos pequeños y de control:
+
+```powershell
+python scripts\verificar_repositorio.py --modo completo
+```
+
+Los archivos grandes se gestionan con Git LFS y se documentan en:
+
+```text
+github/ARCHIVOS_GRANDES_GIT_LFS.csv
+```
+
+## Nivel 4: reproducir experimentos
+
+La reproducción completa requiere disponer de los datos externos originales, que deben colocarse en:
+
+```text
+datos_externos/
+```
+
+Antes de ejecutar experimentos largos, revisar:
+
+```text
+docs/DATOS_EXTERNOS.md
+docs/REPRODUCIBILIDAD.md
+```
+
+El repositorio conserva particiones, configuraciones, scripts, métricas y resultados para comparar una nueva ejecución con los resultados esperados.
+
