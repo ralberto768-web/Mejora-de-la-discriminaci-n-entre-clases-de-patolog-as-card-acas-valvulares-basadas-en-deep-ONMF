@@ -1,93 +1,33 @@
-# Guía para revisión académica
+# Guia para evaluacion externa
 
-Este repositorio contiene código, resultados y evidencias del Trabajo Fin de Grado:
+Esta guia esta pensada para una revision rapida por parte de un tribunal, tutor o lector externo. El repositorio puede revisarse sin ejecutar entrenamientos completos, porque incluye resultados ya generados, tablas, figuras y manifiestos de verificacion.
 
-**Mejora de la discriminación entre clases de patologías cardíacas valvulares basadas en deep-ONMF**
+## Revision recomendada
 
-La finalidad del repositorio es que el tribunal o cualquier lector externo pueda revisar qué se ha implementado, qué resultados se han obtenido y qué material permite comprobarlos.
+1. Leer `README.md` para entender el objetivo y la estructura.
+2. Abrir `informe_general/INFORME_GENERAL_RESULTADOS_DEEP_ONMF.pdf` para una vision completa del metodo y los resultados.
+3. Consultar `docs/RESULTADOS_ESPERADOS.md` para saber donde esta cada tipo de evidencia.
+4. Revisar `resultados/04_optimizacion_deep_onmf/`, `resultados/05_escenario_sin_ruido/`, `resultados/06_escenario_ruidoso_awgn/` y `resultados/07_comparacion_temporal_espectral_h3_w/`.
+5. Ejecutar `run_all.bat todo` si se quiere comprobar que el repositorio descargado conserva los archivos obligatorios.
 
-## Nivel 1: entender el trabajo sin ejecutar código
+## Que se puede comprobar directamente
 
-Abrir en este orden:
+- Codigo y configuraciones del flujo Deep-ONMF.
+- Resultados de optimizacion por capas y dimensiones.
+- Resultados en escenario sin ruido.
+- Resultados en escenario con ruido AWGN.
+- Comparacion entre representaciones temporales y espectrales.
+- Comparacion entre matrices `H3` y `W`.
+- Figuras, tablas, matrices de confusion, CSV de metricas y documentos explicativos.
 
-1. `README.md`
-2. `docs/LECTURA_RAPIDA.md`
-3. `documento_global/DOCUMENTO_EVALUACION_CAPITULOS_6_7_8.pdf`
-4. `docs/MAPA_INDICE_TFG.md`
+## Que no se incluye directamente
 
-Con esto se entiende:
+Los audios fuente y bases de datos completas no se suben al repositorio por tamano y por posibles restricciones externas. Para repetir ejecuciones completas deben colocarse manualmente en `datos_externos/`, siguiendo `docs/DATOS_EXTERNOS.md`.
 
-- cuál es el problema tratado;
-- qué papel tiene Deep-ONMF;
-- qué son las matrices `W`, `H` y `H3`;
-- cómo se organiza la evidencia;
-- qué resultados corresponden a cada apartado de la memoria.
+## Separacion entre evidencia e interpretacion
 
-## Nivel 2: revisar resultados ya generados
+- Las carpetas de `resultados/` contienen evidencia experimental: metricas, tablas, figuras y salidas generadas.
+- `informe_general/` y `docs/` contienen la explicacion y la orientacion de lectura.
+- `conclusiones/` contiene material de cierre y lineas futuras.
 
-Los resultados están en:
-
-```text
-evidencia/capitulos_6_7_8/07_resultados_y_discusion/
-```
-
-Bloques principales:
-
-- `07_04_optimizacion_deep_onmf`: configuraciones por capas y dimensiones.
-- `07_05_escenario_real`: resultados sin ruido.
-- `07_06_escenario_ruidoso_awgn`: resultados con ruido AWGN/SNR.
-- `07_07_espectrales_vs_temporales_h_vs_w`: comparación `H3` frente a `W` y características temporales frente a espectrales.
-
-El documento global resume qué evidencia usar en cada bloque:
-
-```text
-documento_global/DOCUMENTO_EVALUACION_CAPITULOS_6_7_8.pdf
-```
-
-## Nivel 3: comprobar integridad del repositorio
-
-En Windows:
-
-```powershell
-.\run_all.bat todo
-```
-
-Este comando comprueba entorno, archivos obligatorios y resultados principales.
-
-También puede ejecutarse de forma separada:
-
-```powershell
-python scripts\comprobar_entorno.py
-python scripts\verificar_repositorio.py --modo rapido
-python scripts\resumen_resultados.py
-```
-
-Para una comprobación más estricta de archivos pequeños y de control:
-
-```powershell
-python scripts\verificar_repositorio.py --modo completo
-```
-
-Los archivos grandes se gestionan con Git LFS y se documentan en:
-
-```text
-github/ARCHIVOS_GRANDES_GIT_LFS.csv
-```
-
-## Nivel 4: reproducir experimentos
-
-La reproducción completa requiere disponer de los datos externos originales, que deben colocarse en:
-
-```text
-datos_externos/
-```
-
-Antes de ejecutar experimentos largos, revisar:
-
-```text
-docs/DATOS_EXTERNOS.md
-docs/REPRODUCIBILIDAD.md
-```
-
-El repositorio conserva particiones, configuraciones, scripts, métricas y resultados para comparar una nueva ejecución con los resultados esperados.
-
+Esta separacion facilita revisar los datos primero y valorar la interpretacion despues.

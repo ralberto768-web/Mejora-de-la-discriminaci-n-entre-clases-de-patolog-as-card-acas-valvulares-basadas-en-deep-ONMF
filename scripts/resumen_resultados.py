@@ -8,10 +8,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 KEY_FILES = [
-    "documento_global/DOCUMENTO_EVALUACION_CAPITULOS_6_7_8.pdf",
-    "evidencia/capitulos_6_7_8/09_manifiestos_verificacion/MANIFIESTO_ARCHIVOS.csv",
-    "evidencia/capitulos_6_7_8/07_resultados_y_discusion/07_07_espectrales_vs_temporales_h_vs_w/prueba_nmf_w_h/tablas_csv/resumen_accuracy_nmf_w_h.csv",
-    "evidencia/capitulos_6_7_8/07_resultados_y_discusion/07_07_espectrales_vs_temporales_h_vs_w/prueba_nmf_w_h/tablas_csv/resultados_nmf_w_h.csv",
+    "informe_general/INFORME_GENERAL_RESULTADOS_DEEP_ONMF.pdf",
+    "verificacion/MANIFIESTO_ARCHIVOS.csv",
+    "resultados/07_comparacion_temporal_espectral_h3_w/prueba_nmf_w_h/tablas_csv/resumen_accuracy_nmf_w_h.csv",
+    "resultados/07_comparacion_temporal_espectral_h3_w/prueba_nmf_w_h/tablas_csv/resultados_nmf_w_h.csv",
 ]
 
 

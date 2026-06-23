@@ -1,52 +1,63 @@
 # Resultados esperados
 
-Este repositorio no se limita a guardar código. También conserva las salidas experimentales generadas durante el trabajo: métricas, matrices de confusión, figuras, tablas, configuraciones y documentos de evaluación.
+Este documento indica que deberia encontrar un lector al revisar cada bloque experimental.
 
-## Qué se debe poder revisar
+## Optimizacion Deep-ONMF
 
-Un lector debe poder localizar evidencias para:
+Ruta principal: `resultados/04_optimizacion_deep_onmf/`
 
-- la optimización del modelo Deep-ONMF por número de capas y dimensiones;
-- la comparación entre escenario real y escenario ruidoso;
-- los resultados con ruido AWGN y distintos niveles SNR;
-- la comparación entre características temporales (`H3`) y matriz `W`;
-- la comparación con representaciones clásicas;
-- la validación cruzada k-fold;
-- las matrices de confusión y métricas finales.
+Contenido esperado:
 
-## Dónde están las evidencias principales
+- configuraciones probadas por numero de capas;
+- dimensiones empleadas en las matrices internas;
+- tablas con mejores configuraciones;
+- resultados historicos complementarios en `resultados/04_optimizacion_deep_onmf_historico/`;
+- figuras y documentos de apoyo cuando estan disponibles.
 
-| Bloque | Ruta |
-|---|---|
-| Resumen global de resultados | `documento_global/DOCUMENTO_EVALUACION_CAPITULOS_6_7_8.pdf` |
-| Manifiesto general de archivos | `evidencia/capitulos_6_7_8/09_manifiestos_verificacion/MANIFIESTO_ARCHIVOS.csv` |
-| Optimización Deep-ONMF | `evidencia/capitulos_6_7_8/07_resultados_y_discusion/07_04_optimizacion_deep_onmf/` |
-| Escenario sin ruido | `evidencia/capitulos_6_7_8/07_resultados_y_discusion/07_05_escenario_real/` |
-| Escenario con ruido AWGN | `evidencia/capitulos_6_7_8/07_resultados_y_discusion/07_06_escenario_ruidoso_awgn/` |
-| Comparación H3 frente a W | `evidencia/capitulos_6_7_8/07_resultados_y_discusion/07_07_espectrales_vs_temporales_h_vs_w/` |
+## Escenario sin ruido
 
-## Comprobación automática
+Ruta principal: `resultados/05_escenario_sin_ruido/`
 
-Para imprimir un resumen de resultados clave:
+Contenido esperado:
 
-```powershell
-python scripts\resumen_resultados.py
-```
+- resultados de clasificacion sobre datos limpios;
+- comparacion con representaciones clasicas cuando existe evidencia disponible;
+- metricas agregadas y matrices de confusion;
+- ficheros CSV, imagenes y documentos de interpretacion.
 
-Para comprobar estructura y manifiesto:
+## Escenario ruidoso con AWGN
 
-```powershell
-python scripts\verificar_repositorio.py --modo rapido
-```
+Ruta principal: `resultados/06_escenario_ruidoso_awgn/`
 
-## Interpretación correcta
+Contenido esperado:
 
-Los resultados deben interpretarse separando:
+- resultados por nivel de SNR;
+- comparacion de robustez frente a ruido;
+- tablas de metricas y figuras resumen;
+- salidas intermedias necesarias para auditar la evaluacion.
 
-- rendimiento de clasificación;
-- separación visual o geométrica de las características;
-- robustez frente a ruido;
-- coste computacional y dimensionalidad de las representaciones.
+## Comparacion temporal-espectral y H3-W
 
-No debe asumirse que Deep-ONMF gana en todos los casos. El objetivo del repositorio es conservar la evidencia completa para que esa interpretación se pueda comprobar.
+Ruta principal: `resultados/07_comparacion_temporal_espectral_h3_w/`
 
+Contenido esperado:
+
+- comparacion de representaciones temporales frente a espectrales;
+- evidencias de separabilidad mediante nubes de puntos o proyecciones;
+- resultados comparando matrices `H3` y `W`;
+- tablas CSV con metricas de apoyo.
+
+## Discusion y cierre
+
+Rutas principales:
+
+- `resultados/08_discusion_resultados/`
+- `conclusiones/`
+- `informe_general/INFORME_GENERAL_RESULTADOS_DEEP_ONMF.pdf`
+
+Contenido esperado:
+
+- sintesis de resultados relevantes;
+- ventajas y limitaciones de las caracteristicas temporales;
+- relacion entre dimension de entrada, coste computacional y rendimiento;
+- lineas futuras razonables a partir de la evidencia incluida.

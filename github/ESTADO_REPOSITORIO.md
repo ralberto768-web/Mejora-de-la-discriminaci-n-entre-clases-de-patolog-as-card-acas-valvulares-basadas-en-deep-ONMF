@@ -1,21 +1,24 @@
 # Estado del repositorio
 
-- Repositorio: `mejora-discriminacion-patologias-cardiacas-valvulares-deep-onmf`
-- Titulo: Mejora de la discriminación entre clases de patologías cardíacas valvulares basadas en deep-ONMF
-- Fecha: 2026-06-22 17:14:32
-- Archivos copiados: 0
-- Archivos ya presentes con mismo tamano: 66830
-- Errores de copia: 0
-- Archivos manifestados: 66852
-- Errores de hash frente a referencia previa: 0
-- Tamano total manifestado: 8.13 GB
-- Archivos >= 50 MB: 15
-- Comparacion fuente/destino OK: 66830
-- Comparacion fuente/destino errores: 0
+- Repositorio local: `mejora-discriminacion-patologias-cardiacas-valvulares-deep-onmf`
+- Titulo del trabajo: Mejora de la discriminacion entre clases de patologias cardiacas valvulares basadas en Deep-ONMF
+- Fecha de preparacion: 2026-06-22
+- Documentacion publica revisada: si
+- Informe general regenerado: si
+- Comprobacion automatica disponible: `run_all.bat todo`
+- Archivos grandes gestionados con Git LFS: ver `github/ARCHIVOS_GRANDES_GIT_LFS.csv`
 
-Ver:
+## Archivos de control
 
-- `github/MANIFIESTO_REPOSITORIO.csv`
-- `github/COMPARACION_FUENTE_DESTINO.csv`
-- `github/ARCHIVOS_GRANDES_GIT_LFS.csv`
-- `github/INSTRUCCIONES_SUBIDA.md`
+- `github/MANIFIESTO_REPOSITORIO.csv`: manifiesto de archivos del repositorio.
+- `github/ARCHIVOS_GRANDES_GIT_LFS.csv`: lista de archivos grandes gestionados por Git LFS.
+- `github/INSTRUCCIONES_SUBIDA.md`: notas de publicacion y subida a GitHub.
+- `verificacion/MANIFIESTO_ARCHIVOS.csv`: manifiesto de evidencia experimental.
+
+## Documentos principales
+
+- `README.md`
+- `docs/LECTURA_RAPIDA.md`
+- `docs/GUIA_ESTRUCTURA_REPOSITORIO.md`
+- `docs/GUIA_TRIBUNAL.md`
+- `informe_general/INFORME_GENERAL_RESULTADOS_DEEP_ONMF.pdf`

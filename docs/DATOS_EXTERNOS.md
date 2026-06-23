@@ -1,57 +1,31 @@
 # Datos externos
 
-El repositorio incluye código, resultados, tablas, figuras, configuraciones y manifiestos. No incluye obligatoriamente todos los audios fuente originales.
+Las bases de datos completas de sonidos cardiacos no se distribuyen dentro del repositorio. Esta decision evita subir audios pesados y respeta posibles restricciones de licencia o redistribucion.
 
-## Por qué faltan los audios fuente
+## Uso de la carpeta `datos_externos/`
 
-Los audios de sonidos cardíacos pueden estar sujetos a restricciones de distribución y además pueden ocupar un volumen elevado. Por ese motivo se tratan como datos externos: el repositorio conserva todo lo necesario para entender y verificar los resultados, pero la reproducción desde cero requiere colocar las bases de datos en una carpeta local.
+Coloca aqui las bases de datos necesarias para repetir extracciones o entrenamientos completos. La estructura concreta puede depender de la fuente de datos disponible, pero debe mantenerse separada del codigo y de los resultados ya generados.
 
-## Estructura esperada
+Ejemplo de organizacion:
 
 ```text
 datos_externos/
-  Yaseen/
-    audios_originales/
-    README_DATOS.txt
-  AWGN/
-    audios_o_resultados_ruidosos/
-    README_DATOS.txt
+  yaseen/
+    audios/
+    etiquetas/
+  ruido_awgn/
+    configuraciones/
 ```
 
-## Qué representa cada carpeta
+## Revision sin datos externos
 
-- `Yaseen`: base de datos de sonidos cardíacos usada como escenario sin ruido o escenario de referencia.
-- `AWGN`: material asociado a escenarios con ruido aditivo blanco gaussiano y distintos niveles SNR.
+No hace falta disponer de los audios fuente para revisar el repositorio. Las carpetas `resultados/`, `informe_general/`, `docs/` y `verificacion/` contienen la evidencia ya generada.
 
-## Qué se puede hacer sin esos datos
+## Repeticion de experimentos
 
-Aunque no se tengan los audios fuente, se puede:
+Para repetir un experimento completo:
 
-- revisar la implementación;
-- consultar resultados ya generados;
-- comprobar métricas y matrices de confusión;
-- revisar las figuras;
-- verificar manifiestos;
-- leer el documento global del trabajo.
-
-## Qué requiere los datos externos
-
-Repetir todo desde cero requiere:
-
-- cargar audios originales;
-- regenerar características;
-- volver a ejecutar Deep-ONMF;
-- volver a entrenar/evaluar clasificadores;
-- comparar las nuevas salidas con los resultados esperados.
-
-## Recomendación de trazabilidad
-
-Si se añaden datos externos, conviene generar un manifiesto propio con:
-
-- ruta del archivo;
-- tamaño;
-- hash SHA-256;
-- origen o versión de la base de datos.
-
-Así una nueva ejecución podrá compararse con la evidencia conservada en el repositorio.
-
+1. Coloca los datos externos en esta carpeta.
+2. Comprueba dependencias con `python scripts\comprobar_entorno.py`.
+3. Revisa la configuracion del experimento en `metodologia/` o `resultados/`.
+4. Ejecuta el script correspondiente.

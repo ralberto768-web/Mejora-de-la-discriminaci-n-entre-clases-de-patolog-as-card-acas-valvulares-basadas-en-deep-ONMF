@@ -16,13 +16,16 @@ REQUIRED = [
     "requirements.txt",
     "run_all.bat",
     "run_all.ps1",
+    "docs/LECTURA_RAPIDA.md",
     "docs/GUIA_TRIBUNAL.md",
-    "docs/MAPA_INDICE_TFG.md",
+    "docs/GUIA_ESTRUCTURA_REPOSITORIO.md",
     "docs/REPRODUCIBILIDAD.md",
-    "evidencia/capitulos_6_7_8/00_README_GENERAL.md",
-    "evidencia/capitulos_6_7_8/09_manifiestos_verificacion/MANIFIESTO_ARCHIVOS.csv",
-    "documento_global/DOCUMENTO_EVALUACION_CAPITULOS_6_7_8.pdf",
-    "documento_global/DOCUMENTO_EVALUACION_CAPITULOS_6_7_8.md",
+    "metodologia/README.md",
+    "resultados/README.md",
+    "verificacion/README.md",
+    "verificacion/MANIFIESTO_ARCHIVOS.csv",
+    "informe_general/INFORME_GENERAL_RESULTADOS_DEEP_ONMF.pdf",
+    "informe_general/INFORME_GENERAL_RESULTADOS_DEEP_ONMF.md",
 ]
 
 

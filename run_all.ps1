@@ -45,6 +45,13 @@ function Invoke-RepoPython {
         return
     }
 
+    $codexPython = Join-Path $env:USERPROFILE ".cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe"
+    if (Test-Path $codexPython) {
+        & $codexPython @Args
+        if ($LASTEXITCODE -ne 0) { throw "Fallo Python: $Args" }
+        return
+    }
+
     $py = Get-Command py -ErrorAction SilentlyContinue
     if ($py) {
         & $py.Source @Args
