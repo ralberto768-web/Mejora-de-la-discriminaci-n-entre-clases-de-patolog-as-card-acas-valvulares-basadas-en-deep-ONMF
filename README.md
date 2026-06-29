@@ -1,102 +1,86 @@
-# Mejora de la discriminacion entre clases de patologias cardiacas valvulares basadas en Deep-ONMF
+# Ejemplo basico de clasificacion de senales cardiacas
 
-Este repositorio contiene el codigo, las configuraciones, los resultados y la documentacion tecnica de un Trabajo Fin de Grado sobre clasificacion automatica de sonidos cardiacos. El trabajo estudia representaciones temporales obtenidas con Deep-ONMF y su uso junto con clasificadores de aprendizaje automatico para discriminar clases de patologias cardiacas valvulares.
+Este repositorio contiene una prueba minima para el tribunal: un codigo que lee un fichero de senal cardiaca y devuelve una clasificacion basica entre cinco clases: senal sana y cuatro patologias valvulares.
 
-El repositorio esta preparado para que un lector externo pueda entender que se ha hecho, que resultados se han obtenido y que archivos necesita revisar o ejecutar, sin depender de carpetas privadas ni de documentos locales del autor.
+No se incluye aqui el pipeline experimental completo del TFG. La finalidad de esta version es que cualquier miembro del tribunal pueda descargar el repositorio, ejecutar un ejemplo en pocos segundos y entender el flujo principal.
 
-## Que incluye
+## Contenido
 
-- `metodologia/`: codigo, configuraciones y material tecnico del flujo Deep-ONMF y del sistema de clasificacion.
-- `resultados/`: resultados organizados por tipo de experimento: bases de datos, metricas, validacion cruzada, optimizacion, escenario sin ruido, escenario con ruido AWGN y comparacion entre representaciones `H3` y `W`.
-- `conclusiones/`: evidencias usadas para cerrar objetivos, limitaciones y lineas futuras.
-- `informe_general/`: informe PDF y Markdown con una lectura integrada del trabajo y de los resultados principales.
-- `docs/`: guias de lectura, reproducibilidad, datos externos y resultados esperados.
-- `scripts/`: comprobaciones automaticas de entorno, integridad del repositorio y resumen de evidencias.
-- `datos_externos/`: plantilla para colocar bases de datos que no se distribuyen directamente en GitHub.
-- `github/`: manifiestos del repositorio, lista de archivos grandes y estado de la entrega.
-- `verificacion/`: manifiestos y resumen de integridad de la evidencia experimental incluida.
+- `clasificar_senal.py`: script principal. Lee una senal `.csv`, `.txt` o `.wav`, extrae caracteristicas y clasifica.
+- `modelo_basico.json`: parametros de un clasificador sencillo por prototipos.
+- `datos/pcg_sano.wav`: audio PCG sintetico con patron sano.
+- `datos/pcg_estenosis_aortica.wav`: audio PCG sintetico con estenosis aortica.
+- `datos/pcg_regurgitacion_mitral.wav`: audio PCG sintetico con regurgitacion mitral.
+- `datos/pcg_estenosis_mitral.wav`: audio PCG sintetico con estenosis mitral.
+- `datos/pcg_prolapso_mitral.wav`: audio PCG sintetico con prolapso mitral.
+- `verificar_demo.py`: comprobacion rapida de los cinco audios incluidos.
+- `docs/EXPLICACION_BASICA.md`: explicacion breve del metodo y de sus limitaciones.
 
-## Lectura recomendada
+## Instalacion
 
-Para entender el contenido sin ejecutar nada:
-
-1. `docs/LECTURA_RAPIDA.md`
-2. `informe_general/INFORME_GENERAL_RESULTADOS_DEEP_ONMF.pdf`
-3. `docs/GUIA_ESTRUCTURA_REPOSITORIO.md`
-4. `docs/RESULTADOS_ESPERADOS.md`
-
-Para comprobar que la descarga esta completa:
+Se recomienda usar Python 3.10 o superior.
 
 ```powershell
-.\run_all.bat todo
+py -m venv .venv
+.\.venv\Scripts\activate
+py -m pip install -r requirements.txt
 ```
 
-Para preparar una reproduccion completa de los experimentos:
+Si ya tienes `numpy` instalado, tambien puedes ejecutar directamente los comandos de uso.
 
-```text
-docs/DATOS_EXTERNOS.md
-docs/REPRODUCIBILIDAD.md
-```
+## Uso rapido
 
-La reproduccion completa requiere disponer de las bases de datos externas de sonidos cardiacos. Los audios fuente no se incluyen directamente en el repositorio por tamano y por posibles restricciones de licencia.
-
-## Flujo experimental
-
-El trabajo sigue este esquema general:
-
-1. Preparacion de senales de fonocardiograma.
-2. Extraccion de caracteristicas temporales mediante Deep-ONMF.
-3. Obtencion de matrices internas del modelo, principalmente `H3` y `W`.
-4. Clasificacion mediante UjaNet y comparacion con representaciones clasicas.
-5. Evaluacion con validacion cruzada k-fold.
-6. Analisis en escenario sin ruido y con ruido AWGN.
-7. Comparacion entre informacion temporal y espectral, incluyendo el contraste `H3` frente a `W`.
-8. Discusion de coste, dimension de entrada, robustez y limitaciones.
-
-## Estructura de resultados
-
-| Ruta | Contenido |
-|---|---|
-| `resultados/01_bases_de_datos_y_escenarios/` | Evidencia sobre bases de datos y escenarios de evaluacion. |
-| `resultados/02_metricas_de_evaluacion/` | Definiciones, tablas y salidas relacionadas con metricas. |
-| `resultados/03_validacion_cruzada_kfold/` | Particiones, validaciones y resultados de k-fold. |
-| `resultados/04_optimizacion_deep_onmf/` | Configuraciones optimizadas por capas y dimensiones. |
-| `resultados/04_optimizacion_deep_onmf_historico/` | Resultados historicos complementarios de la busqueda Deep-ONMF. |
-| `resultados/05_escenario_sin_ruido/` | Evaluacion sobre datos limpios o escenario optimo. |
-| `resultados/06_escenario_ruidoso_awgn/` | Evaluacion con ruido AWGN y distintos niveles SNR. |
-| `resultados/07_comparacion_temporal_espectral_h3_w/` | Comparacion entre representaciones temporales y espectrales, incluyendo `H3` y `W`. |
-| `resultados/08_discusion_resultados/` | Material para interpretar los resultados principales. |
-
-## Comprobacion rapida
-
-En Windows:
+Clasificar la senal sana:
 
 ```powershell
-.\run_all.bat todo
+py clasificar_senal.py datos\pcg_sano.wav
 ```
 
-Ese comando comprueba dependencias basicas, verifica archivos obligatorios y resume evidencias clave. Tambien se puede ejecutar por partes:
+Clasificar una patologia concreta:
 
 ```powershell
-python scripts\comprobar_entorno.py
-python scripts\verificar_repositorio.py --modo rapido
-python scripts\resumen_resultados.py
+py clasificar_senal.py datos\pcg_estenosis_aortica.wav
 ```
 
-## Git LFS
-
-El repositorio usa Git LFS para ficheros grandes como `.npy`, `.npz`, `.pt`, `.zip`, `.pdf` y resultados pesados. Despues de clonar:
+Comprobar los cinco audios de una vez:
 
 ```powershell
-git lfs install
-git lfs pull
+py verificar_demo.py
 ```
 
-La lista de archivos grandes esta en `github/ARCHIVOS_GRANDES_GIT_LFS.csv`.
+## Formato de entrada
 
-## Estado de la entrega
+El caso mas simple es un CSV con estas columnas:
 
-- Paquete preparado para GitHub con estructura publica y nombres descriptivos.
-- Codigo, resultados, figuras, tablas, configuraciones y manifiestos incluidos.
-- Documentacion redactada para lectura autonoma por parte de un tribunal o lector externo.
-- Comprobacion automatica disponible mediante `run_all.bat todo`.
+```csv
+tiempo_s,amplitud
+0.000000,0.0123
+0.000125,0.0181
+```
+
+Tambien se aceptan:
+
+- CSV o TXT con una sola columna de amplitud. En ese caso se usa `--fs` para indicar la frecuencia de muestreo.
+- WAV PCM mono o estereo.
+
+Ejemplo con frecuencia indicada manualmente:
+
+```powershell
+py clasificar_senal.py mi_senal.csv --fs 8000
+```
+
+## Que hace el codigo
+
+1. Lee el fichero de senal.
+2. Normaliza la amplitud y elimina el desplazamiento medio.
+3. Calcula caracteristicas temporales y espectrales basicas.
+4. Compara esas caracteristicas con cinco prototipos: `sana`, `estenosis_aortica`, `regurgitacion_mitral`, `estenosis_mitral` y `prolapso_mitral`.
+5. Muestra la clase predicha, una confianza aproximada y las distancias a cada prototipo.
+
+## Interpretacion
+
+La salida indica la clase mas cercana al prototipo del modelo. Una distancia menor significa mayor similitud con esa clase. La confianza es orientativa; sirve para interpretar la demo, no para hacer diagnostico medico.
+
+## Limitacion importante
+
+Este repositorio es una demostracion docente y reproducible. No sustituye al sistema experimental completo del TFG, no contiene el entrenamiento completo de Deep ONMF/UjaNet y no debe utilizarse como herramienta clinica.

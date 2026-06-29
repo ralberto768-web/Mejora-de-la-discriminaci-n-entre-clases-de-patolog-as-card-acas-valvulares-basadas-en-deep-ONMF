@@ -1,7 +1,0 @@
-﻿distribucion,clasificador,representacion,Accuracy_mean,Accuracy_std,Sensitivity_mean,Sensitivity_std,Specificity_mean,Specificity_std,Precision_mean,Precision_std,Score_mean,Score_std
-15-10-5,KNN,DeepONMF_H3,0.8,0.0,1.0,0.0,0.0,0.0,0.8,0.0,0.5,0.0
-15-10-5,KNN,DeepONMF_W,0.9,0.14142135623730948,1.0,0.0,0.5,0.7071067811865476,0.9,0.14142135623730948,0.75,0.3535533905932738
-15-10-5,SVM,DeepONMF_H3,0.8,0.0,1.0,0.0,0.0,0.0,0.8,0.0,0.5,0.0
-15-10-5,SVM,DeepONMF_W,1.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0
-15-10-5,UjaNet,DeepONMF_H3,0.8,0.0,1.0,0.0,0.0,0.0,0.8,0.0,0.5,0.0
-15-10-5,UjaNet,DeepONMF_W,0.8,0.0,1.0,0.0,0.0,0.0,0.8,0.0,0.5,0.0

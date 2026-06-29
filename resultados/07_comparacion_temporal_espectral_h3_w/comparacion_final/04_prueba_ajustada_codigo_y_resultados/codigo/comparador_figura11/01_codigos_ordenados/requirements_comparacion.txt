@@ -1,2 +1,0 @@
-PyWavelets>=1.6
-PyMuPDF>=1.24

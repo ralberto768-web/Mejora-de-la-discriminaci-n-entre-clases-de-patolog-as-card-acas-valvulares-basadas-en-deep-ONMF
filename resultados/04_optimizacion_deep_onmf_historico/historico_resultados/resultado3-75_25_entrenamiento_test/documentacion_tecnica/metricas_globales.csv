@@ -1,3 +1,0 @@
-﻿particion,muestras,accuracy,macro_f1
-entrenamiento,750,0.528,0.5253240783253256
-test,250,0.536,0.5412848590833945

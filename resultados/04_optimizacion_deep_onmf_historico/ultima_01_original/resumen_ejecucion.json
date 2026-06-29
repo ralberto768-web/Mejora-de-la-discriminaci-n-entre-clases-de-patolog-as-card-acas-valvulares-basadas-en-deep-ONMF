@@ -1,9 +1,0 @@
-{
-  "base": "original",
-  "inicializacion_onmf": "nndsvd",
-  "audios": 1000,
-  "folds": 5,
-  "candidatos": 199,
-  "resultados": 199,
-  "segundos": 2608.1736929999897
-}

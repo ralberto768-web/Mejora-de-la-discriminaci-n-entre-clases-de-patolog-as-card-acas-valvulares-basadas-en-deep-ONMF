@@ -1,9 +1,0 @@
-{
-  "base": "SNR_5db",
-  "numero_audios": 1000,
-  "distribucion": "28-2",
-  "numero_capas": 2,
-  "iteraciones_onmf": 60,
-  "penalizacion_ortogonal": 0.05,
-  "semilla": 42
-}

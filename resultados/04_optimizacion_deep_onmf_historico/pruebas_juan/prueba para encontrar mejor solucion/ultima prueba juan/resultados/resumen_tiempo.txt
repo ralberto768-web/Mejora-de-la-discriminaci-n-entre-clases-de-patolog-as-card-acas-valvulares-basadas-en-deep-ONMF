@@ -1,4 +1,0 @@
-Tiempo completo de calculo en pared: 126.43 minutos.
-Inicio: 12/06/2026 12:03:38.
-Fin de las configuraciones crecientes: 12/06/2026 14:10:04.
-Se utilizaron trabajadores paralelos sobre configuraciones independientes.

@@ -1,8 +1,0 @@
-﻿metodo,idea,lectura
-CNN,aprende filtros 3x3 sobre espectrogramas,"separa si las texturas tiempo-frecuencia son estables, pero depende del entrenamiento supervisado"
-DWT,descompone la senal con coif5 por escalas,"detecta transitorios, aunque la mezcla entre clases aumenta Davies-Bouldin cuando las escalas no son exclusivas"
-MFCC,resume la envolvente con 40 filtros Mel y 13 coeficientes,"es compacto y robusto, pero puede perder informacion temporal de soplos y cierres valvulares"
-STFT,"mide energia tiempo-frecuencia con Hamming 150, salto 75 y FFT 250","sirve como base interpretable, aunque como rasgo directo no aprende diccionarios por clase"
-Deep-ONMF normal,aprende bases no negativas W1 W2 W3 con rangos 9-8-7,"mejora la estructura espectral, pero leer solo SBV/activaciones no explota toda la separacion por clase"
-Deep-ONMF mejorado,resume cada audio como afinidades de reconstruccion por clase,plantea una pregunta mas discriminante: que base reconstruye mejor el audio
-perfil_softmin_errores_f8,convierte errores relativos contra bases de clase en un perfil softmin de 5 rasgos,es la version con mejor equilibrio global encontrado: sil t-SNE 0.2602 y DB t-SNE 1.3756

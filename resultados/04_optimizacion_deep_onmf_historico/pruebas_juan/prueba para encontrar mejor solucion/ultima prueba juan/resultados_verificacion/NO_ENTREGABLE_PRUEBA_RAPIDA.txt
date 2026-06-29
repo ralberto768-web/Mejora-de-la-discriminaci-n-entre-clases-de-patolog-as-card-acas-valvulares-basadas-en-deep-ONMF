@@ -1,1 +1,0 @@
-Prueba reducida: no representa la validacion sobre 1000 audios.

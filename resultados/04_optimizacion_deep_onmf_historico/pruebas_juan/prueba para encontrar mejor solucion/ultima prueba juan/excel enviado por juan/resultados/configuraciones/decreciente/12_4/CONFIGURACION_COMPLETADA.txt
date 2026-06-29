@@ -1,1 +1,0 @@
-reutilizada_desde=C:\Users\armga\OneDrive\Escritorio\TFG\Implementacion_last\3 pruebas de juan\prueba para encontrar mejor solucion\resultados\configuraciones\12_4\clasificadores\UjaNet\multiclase\DeepONMF_H2

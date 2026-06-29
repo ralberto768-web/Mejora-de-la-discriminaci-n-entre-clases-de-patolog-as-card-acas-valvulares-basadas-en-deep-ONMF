@@ -1,8 +1,0 @@
-Quiero que ciñéndote al articulo objetivo repasándolo varias veces que no te dejes nada por implementar y clavado, es decir siendo fiel a el me hagas esto:
-Quiero obtener todo a través de la matriz de bases(W) y que esto me represente un punto por cada matriz que tengo, es decir si mi base de datos tiene 1000 audios obtendré 1000 matrices. Cada audio de normal viene asociada a un tipo de audio pues quiero que eso lo olvidemos. Como he dicho cada audio/señal tendrá una matriz W, y quiero que estás tan solo sean matriz de bases, y que una vez la tengas me hagas la figura 11 a partir de esas matrices. 
-
-Cuando inicialices quiero que inicialices uno de estos tres modos de inicializacion tres NNDSVD, NNDSVDa, NNDSVDar. 
-
-Una vez se lleve esto a cabo se creara un documento pdf explicativo de todo. Quiero que por encima mires como esta hecho el documento que he dejado dentro llamado Documento explicativo v1 y que mi pdf final sea algo parecido con sus explicacione spertinentes. 
-
-Quiero que cuando me hagas el documento dentro esten todas las comparaiones hechas perfectas y explicadas

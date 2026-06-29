@@ -1,1 +1,0 @@
-10-14-21-30; audios=1000; folds=5; UjaNet-H multiclase

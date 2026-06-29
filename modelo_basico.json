@@ -1,0 +1,79 @@
+{
+  "name": "clasificador_basico_pcg_multiclase_por_prototipos",
+  "version": "2.0",
+  "sampling_rate_reference_hz": 8000.0,
+  "feature_names": [
+    "energia_rms",
+    "cruces_cero",
+    "centroide_hz",
+    "relacion_soplo",
+    "entropia_espectral",
+    "irregularidad_temporal"
+  ],
+  "mean": [
+    0.2757525619420081,
+    0.0710699031149078,
+    115.29813501417716,
+    1.0369044882689118,
+    0.39868851241343983,
+    1.0536229476398329
+  ],
+  "scale": [
+    0.026316910098479106,
+    0.027192878768606783,
+    57.04921844136894,
+    1.5173044366113475,
+    0.07383053518428571,
+    0.3560922574812945
+  ],
+  "prototypes": {
+    "sana": [
+      0.18644443329573201,
+      -0.01609044711255292,
+      -1.0393912045452052,
+      -0.6806319128849824,
+      -1.4532779026010882,
+      1.3379090643483973
+    ],
+    "estenosis_aortica": [
+      -1.9498401649020178,
+      1.5239952050889742,
+      0.8551217282162445,
+      -0.20423206437970182,
+      1.0098161836585522,
+      0.4236883779198791
+    ],
+    "regurgitacion_mitral": [
+      0.6037467594325402,
+      -0.6328909197604282,
+      1.4862142377403431,
+      1.9680804415537982,
+      0.9750218032435899,
+      -1.6861742034903608
+    ],
+    "estenosis_mitral": [
+      0.8312790404011655,
+      -1.410595863533836,
+      -0.9079450567834704,
+      -0.6739144760668245,
+      -0.8888005211964433,
+      -0.3414053112561003
+    ],
+    "prolapso_mitral": [
+      0.3283699317725811,
+      0.5355820253178447,
+      -0.39399970462791123,
+      -0.40930198822229,
+      0.3572404368953887,
+      0.265982072478184
+    ]
+  },
+  "class_descriptions": {
+    "sana": "senal compatible con patron sano",
+    "estenosis_aortica": "senal compatible con estenosis aortica",
+    "regurgitacion_mitral": "senal compatible con regurgitacion mitral",
+    "estenosis_mitral": "senal compatible con estenosis mitral",
+    "prolapso_mitral": "senal compatible con prolapso mitral"
+  },
+  "notes": "Modelo didactico multiclase: compara caracteristicas temporales y espectrales con cinco prototipos de ejemplo."
+}

@@ -1,9 +1,0 @@
-{
-  "base": "SNR_0db",
-  "inicializacion_onmf": "nndsvd",
-  "audios": 1000,
-  "folds": 5,
-  "candidatos": 199,
-  "resultados": 199,
-  "segundos": 14191.78442869999
-}

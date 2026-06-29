@@ -1,2 +1,0 @@
-﻿distribucion,numero_capas,clasificador,representacion,Accuracy_mean,Accuracy_std,Sensitivity_mean,Sensitivity_std,Specificity_mean,Specificity_std,Precision_mean,Precision_std,Score_mean,Score_std
-10-6-4,3,UjaNet,DeepONMF_H3,0.968,0.009486832980505129,0.9199999999999999,0.023717082451262837,0.9799999999999999,0.0059292706128157196,0.92222435720272,0.02330209631160343,0.95,0.014823176532039272

@@ -1,6 +1,0 @@
-﻿clase,etiqueta_binaria,archivo,ruta,fold,pred_binaria,pred_multiclase
-N,normal,New_N_002.wav,C:\Users\armga\OneDrive\Escritorio\TFG\Bases de Datos\N_New_3주기\New_N_002.wav,1,anomalo,N
-AS,anomalo,New_AS_001.wav,C:\Users\armga\OneDrive\Escritorio\TFG\Bases de Datos\AS_New_3주기\New_AS_001.wav,1,anomalo,N
-MR,anomalo,New_MR_002.wav,C:\Users\armga\OneDrive\Escritorio\TFG\Bases de Datos\MR_New_3주기\New_MR_002.wav,1,anomalo,N
-MS,anomalo,New_MS_002.wav,C:\Users\armga\OneDrive\Escritorio\TFG\Bases de Datos\MS_New_3주기\New_MS_002.wav,1,anomalo,N
-MVP,anomalo,New_MVP_002.wav,C:\Users\armga\OneDrive\Escritorio\TFG\Bases de Datos\MVP_New_3주기\New_MVP_002.wav,1,anomalo,N

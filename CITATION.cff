@@ -1,9 +1,0 @@
-cff-version: 1.2.0
-message: "Si usa este repositorio, cite el Trabajo Fin de Grado asociado."
-title: "Mejora de la discriminación entre clases de patologías cardíacas valvulares basadas en deep-ONMF"
-authors:
-  - family-names: "Sanchez Barrionuevo"
-    given-names: "Eduardo"
-year: 2026
-type: software
-repository-code: "https://github.com/TU_USUARIO/mejora-discriminacion-patologias-cardiacas-valvulares-deep-onmf"

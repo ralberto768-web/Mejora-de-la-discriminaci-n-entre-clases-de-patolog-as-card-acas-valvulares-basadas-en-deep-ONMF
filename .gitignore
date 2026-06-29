@@ -1,22 +1,6 @@
-# Python
 __pycache__/
 *.pyc
-.pytest_cache/
-.mypy_cache/
 .venv/
 venv/
-
-# Sistemas
-.DS_Store
-Thumbs.db
-
-# Datos externos privados o demasiado pesados
-datos_externos/Yaseen/**
-datos_externos/AWGN/**
-!datos_externos/Yaseen/README.md
-!datos_externos/AWGN/README.md
-
-# Salidas temporales de ejecucion
-logs/
-tmp/
-_tmp/
+.pytest_cache/
+*.log

@@ -1,4 +1,0 @@
-﻿metodo,muestras,rasgos_originales,rasgos_entrada_tsne,perplexity,silhouette_features,davies_bouldin_features,silhouette_tsne,davies_bouldin_tsne
-resultado8_deep_onmf_sin_descartar_menores_2s__perfil_softmin_errores_f8 + NNDSVD,1000,5,5,30,0.2222776927214366,1.6785016556502488,0.19623130559921265,1.8932584376708423
-resultado8_deep_onmf_sin_descartar_menores_2s__perfil_softmin_errores_f8 + NNDSVDa,1000,5,5,30,0.2085322113383404,1.8875733466144595,0.2038288712501526,1.9698062425079699
-resultado8_deep_onmf_sin_descartar_menores_2s__perfil_softmin_errores_f8 + NNDSVDar,1000,5,5,30,0.17938006979200727,1.9853035356620112,0.18589887022972107,1.7452915120728385
