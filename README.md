@@ -1,4 +1,4 @@
-# Ejemplo basico de clasificacion de senales cardiacas
+# Ejemplo basico de clasificacion de señales cardiacas
 
 Este repositorio contiene una prueba minima para el tribunal: un codigo que lee un fichero de senal cardiaca y devuelve una clasificacion basica entre cinco clases: senal sana y cuatro patologias valvulares.
 
