@@ -4,7 +4,7 @@
 
 El objetivo de esta prueba es mostrar el flujo minimo de uso: leer una senal cardiaca almacenada en un fichero y obtener una clasificacion automatica entre una clase sana y cuatro patologias valvulares.
 
-La demo esta pensada para revision rapida por parte del tribunal. Por ese motivo se evita incluir resultados pesados, bases de datos completas o ejecuciones largas.
+La demo esta pensada para revision rapida por parte del tribunal. Por ese motivo se evita incluir resultados pesados, bases de datos completas o ejecuciones largas, pero los cinco audios incluidos proceden de la base preparada de 2 segundos usada en el trabajo.
 
 ## Entrada
 
@@ -36,6 +36,8 @@ Estos rasgos no pretenden reemplazar el analisis completo del TFG. Son una versi
 ## Clasificador
 
 El fichero `modelo_basico.json` guarda cinco prototipos: `sana`, `estenosis_aortica`, `regurgitacion_mitral`, `estenosis_mitral` y `prolapso_mitral`.
+
+Estos prototipos se han calculado con los 1000 audios reales preparados en `segmentos_2_0s`, con 200 audios por clase: `N`, `AS`, `MR`, `MS` y `MVP`. Los cinco WAV de `datos/` son ejemplos representativos de 2 segundos, uno por clase.
 
 El script extrae las caracteristicas de la senal nueva, las normaliza con los parametros del modelo y calcula la distancia a cada prototipo. La clase asignada es la que queda mas cerca.
 

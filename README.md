@@ -1,18 +1,18 @@
-# Ejemplo basico de clasificacion de señales cardiacas
+# Ejemplo basico de clasificacion de senales cardiacas
 
-Este repositorio contiene una prueba minima del TFG realizado: un codigo que lee un fichero de señal cardiaca y devuelve una clasificacion basica entre cinco clases: señal sana y cuatro patologias valvulares.
+Este repositorio contiene una prueba minima para el tribunal: un codigo que lee un fichero de senal cardiaca y devuelve una clasificacion basica entre cinco clases: senal sana y cuatro patologias valvulares.
 
-No se incluye aqui el pipeline experimental completo del TFG. La finalidad de esta version es que cualquier persona pueda descargar el repositorio, ejecutar un ejemplo en pocos segundos y entender el flujo principal.
+No se incluye aqui el pipeline experimental completo del TFG. La finalidad de esta version es que cualquier miembro del tribunal pueda descargar el repositorio, ejecutar un ejemplo en pocos segundos y entender el flujo principal.
 
 ## Contenido
 
-- `clasificar_senal.py`: script principal. Lee una señal `.csv`, `.txt` o `.wav`, extrae caracteristicas y clasifica.
+- `clasificar_senal.py`: script principal. Lee una senal `.csv`, `.txt` o `.wav`, extrae caracteristicas y clasifica.
 - `modelo_basico.json`: parametros de un clasificador sencillo por prototipos.
-- `datos/pcg_sano.wav`: audio PCG sintetico con patron sano.
-- `datos/pcg_estenosis_aortica.wav`: audio PCG sintetico con estenosis aortica.
-- `datos/pcg_regurgitacion_mitral.wav`: audio PCG sintetico con regurgitacion mitral.
-- `datos/pcg_estenosis_mitral.wav`: audio PCG sintetico con estenosis mitral.
-- `datos/pcg_prolapso_mitral.wav`: audio PCG sintetico con prolapso mitral.
+- `datos/pcg_sano.wav`: audio PCG real de la base preparada, clase `N`.
+- `datos/pcg_estenosis_aortica.wav`: audio PCG real de la base preparada, clase `AS`.
+- `datos/pcg_regurgitacion_mitral.wav`: audio PCG real de la base preparada, clase `MR`.
+- `datos/pcg_estenosis_mitral.wav`: audio PCG real de la base preparada, clase `MS`.
+- `datos/pcg_prolapso_mitral.wav`: audio PCG real de la base preparada, clase `MVP`.
 - `verificar_demo.py`: comprobacion rapida de los cinco audios incluidos.
 - `docs/EXPLICACION_BASICA.md`: explicacion breve del metodo y de sus limitaciones.
 
@@ -30,7 +30,7 @@ Si ya tienes `numpy` instalado, tambien puedes ejecutar directamente los comando
 
 ## Uso rapido
 
-Clasificar la señal sana:
+Clasificar la senal sana:
 
 ```powershell
 py clasificar_senal.py datos\pcg_sano.wav
@@ -71,11 +71,13 @@ py clasificar_senal.py mi_senal.csv --fs 8000
 
 ## Que hace el codigo
 
-1. Lee el fichero de señal.
+1. Lee el fichero de senal.
 2. Normaliza la amplitud y elimina el desplazamiento medio.
 3. Calcula caracteristicas temporales y espectrales basicas.
 4. Compara esas caracteristicas con cinco prototipos: `sana`, `estenosis_aortica`, `regurgitacion_mitral`, `estenosis_mitral` y `prolapso_mitral`.
 5. Muestra la clase predicha, una confianza aproximada y las distancias a cada prototipo.
+
+El modelo basico incluido se ha calculado con los 1000 audios reales preparados en `segmentos_2_0s`: 200 por clase (`N`, `AS`, `MR`, `MS` y `MVP`). Los cinco WAV incluidos en `datos/` son ejemplos representativos de 2 segundos, uno por clase.
 
 ## Interpretacion
 

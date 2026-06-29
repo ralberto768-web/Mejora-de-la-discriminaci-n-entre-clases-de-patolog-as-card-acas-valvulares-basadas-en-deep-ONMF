@@ -1,11 +1,11 @@
 # Datos de ejemplo
 
-Esta carpeta contiene cinco audios sinteticos en formato WAV:
+Esta carpeta contiene cinco audios reales de la base preparada del TFG, todos en formato WAV, a 8000 Hz y con duracion de 2 segundos:
 
-- `pcg_sano.wav`: patron regular usado como ejemplo de senal sana.
-- `pcg_estenosis_aortica.wav`: ejemplo de estenosis aortica.
-- `pcg_regurgitacion_mitral.wav`: ejemplo de regurgitacion mitral.
-- `pcg_estenosis_mitral.wav`: ejemplo de estenosis mitral.
-- `pcg_prolapso_mitral.wav`: ejemplo de prolapso mitral.
+- `pcg_sano.wav`: procede de `segmentos_2_0s/N/N-0884.wav`.
+- `pcg_estenosis_aortica.wav`: procede de `segmentos_2_0s/AS/AS-0123.wav`.
+- `pcg_regurgitacion_mitral.wav`: procede de `segmentos_2_0s/MR/MR-0384.wav`.
+- `pcg_estenosis_mitral.wav`: procede de `segmentos_2_0s/MS/MS-0496.wav`.
+- `pcg_prolapso_mitral.wav`: procede de `segmentos_2_0s/MVP/MVP-0797.wav`.
 
-Son ficheros pequenos creados a 8000 Hz para comprobar el funcionamiento del codigo sin hacer pesado el repositorio. No contienen datos personales ni deben interpretarse como registros clinicos reales.
+Se incluye un audio por clase para que el tribunal pueda ejecutar la prueba sin descargar la base completa de 1000 audios. El modelo basico se ha calculado con los 1000 audios preparados en `segmentos_2_0s`: 200 por clase.
