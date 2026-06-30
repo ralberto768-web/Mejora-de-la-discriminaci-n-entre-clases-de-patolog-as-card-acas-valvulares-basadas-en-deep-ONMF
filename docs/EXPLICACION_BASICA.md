@@ -37,9 +37,13 @@ Estos rasgos no pretenden reemplazar el análisis completo del TFG. Son una vers
 
 El fichero `modelo_basico.json` guarda las referencias de un clasificador KNN ponderado por distancia para cinco clases: `sana`, `estenosis_aortica`, `regurgitacion_mitral`, `estenosis_mitral` y `prolapso_mitral`.
 
-Estas referencias se han calculado con los 1000 audios reales preparados en `segmentos_2_0s`, con 200 audios por clase: `N`, `AS`, `MR`, `MS` y `MVP`. Los cinco WAV de `datos/` son ejemplos reales de 2 segundos, uno por clase.
+Estas referencias se han calculado con los 1000 audios reales preparados en `segmentos_2_0s`, con 200 audios por clase: `N`, `AS`, `MR`, `MS` y `MVP`. Los cinco WAV de `datos/` son ejemplos reales de 2 segundos, uno por clase. Sus nombres son genéricos (`audio1.wav` a `audio5.wav`) para que la clase no se conozca antes de ver el resumen final.
 
 El script extrae las características de la señal nueva, las normaliza con los parámetros del modelo y busca sus vecinos más cercanos. La clase asignada es la que acumula mayor peso entre esos vecinos.
+
+## Verificación aleatoria
+
+El fichero `verificar_demo.py` baraja los cinco audios en cada lanzamiento. Durante la ejecución muestra la predicción obtenida para cada audio, sin usar la clase en el nombre del fichero. Al final imprime un resumen con la clase esperada, la clase obtenida y si la clasificación ha sido correcta.
 
 ## Relación con el TFG
 

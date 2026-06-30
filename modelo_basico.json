@@ -12059,35 +12059,35 @@
   "example_audio_origin": {
     "sana": {
       "source_file": "N/N-0884.wav",
-      "exported_as": "pcg_sano.wav",
+      "exported_as": "audio1.wav",
       "sampling_rate_hz": 8000,
       "samples": 16000,
       "duration_s": 2.0
     },
     "estenosis_aortica": {
       "source_file": "AS/AS-0123.wav",
-      "exported_as": "pcg_estenosis_aortica.wav",
+      "exported_as": "audio2.wav",
       "sampling_rate_hz": 8000,
       "samples": 16000,
       "duration_s": 2.0
     },
     "regurgitacion_mitral": {
       "source_file": "MR/MR-0384.wav",
-      "exported_as": "pcg_regurgitacion_mitral.wav",
+      "exported_as": "audio3.wav",
       "sampling_rate_hz": 8000,
       "samples": 16000,
       "duration_s": 2.0
     },
     "estenosis_mitral": {
       "source_file": "MS/MS-0496.wav",
-      "exported_as": "pcg_estenosis_mitral.wav",
+      "exported_as": "audio4.wav",
       "sampling_rate_hz": 8000,
       "samples": 16000,
       "duration_s": 2.0
     },
     "prolapso_mitral": {
       "source_file": "MVP/MVP-0797.wav",
-      "exported_as": "pcg_prolapso_mitral.wav",
+      "exported_as": "audio5.wav",
       "sampling_rate_hz": 8000,
       "samples": 16000,
       "duration_s": 2.0

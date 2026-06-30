@@ -8,12 +8,8 @@ No se incluye aquí el pipeline experimental completo del TFG. La finalidad de e
 
 - `clasificar_senal.py`: script principal. Lee una señal `.csv`, `.txt` o `.wav`, extrae características y clasifica.
 - `modelo_basico.json`: parámetros de un clasificador KNN ponderado con referencias reales.
-- `datos/pcg_sano.wav`: audio PCG real de la base preparada, clase `N`.
-- `datos/pcg_estenosis_aortica.wav`: audio PCG real de la base preparada, clase `AS`.
-- `datos/pcg_regurgitacion_mitral.wav`: audio PCG real de la base preparada, clase `MR`.
-- `datos/pcg_estenosis_mitral.wav`: audio PCG real de la base preparada, clase `MS`.
-- `datos/pcg_prolapso_mitral.wav`: audio PCG real de la base preparada, clase `MVP`.
-- `verificar_demo.py`: comprobación rápida de los cinco audios incluidos.
+- `datos/audio1.wav` a `datos/audio5.wav`: cinco audios PCG reales de la base preparada, con nombres genéricos para no adelantar la clase.
+- `verificar_demo.py`: comprobación rápida de los cinco audios incluidos. En cada ejecución baraja el orden de análisis y al final muestra qué clase era la correcta.
 - `docs/EXPLICACION_BASICA.md`: explicación breve del método y de sus limitaciones.
 
 ## Instalación
@@ -30,19 +26,19 @@ Si ya tienes `numpy` instalado, también puedes ejecutar directamente los comand
 
 ## Uso rápido
 
-Clasificar la señal sana:
+Clasificar un audio de ejemplo:
 
 ```powershell
-py clasificar_senal.py datos\pcg_sano.wav
+py clasificar_senal.py datos\audio1.wav
 ```
 
-Clasificar una patología concreta:
+Clasificar otro audio de ejemplo:
 
 ```powershell
-py clasificar_senal.py datos\pcg_estenosis_aortica.wav
+py clasificar_senal.py datos\audio2.wav
 ```
 
-Comprobar los cinco audios de una vez:
+Comprobar los cinco audios en orden aleatorio y ver el resumen final de aciertos:
 
 ```powershell
 py verificar_demo.py
@@ -77,7 +73,7 @@ py clasificar_senal.py mi_senal.csv --fs 8000
 4. Compara esas características con las referencias reales guardadas en `modelo_basico.json`.
 5. Muestra la clase predicha, una confianza aproximada y la distancia al audio de referencia más cercano por clase.
 
-El modelo básico incluido usa las características de los 1000 audios reales preparados en `segmentos_2_0s`: 200 por clase (`N`, `AS`, `MR`, `MS` y `MVP`). Los cinco WAV incluidos en `datos/` son ejemplos reales de 2 segundos, uno por clase.
+El modelo básico incluido usa las características de los 1000 audios reales preparados en `segmentos_2_0s`: 200 por clase (`N`, `AS`, `MR`, `MS` y `MVP`). Los cinco WAV incluidos en `datos/` son ejemplos reales de 2 segundos, uno por clase. Se nombran como `audio1.wav`, `audio2.wav`, `audio3.wav`, `audio4.wav` y `audio5.wav` para que la clase no se deduzca antes de consultar el resumen final.
 
 ## Interpretación
 
