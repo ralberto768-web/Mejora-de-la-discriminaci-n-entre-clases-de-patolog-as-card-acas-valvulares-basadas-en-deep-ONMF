@@ -35,11 +35,11 @@ Estos rasgos no pretenden reemplazar el analisis completo del TFG. Son una versi
 
 ## Clasificador
 
-El fichero `modelo_basico.json` guarda cinco prototipos: `sana`, `estenosis_aortica`, `regurgitacion_mitral`, `estenosis_mitral` y `prolapso_mitral`.
+El fichero `modelo_basico.json` guarda las referencias de un clasificador KNN ponderado por distancia para cinco clases: `sana`, `estenosis_aortica`, `regurgitacion_mitral`, `estenosis_mitral` y `prolapso_mitral`.
 
-Estos prototipos se han calculado con los 1000 audios reales preparados en `segmentos_2_0s`, con 200 audios por clase: `N`, `AS`, `MR`, `MS` y `MVP`. Los cinco WAV de `datos/` son ejemplos representativos de 2 segundos, uno por clase.
+Estas referencias se han calculado con los 1000 audios reales preparados en `segmentos_2_0s`, con 200 audios por clase: `N`, `AS`, `MR`, `MS` y `MVP`. Los cinco WAV de `datos/` son ejemplos reales de 2 segundos, uno por clase.
 
-El script extrae las caracteristicas de la senal nueva, las normaliza con los parametros del modelo y calcula la distancia a cada prototipo. La clase asignada es la que queda mas cerca.
+El script extrae las caracteristicas de la senal nueva, las normaliza con los parametros del modelo y busca sus vecinos mas cercanos. La clase asignada es la que acumula mayor peso entre esos vecinos.
 
 ## Relacion con el TFG
 

@@ -143,6 +143,9 @@ def clasificar(caracteristicas: dict[str, float], modelo: dict[str, Any]) -> dic
     escala = np.asarray(modelo["scale"], dtype=np.float64)
     vector_z = (vector - media) / np.maximum(escala, EPS)
 
+    if "references" in modelo:
+        return _clasificar_por_referencias(vector_z, modelo)
+
     distancias: dict[str, float] = {}
     for clase, prototipo in modelo["prototypes"].items():
         prototipo_z = np.asarray(prototipo, dtype=np.float64)
@@ -158,6 +161,49 @@ def clasificar(caracteristicas: dict[str, float], modelo: dict[str, Any]) -> dic
         "descripcion": modelo["class_descriptions"][clase_predicha],
         "confianza": confianza,
         "distancias": distancias,
+    }
+
+
+def _clasificar_por_referencias(vector_z: np.ndarray, modelo: dict[str, Any]) -> dict[str, Any]:
+    referencias = modelo["references"]
+    matriz = np.asarray([ref["features_z"] for ref in referencias], dtype=np.float64)
+    distancias = np.linalg.norm(matriz - vector_z, axis=1)
+    k = int(modelo.get("knn_k", 5))
+    k = max(1, min(k, len(referencias)))
+    indices = np.argsort(distancias)[:k]
+
+    pesos_por_clase = {clase: 0.0 for clase in modelo["class_descriptions"]}
+    distancia_minima_por_clase = {clase: float("inf") for clase in modelo["class_descriptions"]}
+    vecinos = []
+
+    for i, distancia in enumerate(distancias):
+        clase = referencias[i]["class"]
+        distancia_minima_por_clase[clase] = min(distancia_minima_por_clase[clase], float(distancia))
+
+    for indice in indices:
+        ref = referencias[int(indice)]
+        distancia = float(distancias[int(indice)])
+        peso = 1.0 / (distancia + EPS)
+        pesos_por_clase[ref["class"]] += peso
+        vecinos.append(
+            {
+                "archivo": ref["source_file"],
+                "clase": ref["class"],
+                "distancia": distancia,
+            }
+        )
+
+    clase_predicha = max(pesos_por_clase, key=pesos_por_clase.get)
+    suma_pesos = sum(pesos_por_clase.values()) + EPS
+    confianza = float(pesos_por_clase[clase_predicha] / suma_pesos)
+
+    return {
+        "clase": clase_predicha,
+        "descripcion": modelo["class_descriptions"][clase_predicha],
+        "confianza": confianza,
+        "distancias": distancia_minima_por_clase,
+        "vecinos": vecinos,
+        "tipo_modelo": "knn_ponderado",
     }
 
 
@@ -192,7 +238,10 @@ def imprimir_resultado(analisis: dict[str, Any]) -> None:
     print("")
     print(f"Clasificacion: {resultado['descripcion']}")
     print(f"Confianza aproximada: {resultado['confianza']:.3f}")
-    print("Distancias al prototipo:")
+    if resultado.get("tipo_modelo") == "knn_ponderado":
+        print("Distancia al audio de referencia mas cercano por clase:")
+    else:
+        print("Distancias al prototipo:")
     for clase, distancia in resultado["distancias"].items():
         print(f"  - {clase}: {distancia:.6f}")
     print("")

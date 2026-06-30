@@ -7,7 +7,7 @@ No se incluye aqui el pipeline experimental completo del TFG. La finalidad de es
 ## Contenido
 
 - `clasificar_senal.py`: script principal. Lee una senal `.csv`, `.txt` o `.wav`, extrae caracteristicas y clasifica.
-- `modelo_basico.json`: parametros de un clasificador sencillo por prototipos.
+- `modelo_basico.json`: parametros de un clasificador KNN ponderado con referencias reales.
 - `datos/pcg_sano.wav`: audio PCG real de la base preparada, clase `N`.
 - `datos/pcg_estenosis_aortica.wav`: audio PCG real de la base preparada, clase `AS`.
 - `datos/pcg_regurgitacion_mitral.wav`: audio PCG real de la base preparada, clase `MR`.
@@ -74,14 +74,14 @@ py clasificar_senal.py mi_senal.csv --fs 8000
 1. Lee el fichero de senal.
 2. Normaliza la amplitud y elimina el desplazamiento medio.
 3. Calcula caracteristicas temporales y espectrales basicas.
-4. Compara esas caracteristicas con cinco prototipos: `sana`, `estenosis_aortica`, `regurgitacion_mitral`, `estenosis_mitral` y `prolapso_mitral`.
-5. Muestra la clase predicha, una confianza aproximada y las distancias a cada prototipo.
+4. Compara esas caracteristicas con las referencias reales guardadas en `modelo_basico.json`.
+5. Muestra la clase predicha, una confianza aproximada y la distancia al audio de referencia mas cercano por clase.
 
-El modelo basico incluido se ha calculado con los 1000 audios reales preparados en `segmentos_2_0s`: 200 por clase (`N`, `AS`, `MR`, `MS` y `MVP`). Los cinco WAV incluidos en `datos/` son ejemplos representativos de 2 segundos, uno por clase.
+El modelo basico incluido usa las caracteristicas de los 1000 audios reales preparados en `segmentos_2_0s`: 200 por clase (`N`, `AS`, `MR`, `MS` y `MVP`). Los cinco WAV incluidos en `datos/` son ejemplos reales de 2 segundos, uno por clase.
 
 ## Interpretacion
 
-La salida indica la clase mas cercana al prototipo del modelo. Una distancia menor significa mayor similitud con esa clase. La confianza es orientativa; sirve para interpretar la demo, no para hacer diagnostico medico.
+La salida indica la clase con mayor voto ponderado entre los vecinos mas cercanos. Una distancia menor significa mayor similitud con esa clase. La confianza es orientativa; sirve para interpretar la demo, no para hacer diagnostico medico.
 
 ## Limitacion importante
 
