@@ -13,6 +13,21 @@ import numpy as np
 
 EPS = 1e-12
 FS_POR_DEFECTO = 8000.0
+NOMBRES_CARACTERISTICAS = {
+    "energia_rms": "energía RMS",
+    "cruces_cero": "cruces por cero",
+    "centroide_hz": "centroide espectral (Hz)",
+    "relacion_soplo": "relación de soplo",
+    "entropia_espectral": "entropía espectral",
+    "irregularidad_temporal": "irregularidad temporal",
+}
+NOMBRES_CLASES = {
+    "sana": "señal sana",
+    "estenosis_aortica": "estenosis aórtica",
+    "regurgitacion_mitral": "regurgitación mitral",
+    "estenosis_mitral": "estenosis mitral",
+    "prolapso_mitral": "prolapso mitral",
+}
 
 
 def leer_csv(ruta: Path, fs_por_defecto: float) -> tuple[np.ndarray, float]:
@@ -21,7 +36,7 @@ def leer_csv(ruta: Path, fs_por_defecto: float) -> tuple[np.ndarray, float]:
         filas = [fila for fila in csv.reader(f) if fila and any(c.strip() for c in fila)]
 
     if not filas:
-        raise ValueError(f"El fichero esta vacio: {ruta}")
+        raise ValueError(f"El fichero está vacío: {ruta}")
 
     primera = [c.strip().lower() for c in filas[0]]
     tiene_cabecera = any(not _es_numero(c) for c in primera)
@@ -30,7 +45,7 @@ def leer_csv(ruta: Path, fs_por_defecto: float) -> tuple[np.ndarray, float]:
     indice_tiempo: int | None = None
     indice_amplitud = 0
     if tiene_cabecera:
-        nombres_amplitud = {"amplitud", "amplitude", "senal", "signal", "valor", "value"}
+        nombres_amplitud = {"amplitud", "amplitude", "senal", "señal", "signal", "valor", "value"}
         nombres_tiempo = {"tiempo", "tiempo_s", "time", "time_s", "t"}
         for i, nombre in enumerate(primera):
             if nombre in nombres_amplitud:
@@ -52,7 +67,7 @@ def leer_csv(ruta: Path, fs_por_defecto: float) -> tuple[np.ndarray, float]:
 
     senal = np.asarray(amplitudes, dtype=np.float64)
     if senal.size < 8:
-        raise ValueError("La senal debe contener al menos 8 muestras.")
+        raise ValueError("La señal debe contener al menos 8 muestras.")
 
     fs = fs_por_defecto
     if len(tiempos) == len(amplitudes):
@@ -65,7 +80,7 @@ def leer_csv(ruta: Path, fs_por_defecto: float) -> tuple[np.ndarray, float]:
 
 
 def leer_wav(ruta: Path) -> tuple[np.ndarray, float]:
-    """Lee ficheros WAV PCM mono o estereo usando solo la libreria estandar."""
+    """Lee ficheros WAV PCM mono o estéreo usando solo la librería estándar."""
     with wave.open(str(ruta), "rb") as wav:
         canales = wav.getnchannels()
         fs = float(wav.getframerate())
@@ -100,7 +115,7 @@ def preparar_senal(senal: np.ndarray) -> np.ndarray:
     senal = np.asarray(senal, dtype=np.float64).reshape(-1)
     senal = senal[np.isfinite(senal)]
     if senal.size < 8:
-        raise ValueError("La senal no contiene suficientes muestras validas.")
+        raise ValueError("La señal no contiene suficientes muestras válidas.")
     senal = senal - float(np.mean(senal))
     maximo = float(np.max(np.abs(senal)))
     if maximo > EPS:
@@ -109,7 +124,7 @@ def preparar_senal(senal: np.ndarray) -> np.ndarray:
 
 
 def extraer_caracteristicas(senal: np.ndarray, fs: float) -> dict[str, float]:
-    """Calcula un conjunto pequeno de rasgos interpretables."""
+    """Calcula un conjunto pequeño de rasgos interpretables."""
     senal = preparar_senal(senal)
     frecuencias, potencia, energias_trama = _espectro_promedio(senal, fs)
 
@@ -230,22 +245,24 @@ def imprimir_resultado(analisis: dict[str, Any]) -> None:
     resultado = analisis["resultado"]
     print(f"Archivo analizado: {analisis['archivo']}")
     print(f"Frecuencia de muestreo: {analisis['frecuencia_hz']:.1f} Hz")
-    print(f"Duracion: {analisis['duracion_s']:.3f} s")
+    print(f"Duración: {analisis['duracion_s']:.3f} s")
     print("")
-    print("Caracteristicas extraidas:")
+    print("Características extraídas:")
     for nombre, valor in analisis["caracteristicas"].items():
-        print(f"  - {nombre}: {valor:.6f}")
+        etiqueta = NOMBRES_CARACTERISTICAS.get(nombre, nombre)
+        print(f"  - {etiqueta}: {valor:.6f}")
     print("")
-    print(f"Clasificacion: {resultado['descripcion']}")
+    print(f"Clasificación: {resultado['descripcion']}")
     print(f"Confianza aproximada: {resultado['confianza']:.3f}")
     if resultado.get("tipo_modelo") == "knn_ponderado":
-        print("Distancia al audio de referencia mas cercano por clase:")
+        print("Distancia al audio de referencia más cercano por clase:")
     else:
         print("Distancias al prototipo:")
     for clase, distancia in resultado["distancias"].items():
-        print(f"  - {clase}: {distancia:.6f}")
+        etiqueta = NOMBRES_CLASES.get(clase, clase)
+        print(f"  - {etiqueta}: {distancia:.6f}")
     print("")
-    print("Aviso: esta demo es educativa y no sustituye al sistema experimental completo ni a un diagnostico clinico.")
+    print("Aviso: esta demo es educativa y no sustituye al sistema experimental completo ni a un diagnóstico clínico.")
 
 
 def _es_numero(texto: str) -> bool:
@@ -304,14 +321,14 @@ def _bandas_analisis(fs: float) -> tuple[tuple[float, float], tuple[float, float
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Clasifica una senal cardiaca de ejemplo como sana o patologica."
+        description="Clasifica una señal cardíaca de ejemplo como sana o patológica."
     )
     parser.add_argument("archivo", type=Path, help="Ruta del fichero .csv, .txt o .wav que se quiere clasificar.")
     parser.add_argument(
         "--modelo",
         type=Path,
         default=Path(__file__).resolve().parent / "modelo_basico.json",
-        help="Ruta del modelo basico en formato JSON.",
+        help="Ruta del modelo básico en formato JSON.",
     )
     parser.add_argument(
         "--fs",

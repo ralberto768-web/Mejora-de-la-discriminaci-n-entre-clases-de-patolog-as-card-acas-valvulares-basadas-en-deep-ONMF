@@ -12050,11 +12050,11 @@
     }
   ],
   "class_descriptions": {
-    "sana": "senal compatible con patron sano",
-    "estenosis_aortica": "senal compatible con estenosis aortica",
-    "regurgitacion_mitral": "senal compatible con regurgitacion mitral",
-    "estenosis_mitral": "senal compatible con estenosis mitral",
-    "prolapso_mitral": "senal compatible con prolapso mitral"
+    "sana": "señal compatible con patrón sano",
+    "estenosis_aortica": "señal compatible con estenosis aórtica",
+    "regurgitacion_mitral": "señal compatible con regurgitación mitral",
+    "estenosis_mitral": "señal compatible con estenosis mitral",
+    "prolapso_mitral": "señal compatible con prolapso mitral"
   },
   "example_audio_origin": {
     "sana": {
@@ -12093,5 +12093,5 @@
       "duration_s": 2.0
     }
   },
-  "notes": "Modelo didactico multiclase: clasificador KNN ponderado por distancia usando las caracteristicas de los 1000 audios reales preparados en segmentos de 2 segundos. La demo incluye un audio real por clase."
+  "notes": "Modelo didáctico multiclase: clasificador KNN ponderado por distancia usando las características de los 1000 audios reales preparados en segmentos de 2 segundos. La demo incluye un audio real por clase."
 }

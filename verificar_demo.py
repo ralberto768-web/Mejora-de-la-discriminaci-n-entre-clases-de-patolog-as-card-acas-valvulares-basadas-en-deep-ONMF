@@ -24,4 +24,4 @@ if __name__ == "__main__":
     comprobar("pcg_regurgitacion_mitral.wav", "regurgitacion_mitral")
     comprobar("pcg_estenosis_mitral.wav", "estenosis_mitral")
     comprobar("pcg_prolapso_mitral.wav", "prolapso_mitral")
-    print("Verificacion completada correctamente.")
+    print("Verificación completada correctamente.")
