@@ -21,7 +21,9 @@
       "MR": "regurgitacion_mitral",
       "MS": "estenosis_mitral",
       "MVP": "prolapso_mitral"
-    }
+    },
+    "references_used_in_model": 1000,
+    "evaluation_protocol": "Los scripts de verificaci?n excluyen de las referencias el mismo audio que se est? evaluando para evitar coincidencias exactas."
   },
   "feature_names": [
     "energia_rms",
@@ -12093,5 +12095,5 @@
       "duration_s": 2.0
     }
   },
-  "notes": "Modelo didáctico multiclase: clasificador KNN ponderado por distancia usando las características de los 1000 audios reales preparados en segmentos de 2 segundos. La demo incluye un audio real por clase."
+  "notes": "Modelo did?ctico multiclase: clasificador KNN ponderado por distancia usando las caracter?sticas de los 1000 audios reales preparados en segmentos de 2 segundos. Los scripts de evaluaci?n aplican exclusi?n leave-one-out para que cada audio probado no se compare contra s? mismo."
 }

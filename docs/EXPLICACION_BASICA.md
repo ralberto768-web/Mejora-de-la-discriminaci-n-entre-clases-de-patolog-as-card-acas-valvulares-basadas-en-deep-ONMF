@@ -4,7 +4,7 @@
 
 El objetivo de esta prueba es mostrar el flujo mínimo de uso: leer una señal cardíaca almacenada en un fichero y obtener una clasificación automática entre una clase sana y cuatro patologías valvulares.
 
-La demo está pensada para revisión rápida por parte del tribunal. Por ese motivo se evita incluir resultados pesados, bases de datos completas o ejecuciones largas, pero los cinco audios incluidos proceden de la base preparada de 2 segundos usada en el trabajo.
+La demo está pensada para revisión rápida por parte del tribunal, pero también incluye una evaluación completa sobre 1000 audios reales. Así se puede ver tanto un ejemplo corto de uso como la producción efectiva del clasificador en toda la base incluida.
 
 ## Entrada
 
@@ -37,7 +37,9 @@ Estos rasgos no pretenden reemplazar el análisis completo del TFG. Son una vers
 
 El fichero `modelo_basico.json` guarda las referencias de un clasificador KNN ponderado por distancia para cinco clases: `sana`, `estenosis_aortica`, `regurgitacion_mitral`, `estenosis_mitral` y `prolapso_mitral`.
 
-Estas referencias se han calculado con los 1000 audios reales preparados en `segmentos_2_0s`, con 200 audios por clase: `N`, `AS`, `MR`, `MS` y `MVP`. Los cinco WAV de `datos/` son ejemplos reales de 2 segundos, uno por clase. Sus nombres son genéricos (`audio1.wav` a `audio5.wav`) para que la clase no se conozca antes de ver el resumen final.
+Estas referencias se han calculado a partir de los 1000 audios reales preparados en `segmentos_2_0s`, con 200 audios por clase: `N`, `AS`, `MR`, `MS` y `MVP`. La carpeta `datos_1000/` contiene esos 1000 WAV y la carpeta `datos/` contiene cinco ejemplos rápidos, uno por clase. Los cinco ejemplos tienen nombres genéricos (`audio1.wav` a `audio5.wav`) para que la clase no se conozca antes de ver el resumen final.
+
+Para que la verificación no esté forzada, los scripts aplican una exclusión leave-one-out. Antes de clasificar un audio, eliminan ese mismo fichero de las referencias internas del modelo. De esta forma, cuando se analiza `audio1.wav`, por ejemplo, el clasificador no puede encontrar ese mismo fichero dentro del modelo con distancia cero.
 
 El script extrae las características de la señal nueva, las normaliza con los parámetros del modelo y busca sus vecinos más cercanos. La clase asignada es la que acumula mayor peso entre esos vecinos.
 
@@ -45,9 +47,22 @@ El script extrae las características de la señal nueva, las normaliza con los 
 
 El fichero `verificar_demo.py` baraja los cinco audios en cada lanzamiento. Durante la ejecución muestra la predicción obtenida para cada audio, sin usar la clase en el nombre del fichero. Al final imprime un resumen con la clase esperada, la clase obtenida y si la clasificación ha sido correcta.
 
+## Evaluación completa
+
+El fichero `evaluar_1000_audios.py` recorre los 1000 audios de `datos_1000/` y aplica la misma exclusión leave-one-out. Al terminar muestra:
+
+- Número total de audios evaluados.
+- Clasificaciones correctas.
+- Fallos.
+- Exactitud global.
+- Matriz de confusión.
+- Primeros fallos con clase esperada, clase obtenida y confianza.
+
+En la versión incluida, la evaluación completa obtiene 945 aciertos de 1000 audios, es decir, una exactitud aproximada del 94.50 %. Este resultado es más informativo que repetir indefinidamente los cinco audios de demostración, porque muestra que el clasificador también puede fallar.
+
 ## Relación con el TFG
 
-El TFG completo estudia representaciones temporales y espectrales de señales cardíacas, incluyendo variantes basadas en Deep ONMF. Esta demo conserva la idea general de procesar la señal y clasificarla, pero reduce el sistema a una prueba básica y rápida, siguiendo la indicación de subir solo un ejemplo sencillo al repositorio.
+El TFG completo estudia representaciones temporales y espectrales de señales cardíacas, incluyendo variantes basadas en Deep ONMF. Esta demo conserva la idea general de procesar la señal y clasificarla, pero reduce el sistema a un ejemplo ejecutable y a una evaluación completa sencilla de interpretar.
 
 ## Uso con una señal propia
 

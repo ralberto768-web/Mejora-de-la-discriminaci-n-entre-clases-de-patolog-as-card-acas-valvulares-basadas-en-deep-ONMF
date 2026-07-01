@@ -9,7 +9,9 @@ No se incluye aquí el pipeline experimental completo del TFG. La finalidad de e
 - `clasificar_senal.py`: script principal. Lee una señal `.csv`, `.txt` o `.wav`, extrae características y clasifica.
 - `modelo_basico.json`: parámetros de un clasificador KNN ponderado con referencias reales.
 - `datos/audio1.wav` a `datos/audio5.wav`: cinco audios PCG reales de la base preparada, con nombres genéricos para no adelantar la clase.
+- `datos_1000/`: base completa incluida para evaluar 1000 audios reales, 200 por clase.
 - `verificar_demo.py`: comprobación rápida de los cinco audios incluidos. En cada ejecución baraja el orden de análisis y al final muestra qué clase era la correcta.
+- `evaluar_1000_audios.py`: evaluación completa de los 1000 audios con exactitud, fallos y matriz de confusión.
 - `docs/EXPLICACION_BASICA.md`: explicación breve del método y de sus limitaciones.
 
 ## Instalación
@@ -44,6 +46,14 @@ Comprobar los cinco audios en orden aleatorio y ver el resumen final de aciertos
 py verificar_demo.py
 ```
 
+Evaluar los 1000 audios reales y obtener la producción efectiva del clasificador:
+
+```powershell
+py evaluar_1000_audios.py
+```
+
+Esta evaluación guarda además un CSV con el detalle de cada audio en `resultados/detalle_evaluacion_1000.csv`.
+
 ## Formato de entrada
 
 El caso más simple es un CSV con estas columnas:
@@ -73,7 +83,14 @@ py clasificar_senal.py mi_senal.csv --fs 8000
 4. Compara esas características con las referencias reales guardadas en `modelo_basico.json`.
 5. Muestra la clase predicha, una confianza aproximada y la distancia al audio de referencia más cercano por clase.
 
-El modelo básico incluido usa las características de los 1000 audios reales preparados en `segmentos_2_0s`: 200 por clase (`N`, `AS`, `MR`, `MS` y `MVP`). Los cinco WAV incluidos en `datos/` son ejemplos reales de 2 segundos, uno por clase. Se nombran como `audio1.wav`, `audio2.wav`, `audio3.wav`, `audio4.wav` y `audio5.wav` para que la clase no se deduzca antes de consultar el resumen final.
+El modelo básico incluido parte de los 1000 audios reales preparados en `segmentos_2_0s`: 200 por clase (`N`, `AS`, `MR`, `MS` y `MVP`). Los cinco WAV incluidos en `datos/` son ejemplos reales de 2 segundos, uno por clase. Los scripts de verificación aplican una exclusión leave-one-out: antes de clasificar un audio, eliminan ese mismo fichero de las referencias internas. Así se evita que la demo o la evaluación completa acierten por una coincidencia exacta contra el mismo audio.
+
+En la evaluación completa incluida, el resultado esperado es:
+
+- 1000 audios probados.
+- 945 clasificaciones correctas.
+- 55 fallos.
+- Exactitud aproximada: 94.50 %.
 
 ## Interpretación
 

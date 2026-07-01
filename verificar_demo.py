@@ -8,11 +8,11 @@ BASE = Path(__file__).resolve().parent
 MODELO = cargar_modelo(BASE / "modelo_basico.json")
 
 CASOS = [
-    ("audio1.wav", "sana"),
-    ("audio2.wav", "estenosis_aortica"),
-    ("audio3.wav", "regurgitacion_mitral"),
-    ("audio4.wav", "estenosis_mitral"),
-    ("audio5.wav", "prolapso_mitral"),
+    ("audio1.wav", "sana", "N/N-0884.wav"),
+    ("audio2.wav", "estenosis_aortica", "AS/AS-0123.wav"),
+    ("audio3.wav", "regurgitacion_mitral", "MR/MR-0384.wav"),
+    ("audio4.wav", "estenosis_mitral", "MS/MS-0496.wav"),
+    ("audio5.wav", "prolapso_mitral", "MVP/MVP-0797.wav"),
 ]
 
 
@@ -20,9 +20,19 @@ def descripcion_clase(clase: str) -> str:
     return MODELO.get("class_descriptions", {}).get(clase, clase)
 
 
-def comprobar(nombre_fichero: str, clase_esperada: str) -> dict[str, object]:
+def modelo_sin_audio(source_file: str) -> dict:
+    modelo = dict(MODELO)
+    modelo["references"] = [
+        referencia
+        for referencia in MODELO["references"]
+        if referencia.get("source_file") != source_file
+    ]
+    return modelo
+
+
+def comprobar(nombre_fichero: str, clase_esperada: str, source_file: str) -> dict[str, object]:
     ruta = BASE / "datos" / nombre_fichero
-    analisis = analizar_archivo(ruta, MODELO)
+    analisis = analizar_archivo(ruta, modelo_sin_audio(source_file))
     resultado = analisis["resultado"]
     clase_obtenida = resultado["clase"]
     return {
@@ -44,8 +54,8 @@ if __name__ == "__main__":
     print("Resultados durante la prueba:")
 
     resultados = []
-    for indice, (nombre_fichero, clase_esperada) in enumerate(casos, start=1):
-        resultado = comprobar(nombre_fichero, clase_esperada)
+    for indice, (nombre_fichero, clase_esperada, source_file) in enumerate(casos, start=1):
+        resultado = comprobar(nombre_fichero, clase_esperada, source_file)
         resultados.append(resultado)
         print(
             f"{indice}. {resultado['audio']} -> "
@@ -69,6 +79,6 @@ if __name__ == "__main__":
     total = len(resultados)
     fallos = total - aciertos
     if fallos:
-        raise AssertionError(f"Verificación fallida: {fallos} fallo(s) de {total} pruebas.")
-
-    print(f"\nVerificación completada correctamente: {aciertos}/{total} aciertos.")
+        print(f"\nVerificación finalizada: {aciertos}/{total} aciertos y {fallos} fallo(s).")
+    else:
+        print(f"\nVerificación completada correctamente: {aciertos}/{total} aciertos.")
